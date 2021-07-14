@@ -1,0 +1,13 @@
+@import "../../utils/animationTimer"
+
+.signature
+  max-height: 34px
+  height: 100% // required for IE11 support
+  -webkit-transition: filter $colorTransitionDuration linear
+  -moz-transition: filter $colorTransitionDuration linear
+  transition: filter $colorTransitionDuration linear
+  animation-delay: $transitionDelay
+
+.darkSignature
+  -webkit-filter: invert(100%)
+  filter: invert(100%)

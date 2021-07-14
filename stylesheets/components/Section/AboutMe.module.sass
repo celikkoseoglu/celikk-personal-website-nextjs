@@ -1,0 +1,64 @@
+@import "../../../utils/widthPicker"
+@import "../../../utils/colorPalette"
+
+.description
+  width: 660px
+  +screen(greaterThanMedium)
+    margin-right: 30px
+  +screen(extraLarge)
+    width: 550px
+  +screen(large)
+    width: 410px
+  +screen(small)
+    width: 100%
+
+.image
+  width: 300px
+  height: 300px
+  border: 7px solid $oxidised-silver
+  filter: grayscale(85%)
+  border-radius: 100%
+  transition: filter .2s
+  +screen(lessThanMedium)
+    display: none
+  +screen(large)
+    width: 250px
+    height: 250px
+  &:hover
+    filter: grayscale(0%)
+
+.ruler
+  flex-grow: 1
+  margin-left: 30px
+  +screen(small)
+    margin-left: 10px
+
+.heading
+  margin-bottom: 0
+  margin-left: 0
+
+.titleRow
+  margin-bottom: 50px
+  align-items: center
+  +screen(small)
+    margin-bottom: 10px
+  +screen(large)
+    margin-bottom: 35px
+
+.descriptionRow
+  justify-content: space-between
+  align-items: center
+
+.listPadding
+  padding: 0
+  li
+    list-style: none
+  li::before
+    content: "\003E"
+    display: inline-block
+    font-size: 16px
+    width: 1em
+  li a
+    color: $oxidised-silver
+    text-decoration: underline
+    text-decoration-style: dotted

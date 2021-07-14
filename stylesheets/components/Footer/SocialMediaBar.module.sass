@@ -1,0 +1,47 @@
+@import "../../../utils/colorPalette"
+
+.socialMediaButton
+  text-align: center
+  display: block
+  height: 40px
+  width: 40px
+  outline: 0
+  border-radius: 100%
+  font-size: 18px
+  line-height: 40px
+  color: $white
+  transition: background-color .2s, transform 0.2s
+  margin: 0
+  background: $oxidised-silver
+  &:hover
+    transform: scale(1.075)
+    color: $white
+  &:active
+    transform: scale(1.025)
+
+.twitter
+  &:hover, &:focus, &:active
+    background-color: $twitter
+.facebook
+  &:hover, &:focus, &:active
+    background-color: $facebook
+.linkedin
+  &:hover, &:focus, &:active
+    background-color: $linkedin
+.github
+  &:hover, &:focus, &:active
+    background-color: $github
+.instagram
+  &:hover, &:focus, &:active
+    background-color: $instagram
+.mail
+  &:hover, &:focus, &:active
+    background-color: $mail
+
+.noVerticalMargin
+  margin-top: 0
+  margin-bottom: 0
+
+.inlineList
+  padding-left: 0
+  list-style: none

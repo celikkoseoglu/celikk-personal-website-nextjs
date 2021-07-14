@@ -1,0 +1,38 @@
+@import "../utils/animationTimer"
+@import "../utils/variables"
+@import "../utils/widthPicker"
+@import "../utils/colorPalette"
+
+.blogContainer
+  max-width: $blog-width
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+  padding-top: 70px
+  +screen(small)
+    padding-top: 30px
+
+.blogPostBody
+  display: flex
+  justify-content: center
+  transition: color $colorTransitionDuration
+  min-height: 100vh
+
+.blogPostNavbarMargin
+  margin-bottom: 50px
+  +screen(small)
+    margin-bottom: 40px
+
+.blogPostDark
+  color: $white
+
+.footerStyle
+  max-width: $blog-width
+  padding-bottom: 20px
+  padding-top: 10px
+  margin-left: auto
+  margin-right: auto
+
+.width
+  width: 100%

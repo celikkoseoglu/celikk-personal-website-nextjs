@@ -1,0 +1,28 @@
+@import "../../utils/colorPalette"
+
+.customButton
+  display: inline-block
+  font-size: 20px
+  font-weight: 700
+  line-height: 1.4em
+  transition: color 0.3s, border 0.3s
+  background: transparent
+  padding: 8px
+  border: 2px solid $dark-blue
+  border-radius: 5px
+  color: $dark-blue
+  &:hover
+    text-decoration: none
+    background: transparent
+    border: 2px solid $blue
+    color: $blue
+
+.customButtonDark
+  border: 2px solid $light-blue
+  color: $light-blue
+  &:hover
+    border: 2px solid $sky-blue
+    color: $sky-blue
+
+.textCenter
+  text-align: center

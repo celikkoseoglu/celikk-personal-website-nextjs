@@ -1,0 +1,52 @@
+@import "../../../utils/widthPicker"
+@import "../../../utils/colorPalette"
+
+.square
+  height: 230px
+  width: 230px
+  margin: 30px
+  padding: 14px
+  border: 1px solid $dark-grey
+  border-radius: 5px
+  transition: box-shadow 0.1s, transform 0.1s
+  box-shadow: 6px 6px 0 0 $smoke-grey
+  &:hover
+    box-shadow: 8px 8px 0 0 $smoke-grey
+    transform: scale(1.01)
+    +screen(small)
+      box-shadow: 7px 7px 0 0 $smoke-grey
+      transform: scale(1.005)
+  +screen(small)
+    -webkit-box-shadow: 5px 5px 0 0 $smoke-grey
+    box-shadow: 5px 5px 0 0 $smoke-grey
+    height: auto
+    width: auto
+    margin: 10px 0
+  +screen(medium)
+    margin: 20px
+  +screen(large)
+    margin: 10px
+
+.montserrat
+  font-family: 'Montserrat', sans-serif
+  font-weight: 600
+
+.titleStyle
+  font-weight: 500
+
+.timestampStyle
+  font-size: 13px
+  color: $dark-grey
+  margin-bottom: 0
+  margin-top: 0
+
+.subtitleStyle
+  margin-top: 0
+
+.description
+  height: 180px
+  overflow: hidden
+  p
+    margin-bottom: 0
+  +screen(small)
+    height: auto

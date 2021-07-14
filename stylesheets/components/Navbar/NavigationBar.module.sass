@@ -1,0 +1,77 @@
+@import "../../../utils/widthPicker"
+@import "../../../utils/colorPalette"
+
+$transparency: 0.85
+$navbar-color: rgba(27, 27, 27, $transparency)
+
+.topNavExpand
+  padding-top: 5px
+  padding-bottom: 5px
+
+.topNavCollapse
+  backdrop-filter: blur(5px)
+
+.customNavbar
+  transition: background .2s ease .1s, padding .5s ease
+  position: fixed
+  width: 100%
+  z-index: 1000
+
+.whiteLink
+  color: $pale-grey
+  font-family: 'Montserrat', sans-serif
+  font-weight: 600
+  transition: color .3s ease-in-out
+  +screen(small)
+    padding-left: 2px
+  &:hover
+    color: $white
+
+.brand
+  // this allows for more space on the NavBar on a small
+  // screen like portrait iPad so items don't wrap to the next line
+  padding-right: 0
+  color: $pale-grey
+  font-family: 'Montserrat', sans-serif
+  font-weight: 600
+  font-size: 1.5em
+  transition: color .3s ease-in-out
+  &:hover
+    color: $white
+  +screen(small)
+    padding-left: 0
+  +screen(large)
+    font-size: 1.4em
+  +screen(greaterThanLarge)
+    font-size: 2em
+
+.navbarToggle
+  +screen(greaterThanMedium)
+    display: none
+
+.navbarContainer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +screen(lessThanMedium)
+    display: block
+
+.mobileNavbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.navbarLinks
+  display: flex
+  transition: max-height .2s ease-in-out
+  overflow: hidden
+  +screen(lessThanMedium)
+    display: block
+
+.mobileNavbarLinksCollapsed
+  +screen(lessThanMedium)
+    max-height: 0
+
+.mobileNavbarLinksExpanded
+  +screen(lessThanMedium)
+    max-height: 150px

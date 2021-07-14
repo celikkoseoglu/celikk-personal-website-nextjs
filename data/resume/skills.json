@@ -1,0 +1,26 @@
+[
+  {
+    "header": "PROGRAMMING LANGUAGES",
+    "content": "Java (OCA), Kotlin, C/C++, Swift, Python, Javascript, Solidity"
+  },
+  {
+    "header": "WEB TECHNOLOGIES",
+    "content": "HTML, CSS, jQuery, Bootstrap, React, WebGL"
+  },
+  {
+    "header": "TESTING AND DEPLOYMENT",
+    "content": "Git, Jenkins, JUnit, Espresso, Mockito, Wiremock, Maven, Gradle"
+  },
+  {
+    "header": "OTHER FRAMEWORKS",
+    "content": "Hadoop, Flume, Hive, Spring Boot, lex/yacc, Verilog, OpenGL, CUDA, OpenCL, RxJava"
+  },
+  {
+    "header": "DESIGN TOOLS",
+    "content": "Sketch, AfterEffects, Photoshop, Indesign, Illustrator, Premiere, Final Cut Pro"
+  },
+  {
+    "header": "PERSONAL INTERESTS",
+    "content": "Low-level software optimisation, artificial intelligence, virtual reality, microprocessors"
+  }
+]

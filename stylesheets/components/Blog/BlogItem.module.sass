@@ -1,0 +1,17 @@
+@import "../../../utils/colorPalette"
+@import "../../../utils/animationTimer"
+
+.blogItemLink
+  h4, h6, p
+    transition: color $colorTransitionDuration ease
+  &:hover h4, &:hover h6, &:hover p
+    transition: color $hoverColorTransitionDuration ease
+    color: $dark-blue
+
+.blogItemLinkDark
+  h4, h6, p
+    color: $white
+  &:hover h4
+    color: $sky-blue
+  &:hover h6,  &:hover p
+    color: $light-blue

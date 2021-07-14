@@ -1,0 +1,66 @@
+@import "../utils/animationTimer"
+@import "../utils/variables"
+@import "../utils/widthPicker"
+@import "../utils/colorPalette"
+
+.profilePicture
+  width: 60px
+  height: 60px
+  margin-right: 15px
+
+.fontColorTransition
+  transition: color $colorTransitionDuration
+
+.blogTitleFont
+  font-size: 20px
+  font-family: "Montserrat", sans-serif
+  font-weight: 600
+
+.blogSubtitleFont
+  font-size: 16px
+  font-family: "Montserrat", sans-serif
+  font-weight: 400
+
+.blogDark
+  color: $white
+
+.blogStyle
+  max-width: $blog-width
+  padding-top: 70px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+  +screen(small)
+    padding-top: 30px
+
+.footerStyle
+  max-width: $blog-width
+  margin-left: auto
+  margin-right: auto
+  padding-bottom: 20px
+  padding-top: 10px
+
+.titleMarginBottom
+  margin-bottom: 8px
+
+.noMargin
+  margin: 0
+
+.circularImage
+  border-radius: 100%
+
+.verticalCenter
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+
+.blogItemMargin
+  margin-bottom: 45px
+  +screen(small)
+    margin-bottom: 30px
+
+.blogNavbarMargin
+  margin-bottom: 50px
+  +screen(small)
+    margin-bottom: 30px

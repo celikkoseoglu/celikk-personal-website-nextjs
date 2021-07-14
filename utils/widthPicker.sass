@@ -1,0 +1,33 @@
+$small: 594px
+$medium: 768px
+$large: 991px
+$lessThanMedium: 767px
+$extraLarge: 1200px
+
+=screen($size)
+  @if $size == "small"
+    @media (max-width: $small)
+      @content
+  @else if $size == "medium"
+    @media (min-width: $small) and (max-width: $medium)
+      @content
+  @else if $size == "large"
+    @media (min-width: $medium) and (max-width: $large)
+      @content
+  @else if $size == "extraLarge"
+    @media (min-width: $large) and (max-width: $extraLarge)
+      @content
+  @else if $size == "lessThanMedium"
+    @media (max-width: $lessThanMedium)
+      @content
+  @else if $size == "greaterThanMedium"
+    @media (min-width: $medium)
+      @content
+  @else if $size == "greaterThanLarge"
+    @media (min-width: $large)
+      @content
+  @else if $size == "greaterThanExtraLarge"
+    @media (min-width: $extraLarge)
+      @content
+  @else
+    @content

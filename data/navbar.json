@@ -1,0 +1,22 @@
+{
+  "heroTitle": "CK",
+  "landingReference": "landing",
+  "items": [
+    {
+      "title":"PROJECTS",
+      "reference": "projects"
+    },
+    {
+      "title":"SKILLS",
+      "reference": "skills"
+    },
+    {
+      "title":"CONTACT",
+      "reference": "contact"
+    },
+    {
+      "title": "BLOG",
+      "href": "/blog"
+    }
+  ]
+}

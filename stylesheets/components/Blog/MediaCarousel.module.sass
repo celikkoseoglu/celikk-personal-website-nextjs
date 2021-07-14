@@ -1,0 +1,48 @@
+@import "../../../utils/colorPalette"
+
+.horizontalOverflow
+  white-space: nowrap
+  overflow-x: auto
+
+.autoSizeImage
+  width: auto
+  height: auto
+  max-height: 400px
+  max-width: 100%
+
+.autoSizeMultipleImage
+  max-height: 440px
+  max-width: 90%
+
+.mediaCarousel
+  color: $dark-blue
+  transition: color 0.3s ease
+  &:hover
+    color: $blue
+
+.mediaCarousel::-webkit-scrollbar-thumb
+  border: 8px solid
+  border-radius: 10px
+
+.mediaCarousel::-webkit-scrollbar
+  height: 8px
+
+.mediaCarousel::-webkit-scrollbar-track
+  border-radius: 5px
+
+.darkMediaCarousel
+  color: $dark-grey
+  &:hover
+    color: $grey
+
+.imageMargin
+  margin-left: 5px
+
+.multipleImage
+  margin-top: 10px
+  padding-bottom: 10px
+  margin-bottom: 20px
+
+.multipleImageIOS
+  margin-top: 20px
+  margin-bottom: 5px
