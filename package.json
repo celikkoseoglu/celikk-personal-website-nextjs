@@ -18,6 +18,8 @@
     "local-storage-fallback": "4.1.2",
     "react-image-webp": "0.7.0",
     "react-progressive-image": "0.6.0",
-    "next-images": "1.8.1"
+    "next-images": "1.8.1",
+    "react-device-detect": "1.17.0",
+    "react-icons": "4.2.0"
   }
 }

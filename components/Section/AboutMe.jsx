@@ -15,7 +15,7 @@ import HorizontalRuler from "../Util/HorizontalRuler";
 import Section from "../Util/Section";
 import Container from "../Util/Container";
 import Row from "../Util/Row";
-import ProfileImage from "../../data/images/aboutMe/celik.jpg";
+import ProfileImage from "../../public/images/aboutMe/celik.jpg";
 
 const aboutMe = require("../../data/aboutMe.json");
 

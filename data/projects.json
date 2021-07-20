@@ -2,7 +2,7 @@
   "projectsTitle": "PROJECTS",
   "projectList": [
     {
-      "imageLink": "data/images/projects/QNote.svg",
+      "imageLink": "/images/projects/QNote.svg",
       "imageAlt": "QNote app logo",
       "title": "QNote",
       "subtitle": "BLAZING FAST NOTE TAKING",
@@ -10,7 +10,7 @@
       "blogPost": "qnote"
     },
     {
-      "imageLink": "data/images/projects/IPManager.svg",
+      "imageLink": "/images/projects/IPManager.svg",
       "imageAlt": "IPManager app logo",
       "title": "IPManager",
       "subtitle": "DHCP MADE EASY",
@@ -18,7 +18,7 @@
       "blogPost": "ipmanager"
     },
     {
-      "imageLink": "data/images/projects/PhotoSec.svg",
+      "imageLink": "/images/projects/PhotoSec.svg",
       "imageAlt": "PhotoSec app logo",
       "title": "PhotoSec",
       "subtitle": "SECURE YOUR PHOTOS!",
@@ -26,7 +26,7 @@
       "blogPost": "photosec"
     },
     {
-      "imageLink": "data/images/projects/Marmara.svg",
+      "imageLink": "/images/projects/Marmara.svg",
       "imageAlt": "content not ready",
       "title": "Today's Meal in Marmara",
       "subtitle": "MEAL IN A DIFFERENT FORM",
@@ -34,7 +34,7 @@
       "blogPost": "marmara"
     },
     {
-      "imageLink": "data/images/projects/RockyJourney.svg",
+      "imageLink": "/images/projects/RockyJourney.svg",
       "imageAlt": "a ship sailing on the sea",
       "title": "Rocky Journey",
       "subtitle": "AN FPGA GAME",
@@ -42,7 +42,7 @@
       "blogPost": "rockyJourney"
     },
     {
-      "imageLink": "data/images/projects/PersonalWebsite.svg",
+      "imageLink": "/images/projects/PersonalWebsite.svg",
       "imageAlt": "iMac showing the source code of this website",
       "title": "Personal Website",
       "subtitle": "BUILT USING LATEST TECH",
