@@ -6,7 +6,9 @@ import {
   dark,
 } from "../../stylesheets/components/Util/LoadingIndicator.module.sass";
 
-const LoadingIndicator = ({ isDark }) => <div className={`${spinner} ${isDark ? dark : light}`} />;
+const LoadingIndicator = ({ isDark }) => (
+  <div className={`${spinner} ${isDark ? dark : light}`} />
+);
 
 LoadingIndicator.propTypes = {
   isDark: PropTypes.bool,

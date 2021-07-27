@@ -10,7 +10,14 @@ import {
 } from "../stylesheets/components/ProjectCard.module.sass";
 import UnstyledLink from "./Util/UnstyledLink";
 
-const ProjectCard = ({ imageLink, imageAlt, title, subtitle, text, blogPost }) => {
+const ProjectCard = ({
+  imageLink,
+  imageAlt,
+  title,
+  subtitle,
+  text,
+  blogPost,
+}) => {
   return (
     <div className={`${point}`}>
       <UnstyledLink to={`/blog/${blogPost}`}>

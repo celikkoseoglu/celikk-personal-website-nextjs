@@ -11,7 +11,9 @@ import UnstyledLink from "../Util/UnstyledLink";
 const BlogShowcaseButton = ({ link, text, className }) => (
   <div className={shadowMargin}>
     <UnstyledLink to={link}>
-      <p className={`${className} ${montserrat} ${square} ${textColor}`}>{text}</p>
+      <p className={`${className} ${montserrat} ${square} ${textColor}`}>
+        {text}
+      </p>
     </UnstyledLink>
   </div>
 );

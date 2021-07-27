@@ -36,10 +36,14 @@ const Footer = () => (
 
       <div className={`${footerRight}`}>
         <p className={`${footerLightText} ${footerName}`}>{footer.title}</p>
-        <p className={`${footerLightText} ${footerLocation}`}>{footer.location}</p>
+        <p className={`${footerLightText} ${footerLocation}`}>
+          {footer.location}
+        </p>
         <SocialMediaBar socialMediaLinks={footer.socialMediaLinks} />
         <div className={footerListContainer}>
-          <p className={`${footerListDescription} ${footerLightText}`}>{footer.linkText}</p>
+          <p className={`${footerListDescription} ${footerLightText}`}>
+            {footer.linkText}
+          </p>
           <ul className={`${footerLightText} ${footerList}`}>
             {footer.links.map((link, index) => (
               <li key={link} className={footerLinks}>

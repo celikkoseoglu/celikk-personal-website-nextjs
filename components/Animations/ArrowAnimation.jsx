@@ -50,7 +50,12 @@ const ArrowAnimation = ({ className, reference }) => {
             >
               <mpath xlinkHref="#linePath" />
             </animateMotion>
-            <set begin="exit.end" attributeName="visibility" from="visible" to="hidden" />
+            <set
+              begin="exit.end"
+              attributeName="visibility"
+              from="visible"
+              to="hidden"
+            />
           </polygon>
           <path
             id="linePath"

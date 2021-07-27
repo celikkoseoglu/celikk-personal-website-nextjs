@@ -42,7 +42,8 @@ const NavigationBar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", throttle(debounce(handleScroll)));
-    return () => window.removeEventListener("scroll", throttle(debounce(handleScroll)));
+    return () =>
+      window.removeEventListener("scroll", throttle(debounce(handleScroll)));
   }, []);
 
   return (
@@ -58,7 +59,9 @@ const NavigationBar = () => {
               backdropFilter: `blur(${transparency * 5}px)`,
             }
       }
-      className={`${customNavbar} ${navbarExpanded ? topNavExpand : topNavCollapse}`}
+      className={`${customNavbar} ${
+        navbarExpanded ? topNavExpand : topNavCollapse
+      }`}
     >
       <Container className={navbarContainer}>
         <div className={mobileNavbar}>
@@ -75,7 +78,9 @@ const NavigationBar = () => {
         </div>
         <div
           className={`${navbarLinks} ${
-            mobileNavbarCollapsed ? mobileNavbarLinksCollapsed : mobileNavbarLinksExpanded
+            mobileNavbarCollapsed
+              ? mobileNavbarLinksCollapsed
+              : mobileNavbarLinksExpanded
           }`}
         >
           {content.items.map((item) => (

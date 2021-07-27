@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { GoStar, GoRepoForked } from "react-icons/go";
-import { numbers, main, innerMain } from "../stylesheets/components/GithubStatistics.module.sass";
+import {
+  numbers,
+  main,
+  innerMain,
+} from "../stylesheets/components/GithubStatistics.module.sass";
 
 const GithubStatistics = ({ username, repo, className }) => {
   const [githubStats, setGithubStats] = useState({

@@ -14,7 +14,13 @@ const DRAW_OUT_TIME = 0.4;
 const EASE_IN_OUT_BEZIER_SPLINES = "0.42 0 0.58 1";
 
 const BlogBrandingLogo = ({ className, isDark }) => (
-  <svg id="branding" className={className} viewBox="0 0 504 715" visibility="hidden" version="1.1">
+  <svg
+    id="branding"
+    className={className}
+    viewBox="0 0 504 715"
+    visibility="hidden"
+    version="1.1"
+  >
     <path
       className={`${isDark ? darkFill : lightFill} ${colorTransition}`}
       d="M446.7,696.8c-86,24-172.1,24-258.5,0.7c23.9-11.2,63.2-25.8,

@@ -22,7 +22,9 @@ const BlogFooter = ({ isDark }) => (
     <div className={socialMediaBar}>
       <SocialMediaBar
         socialMediaLinks={footer.socialMediaLinks}
-        buttonBackground={isDark ? socialMediaButtonBackgroundDark : socialMediaButtonBackground}
+        buttonBackground={
+          isDark ? socialMediaButtonBackgroundDark : socialMediaButtonBackground
+        }
       />
     </div>
   </footer>

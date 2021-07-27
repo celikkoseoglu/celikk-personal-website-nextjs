@@ -11,7 +11,14 @@ import {
 import UnstyledLink from "../Util/UnstyledLink";
 import { BLOG_LINK } from "../../utils/Constants.utils";
 
-const BlogShowcaseCard = ({ title, subtitle, timestamp, minutes, blogPost, className }) => (
+const BlogShowcaseCard = ({
+  title,
+  subtitle,
+  timestamp,
+  minutes,
+  blogPost,
+  className,
+}) => (
   <div className={`${square} ${className}`}>
     <UnstyledLink to={`${BLOG_LINK}${blogPost}`}>
       <div className={description}>

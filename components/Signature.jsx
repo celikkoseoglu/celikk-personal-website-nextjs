@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { signature, darkSignature } from "../stylesheets/components/Signature.module.sass";
+import {
+  signature,
+  darkSignature,
+} from "../stylesheets/components/Signature.module.sass";
 
 import SignatureImage from "../public/images/signature.svg";
 

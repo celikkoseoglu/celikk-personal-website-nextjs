@@ -4,8 +4,10 @@ import { noDecoration } from "../../stylesheets/components/Util/UnstyledLink.mod
 
 const handler = (href) => Router.push(href);
 
-const Link = ({className, children, href, ...rest}={}) => (
-    <a onClick={() => handler(href)} className={className} {...rest} >{children}</a>
+const Link = ({ className, children, href, ...rest } = {}) => (
+  <a onClick={() => handler(href)} className={className} {...rest}>
+    {children}
+  </a>
 );
 
 const UnstyledLink = ({ className, to, children }) => (

@@ -33,13 +33,18 @@ const BlogShowcase = ({ id }) => (
             title={blogItem.title}
             subtitle={blogItem.subtitle}
             className={
-              index >= NUMBER_OF_LATEST_BLOG_CARDS_TO_RENDER_ON_MOBILE ? blogShowcaseCard : null
+              index >= NUMBER_OF_LATEST_BLOG_CARDS_TO_RENDER_ON_MOBILE
+                ? blogShowcaseCard
+                : null
             }
             key={blogItem.title}
           />
         ))}
       </Row>
-      <BlogShowcaseButton link={BLOG_LINK} text={blogShowcase.viewAllBlogPostsButton} />
+      <BlogShowcaseButton
+        link={BLOG_LINK}
+        text={blogShowcase.viewAllBlogPostsButton}
+      />
     </Container>
   </Section>
 );

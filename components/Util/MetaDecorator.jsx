@@ -13,7 +13,11 @@ const MetaDecorator = ({ title, description, imageUrl, imageAlt }) => (
     <meta property="og:image" content={metaDecorator.hostname + imageUrl} />
     <meta
       property="og:url"
-      content={metaDecorator.hostname + window.location.pathname + window.location.search}
+      content={
+        metaDecorator.hostname +
+        window.location.pathname +
+        window.location.search
+      }
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content={imageAlt} />

@@ -6,14 +6,21 @@ const BlogMetaDecorator = ({ title, description, image, imageAlt, folder }) => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    import(`../../data/images/blogPost/${folder}/${image}`).then((imageLink) => {
-      setUrl(imageLink.default);
-    });
+    import(`../../data/images/blogPost/${folder}/${image}`).then(
+      (imageLink) => {
+        setUrl(imageLink.default);
+      }
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [folder, image]);
 
   return (
-    <MetaDecorator imageUrl={url} title={title} description={description} imageAlt={imageAlt} />
+    <MetaDecorator
+      imageUrl={url}
+      title={title}
+      description={description}
+      imageAlt={imageAlt}
+    />
   );
 };
 

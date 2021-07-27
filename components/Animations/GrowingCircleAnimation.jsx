@@ -40,7 +40,8 @@ const m = {
     // window.screen.height and width are not reliable on iPad Safari. Use window.inner instead.
     m.height = Math.max(window.screen.height, window.innerHeight);
     m.width = Math.max(window.screen.width, window.innerWidth);
-    m.maxRadiusMultiplier = Math.max(m.width, m.height) ** (1.0 / GROWTH_FUNCTION_EXPONENTIAL);
+    m.maxRadiusMultiplier =
+      Math.max(m.width, m.height) ** (1.0 / GROWTH_FUNCTION_EXPONENTIAL);
     m.timeAtPreviousDraw = Date.now();
 
     // set page body background color before starting the animation. iOS 14 safari bottom bar does
@@ -48,7 +49,9 @@ const m = {
     // first fill the view with the body color, and then the canvas colour. Also, Twitter app's
     // webview does not readjust window.innerHeight after the bottom bar disappears, leaving the
     // bottom part of the website dark. Consider removing this if/when Safari fixes itself.
-    document.body.style.backgroundColor = m.isDark ? COLORS.midnightBlack : COLORS.white;
+    document.body.style.backgroundColor = m.isDark
+      ? COLORS.midnightBlack
+      : COLORS.white;
 
     // adjust canvas pixel ratio (resolution)
     const { width, height } = m.ctx.canvas.getBoundingClientRect();
@@ -62,7 +65,10 @@ const m = {
 
     // If mouse coordinates are not set, there should be no animation. Skip the whole thing.
     // This also skips the animation when the window is resized because we remove the mouse coords.
-    if (circleCenterCoordinates.x == null || circleCenterCoordinates.y == null) {
+    if (
+      circleCenterCoordinates.x == null ||
+      circleCenterCoordinates.y == null
+    ) {
       m.radiusMultiplier = isDark ? 0 : m.maxRadiusMultiplier;
     }
 
@@ -71,12 +77,14 @@ const m = {
   start: () => (m.isDark ? m.shrinkCircle : m.growCircle),
 
   growCircle: () => {
-    m.radiusMultiplier += RADIUS_GROWTH_PER_MS * Math.max(1, Date.now() - m.timeAtPreviousDraw);
+    m.radiusMultiplier +=
+      RADIUS_GROWTH_PER_MS * Math.max(1, Date.now() - m.timeAtPreviousDraw);
     return m.verifyCircleBounds;
   },
 
   shrinkCircle: () => {
-    m.radiusMultiplier -= RADIUS_GROWTH_PER_MS * Math.max(1, Date.now() - m.timeAtPreviousDraw);
+    m.radiusMultiplier -=
+      RADIUS_GROWTH_PER_MS * Math.max(1, Date.now() - m.timeAtPreviousDraw);
     return m.verifyCircleBounds;
   },
 
@@ -165,7 +173,11 @@ const GrowingCircleAnimation = ({ isDark }) => {
     return () => {
       isStateMachinePowered = false;
       window.removeEventListener("darkModeToggle", handleClick);
-      window.removeEventListener("resize", throttle(debounce(handleResize)), false);
+      window.removeEventListener(
+        "resize",
+        throttle(debounce(handleResize)),
+        false
+      );
     };
   }, [isDark]);
 

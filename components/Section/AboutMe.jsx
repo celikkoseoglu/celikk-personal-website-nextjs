@@ -15,29 +15,34 @@ import HorizontalRuler from "../Util/HorizontalRuler";
 import Section from "../Util/Section";
 import Container from "../Util/Container";
 import Row from "../Util/Row";
-import ProfileImage from "../../public/images/aboutMe/celik.jpg";
 
 const aboutMe = require("../../data/aboutMe.json");
 
 const AboutMe = ({ id }) => (
-    <Section id={id}>
-      <Container>
-        <Row className={`${titleRow}`}>
-          <Heading text={aboutMe.title} className={heading} />
-          <HorizontalRuler isThick className={ruler} />
-        </Row>
-        <Row className={`${descriptionRow}`}>
-          <div className={description}>
-            <p>{aboutMe.descriptionHead}</p>
+  <Section id={id}>
+    <Container>
+      <Row className={`${titleRow}`}>
+        <Heading text={aboutMe.title} className={heading} />
+        <HorizontalRuler isThick className={ruler} />
+      </Row>
+      <Row className={`${descriptionRow}`}>
+        <div className={description}>
+          <p>{aboutMe.descriptionHead}</p>
 
-            <Markdown className={listPadding}>{aboutMe.items.join("\n")}</Markdown>
+          <Markdown className={listPadding}>
+            {aboutMe.items.join("\n")}
+          </Markdown>
 
-            <p>{aboutMe.descriptionTail}</p>
-          </div>
-          <img className={image} alt={aboutMe.portraitAlt} src={ProfileImage} />
-        </Row>
-      </Container>
-    </Section>
+          <p>{aboutMe.descriptionTail}</p>
+        </div>
+        <img
+          className={image}
+          alt={aboutMe.portraitAlt}
+          src="/images/aboutMe/celik.jpg"
+        />
+      </Row>
+    </Container>
+  </Section>
 );
 
 AboutMe.propTypes = {

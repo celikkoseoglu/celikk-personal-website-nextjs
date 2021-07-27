@@ -6,7 +6,10 @@ import {
 } from "../../stylesheets/components/Util/Section.module.sass";
 
 const Section = ({ id, className, children }) => (
-  <section id={id} className={`${sectionBackground} ${sectionPadding} ${className}`}>
+  <section
+    id={id}
+    className={`${sectionBackground} ${sectionPadding} ${className}`}
+  >
     {children}
   </section>
 );
