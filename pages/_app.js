@@ -1,7 +1,7 @@
-import '../globals.sass'
+import "../globals.sass";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
