@@ -19,32 +19,50 @@ import DarkModeToggle from "../DarkModeToggle";
 import UnstyledLink from "../Util/UnstyledLink";
 import BlogBrandingLogo from "../Animations/BlogBrandingLogo";
 
-const BlogNavbar = ({ headerText, headerLink, brandingLink, isDark, setIsDark, className }) => {
+const BlogNavbar = ({
+  headerText,
+  headerLink,
+  brandingLink,
+  isDark,
+  setIsDark,
+  className,
+}) => {
   const header = <h1 className={`${noMargin} ${titleFont}`}>{headerText}</h1>;
 
   const getTitleOrButton = (text, link) =>
     link ? (
       <UnstyledLink
-        className={`${isDark ? blogLinkBrandingDark : blogLinkBranding} ${pointerCursor}`}
+        className={`${
+          isDark ? blogLinkBrandingDark : blogLinkBranding
+        } ${pointerCursor}`}
         to={link}
       >
         {header}
       </UnstyledLink>
     ) : (
-      <span className={`${defaultCursor} ${isDark ? titleDark : title}`}>{header}</span>
+      <span className={`${defaultCursor} ${isDark ? titleDark : title}`}>
+        {header}
+      </span>
     );
 
   return (
     <div className={`${navbarFlex} ${className}`}>
       <div className={brandingContainer}>
         <UnstyledLink to={brandingLink}>
-          <BlogBrandingLogo className={`${branding} ${isDark && brandingDark}`} isDark={isDark} />
+          <BlogBrandingLogo
+            className={`${branding} ${isDark && brandingDark}`}
+            isDark={isDark}
+          />
         </UnstyledLink>
 
         {getTitleOrButton(headerText, headerLink, isDark)}
       </div>
       <div className={darkModeToggle}>
-        <DarkModeToggle onClickMethod={setIsDark} isDark={isDark} setIsDark={setIsDark} />
+        <DarkModeToggle
+          onClickMethod={setIsDark}
+          isDark={isDark}
+          setIsDark={setIsDark}
+        />
       </div>
     </div>
   );

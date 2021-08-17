@@ -7,7 +7,15 @@ import {
 } from "../../stylesheets/components/Blog/BlogItem.module.sass";
 import { BLOG_LINK } from "../../utils/Constants.utils";
 
-const BlogItem = ({ className, title, date, minutes, subtitle, blogPost, isDark }) => (
+const BlogItem = ({
+  className,
+  title,
+  date,
+  minutes,
+  subtitle,
+  blogPost,
+  isDark,
+}) => (
   <div className={className}>
     <UnstyledLink
       to={`${BLOG_LINK}${blogPost}`}

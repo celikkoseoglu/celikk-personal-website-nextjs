@@ -1,5 +1,5 @@
-import BlogItem from "../components/Blog/BlogItem";
-import Row from "../components/Util/Row";
+import BlogItem from "../../components/Blog/BlogItem";
+import Row from "../../components/Util/Row";
 import {
   fontColorTransition,
   blogDark,
@@ -13,17 +13,17 @@ import {
   noMargin,
   profilePicture,
   verticalCenter,
-} from "../stylesheets/Blog.module.sass";
-import BlogFooter from "../components/Footer/BlogFooter";
-import HorizontalRuler from "../components/Util/HorizontalRuler";
-import BlogNavbar from "../components/Navbar/BlogNavbar";
-import GrowingCircleAnimation from "../components/Animations/GrowingCircleAnimation";
+} from "../../stylesheets/Blog.module.sass";
+import BlogFooter from "../../components/Footer/BlogFooter";
+import HorizontalRuler from "../../components/Util/HorizontalRuler";
+import BlogNavbar from "../../components/Navbar/BlogNavbar";
+import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
 import { useState } from "react";
-import { getInitialTheme } from "../utils/FileManager.utils";
+import { getInitialTheme } from "../../utils/FileManager.utils";
 
-const blog = require("../data/blog.json");
-const footer = require("../data/footer.json");
-const blogNavbar = require("../data/blogNavbar.json");
+const blog = require("../../data/blog.json");
+const footer = require("../../data/footer.json");
+const blogNavbar = require("../../data/blogNavbar.json");
 
 export default function Home() {
   const [isDark, setIsDark] = useState(getInitialTheme());

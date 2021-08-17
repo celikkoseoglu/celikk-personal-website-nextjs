@@ -9,14 +9,6 @@ import {
   mediaCarousel,
   multipleImage,
 } from "../../stylesheets/components/Blog/MediaCarousel.module.sass";
-import { IS_WEBP_SUPPORTED } from "../../utils/Constants.utils";
-
-const getImageLinkWithExtension = (imageLink) => {
-  if (IS_WEBP_SUPPORTED && imageLink.endsWith(".png")) {
-    return `${imageLink.substring(0, imageLink.length - 4)}.webp`;
-  }
-  return imageLink;
-};
 
 const MediaCarousel = ({ folder, images, isDark }) => {
   const imageFileNames = images.split(",");
@@ -24,10 +16,9 @@ const MediaCarousel = ({ folder, images, isDark }) => {
 
   for (let i = 0; i < imageFileNames.length; i += 1) {
     imagesToBeLoaded.push(
+      // TODO: bring WEBP support back
       // eslint-disable-next-line global-require,import/no-dynamic-require
-      require(`../../data/images/blogPost/${folder}/${getImageLinkWithExtension(
-        imageFileNames[i]
-      )}`).default
+      `/images/blogPost/${folder}/${imageFileNames[i]}`
     );
   }
 
@@ -35,12 +26,13 @@ const MediaCarousel = ({ folder, images, isDark }) => {
     <>
       <div
         align="center"
-        className={`${horizontalOverflow} ${isDark ? darkMediaCarousel : null} ${mediaCarousel} ${
-          imagesToBeLoaded.length > 1 && multipleImage
-        }`}
+        className={`${horizontalOverflow} ${
+          isDark ? darkMediaCarousel : null
+        } ${mediaCarousel} ${imagesToBeLoaded.length > 1 && multipleImage}`}
       >
         {imagesToBeLoaded.map((imageRelativeLink, index) =>
-          imageRelativeLink !== undefined && imageRelativeLink.endsWith(".mp4") ? (
+          imageRelativeLink !== undefined &&
+          imageRelativeLink.endsWith(".mp4") ? (
             // eslint-disable-next-line jsx-a11y/media-has-caption
             <video
               className={`${autoSizeImage} ${
