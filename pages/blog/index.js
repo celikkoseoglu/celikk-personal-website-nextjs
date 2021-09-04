@@ -20,6 +20,7 @@ import BlogNavbar from "../../components/Navbar/BlogNavbar";
 import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
 import { useState } from "react";
 import { getInitialTheme } from "../../utils/FileManager.utils";
+import NoSSR from "react-no-ssr";
 
 const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
@@ -28,7 +29,60 @@ const blogNavbar = require("../../data/blogNavbar.json");
 export default function Home() {
   const [isDark, setIsDark] = useState(getInitialTheme());
 
-  return (
+  const noSSRContent = (
+    <div>
+      <div className={`${blogStyle}`}>
+        <BlogNavbar
+          headerText={blogNavbar.blogBranding}
+          brandingLink={blogNavbar.homeLink}
+          className={blogNavbarMargin}
+          isDark={false}
+          setIsDark={setIsDark}
+        />
+        <Row className={`${blogItemMargin} ${verticalCenter}`}>
+          <div>
+            <img
+              className={`${circularImage} ${profilePicture}`}
+              src="/images/blog/PP.jpg"
+              alt={blog.imageAlt}
+            />
+          </div>
+          <div>
+            <p
+              className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}
+            >
+              {blog.title}
+            </p>
+            <p
+              className={`${blogSubtitleFont} ${noMargin} ${fontColorTransition}`}
+            >
+              {blog.subtitle}
+            </p>
+          </div>
+        </Row>
+
+        {blog.blogItems.map((blogItem) => (
+          <BlogItem
+            className={blogItemMargin}
+            title={blogItem.title}
+            date={blogItem.date}
+            minutes={blogItem.minutes}
+            subtitle={blogItem.subtitle}
+            blogPost={blogItem.blogPost}
+            isDark={false}
+            key={blogItem.title}
+          />
+        ))}
+
+        <HorizontalRuler isDark={false} />
+      </div>
+      <div className={footerStyle}>
+        <BlogFooter content={footer} isDark={false} />
+      </div>
+    </div>
+  );
+
+  const content = (
     <div>
       <GrowingCircleAnimation isDark={isDark} />
       <div className={`${blogStyle}`}>
@@ -81,4 +135,6 @@ export default function Home() {
       </div>
     </div>
   );
+
+  return <NoSSR onSSR={noSSRContent}>{content}</NoSSR>;
 }

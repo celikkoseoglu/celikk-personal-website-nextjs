@@ -17,6 +17,7 @@ import { getInitialTheme } from "../../utils/FileManager.utils";
 import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
 const footer = require("../../data/footer.json");
+import NoSSR from "react-no-ssr";
 
 export default function Post({ post }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
@@ -25,7 +26,32 @@ export default function Post({ post }) {
   if (!router.isFallback && !post?.slug) {
     return <p>404</p>;
   }
-  return (
+
+  const noSSRContent = (
+    <div className={blogPostBody}>
+      <div className={width}>
+        <div className={blogContainer}>
+          <BlogNavbar
+            headerText={blogNavbar.blogBranding}
+            headerLink={blogNavbar.blogLink}
+            brandingLink={blogNavbar.homeLink}
+            className={blogPostNavbarMargin}
+            isDark={false}
+            setIsDark={setIsDark}
+          />
+
+          <BlogPostMarkdown content={post.content} isDark={false} />
+
+          <HorizontalRuler isDark={false} />
+        </div>
+        <div className={footerStyle}>
+          <BlogFooter content={footer} isDark={false} />
+        </div>
+      </div>
+    </div>
+  );
+
+  const content = (
     <div className={`${isDark && blogPostDark} ${blogPostBody}`}>
       <GrowingCircleAnimation isDark={isDark} />
       <div className={width}>
@@ -49,6 +75,8 @@ export default function Post({ post }) {
       </div>
     </div>
   );
+
+  return <NoSSR onSSR={noSSRContent}>{content}</NoSSR>;
 }
 
 export async function getStaticProps({ params }) {
