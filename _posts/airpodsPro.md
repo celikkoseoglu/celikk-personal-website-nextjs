@@ -1,13 +1,13 @@
 ---
-title: 'Preview Mode for Static Generation'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/preview/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+title: "CK - AirPods Pro"
+excerpt: "Earphones have come a long way. It's about time we forget about the headphone jack."
+cover:
+  image: "/images/blogPost/airpodsPro/case3.jpg"
+  alt: "AirPods Pro and Charging Case close up"
+date: "2020-05-17T12:35:07.322Z"
 author:
-  name: Joe Haddad
-  picture: '/assets/blog/authors/joe.jpeg'
-ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  name: Celik Koseoglu
+  picture: "/images/blog/PP.jpg"
 ---
 
 # Airpods Pro - the end of wired earphones
