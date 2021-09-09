@@ -31,10 +31,10 @@ export default function Post({ post }) {
 
   const meta = (
     <Head>
-      <title>{post.title}</title>
-      <meta property="og:title" content={post.title} />
-      <meta name="description" content={post.excerpt} />
-      <meta property="og:description" content={post.excerpt} />
+      <title>{post.seoTitle}</title>
+      <meta property="og:title" content={post.seoTitle} />
+      <meta name="description" content={post.description} />
+      <meta property="og:description" content={post.description} />
       <meta
         property="og:image"
         content={metaDecorator.hostname + post.cover.image}
@@ -105,9 +105,9 @@ export default function Post({ post }) {
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
-    "title",
+    "seoTitle",
+    "description",
     "date",
-    "excerpt",
     "cover",
     "author",
     "content",
