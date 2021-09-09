@@ -37,7 +37,7 @@ export default function Post({ post }) {
       <meta property="og:description" content={post.excerpt} />
       <meta
         property="og:image"
-        content={metaDecorator.hostname + post.cover.image}
+        content={post.cover.image}
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image:alt" content={post.cover.alt} />
