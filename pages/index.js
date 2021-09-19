@@ -14,6 +14,7 @@ import {
 import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
 import BlogShowcase from "../components/Section/BlogShowcase";
+import { getMeta } from "../components/Util/MetaGenerator";
 
 const content = require("../data/content.json");
 
@@ -26,13 +27,16 @@ export default function Home() {
     </div>
   );
 
+  const meta = getMeta(
+    content.pageTitle,
+    content.pageDescription,
+    "/images/meta/home.png",
+    content.metaImageAlt
+  );
+
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      {meta}
       <NavigationBar />
       <Landing
         id={content.landingReference}

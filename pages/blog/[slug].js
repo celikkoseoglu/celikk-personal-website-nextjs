@@ -18,8 +18,7 @@ import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
 const footer = require("../../data/footer.json");
 import NoSSR from "react-no-ssr";
-import Head from "next/head";
-import metaDecorator from "../../data/metaDecorator.json";
+import { getMeta } from "../../components/Util/MetaGenerator";
 
 export default function Post({ post }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
@@ -29,20 +28,11 @@ export default function Post({ post }) {
     return <p>404</p>;
   }
 
-  const meta = (
-    <Head>
-      <title>{post.seoTitle}</title>
-      <meta property="og:title" content={post.seoTitle} />
-      <meta name="description" content={post.description} />
-      <meta property="og:description" content={post.description} />
-      <meta
-        property="og:image"
-        content={metaDecorator.hostname + post.cover.image}
-      />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image:alt" content={post.cover.alt} />
-      <meta name="twitter:site" content={metaDecorator.twitterUsername} />
-    </Head>
+  const meta = getMeta(
+    post.seoTitle,
+    post.description,
+    post.cover.image,
+    post.cover.alt
   );
 
   const noSSRContent = (
