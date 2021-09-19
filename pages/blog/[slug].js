@@ -50,7 +50,11 @@ export default function Post({ post }) {
               setIsDark={setIsDark}
             />
 
-            <BlogPostMarkdown content={post.content} isDark={false} />
+            <BlogPostMarkdown
+              fileName={post.slug}
+              content={post.content}
+              isDark={false}
+            />
 
             <HorizontalRuler isDark={false} />
           </div>
@@ -78,7 +82,11 @@ export default function Post({ post }) {
               setIsDark={setIsDark}
             />
 
-            <BlogPostMarkdown content={post.content} isDark={isDark} />
+            <BlogPostMarkdown
+              fileName={post.slug}
+              content={post.content}
+              isDark={isDark}
+            />
 
             <HorizontalRuler isDark={isDark} />
           </div>

@@ -8,28 +8,46 @@ import {
 } from "../../stylesheets/components/Blog/BlogPostMarkdown.module.sass";
 import Code from "./Code";
 
-const BlogPostMarkdown = ({ isDark, content }) => {
-  return (
-    <div className={`${blogPostStyle} ${isDark && blogPostDarkStyle}`}>
-      {compiler(content, {
-        overrides: {
-          MediaCarousel: {
-            component: MediaCarousel,
-            props: {
-              isDark,
-            },
-          },
-          Code: {
-            component: Code,
-            props: {
-              isDark,
-            },
+const blogCache = new Map();
+
+const retrieveCompiledBlogPostFromCache = (
+  blogPostFileName,
+  isDark,
+  postContent
+) => {
+  // don't cache react-snap SSR pass
+  if (postContent === "") return null;
+
+  const cachedItem = blogCache.get(blogPostFileName + isDark);
+  if (cachedItem === undefined) {
+    const cachedVar = compiler(postContent, {
+      overrides: {
+        MediaCarousel: {
+          component: MediaCarousel,
+          props: {
+            isDark,
           },
         },
-      })}
-    </div>
-  );
+        Code: {
+          component: Code,
+          props: {
+            isDark,
+          },
+        },
+      },
+    });
+    blogCache.set(blogPostFileName + isDark, cachedVar);
+    return cachedVar;
+  }
+
+  return cachedItem;
 };
+
+const BlogPostMarkdown = ({ isDark, content, fileName }) => (
+  <div className={`${blogPostStyle} ${isDark && blogPostDarkStyle}`}>
+    {retrieveCompiledBlogPostFromCache(fileName, isDark, content)}
+  </div>
+);
 
 BlogPostMarkdown.propTypes = {
   content: PropTypes.string.isRequired,
