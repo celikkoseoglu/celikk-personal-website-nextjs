@@ -1,3 +1,5 @@
+import "react-app-polyfill/ie11"; // required for IE11
+import "react-app-polyfill/stable"; // required for IE11
 import "../globals.sass";
 import { useEffect } from "react";
 import Head from "next/head";
