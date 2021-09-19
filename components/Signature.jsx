@@ -5,11 +5,9 @@ import {
   darkSignature,
 } from "../stylesheets/components/Signature.module.sass";
 
-import SignatureImage from "../public/images/signature.svg";
-
 const Signature = ({ isDark, className }) => (
   <img
-    src={SignatureImage}
+    src="/images/signature.svg"
     alt="signature"
     className={`${signature} ${isDark ? darkSignature : null} ${className}`}
   />
