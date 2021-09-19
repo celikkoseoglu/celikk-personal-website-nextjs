@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  CK
+</h1>
+<h2 align="center">
+  celikk.me - personal website
+</h2>
+<p align="center">
+  My new personal website <a href="https://celikk.me" target="_blank">celikk.me</a> built using React from scratch. Hosted on <a href="https://firebase.google.com/docs/hosting" target="_blank">Firebase</a>.
+</p>
 
-## Getting Started
+![collage](https://i.ibb.co/3h4ZyFq/collage.png)
 
-First, run the development server:
+## 🛠 Development Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Install dependencies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```sh
+   yarn install
+   ```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2. Start the development server
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```sh
+   yarn start
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🚀 Hosting
 
-## Learn More
+This is a NextJS project so I use Vercel for hosting as it makes things easy for me. Feel free to use other hosting platforms. Pushing to this repo automatically updates the vercel deployment.
 
-To learn more about Next.js, take a look at the following resources:
+## ❓ If you don't understand how a certain part works;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Watch how I implemented it. If you want to see my learning process, join the discussion. Give me recommendations on what/how to do.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [YouTube Playlist](https://www.youtube.com/watch?v=2sxI11_lxSg&list=PLNkfllcUq3AkdeD4Aqp_Z2AIGyyF00_d8&index=39)
+- [Twitch](https://www.twitch.tv/celikkoseoglu)
 
-## Deploy on Vercel
+## 🚨 Forking this repo and copying code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I encourage you to do it. Let me know if you do. Also feel free to create pull requests if you think you've made an improvement.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you copied the whole thing, giving some credit would be nice but I can't force you to do it.
+
+<hr/>
+
+- [Previous Personal Website with Create-React-App](https://github.com/celikkoseoglu/celikk-personal-website)
+- [Previous Personal Website with Bootstrap](https://github.com/celikkoseoglu/personalwebsite)
