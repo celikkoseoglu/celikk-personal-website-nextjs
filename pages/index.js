@@ -1,4 +1,3 @@
-import Head from "next/head";
 import AboutMe from "../components/Section/AboutMe";
 import NavigationBar from "../components/Navbar/NavigationBar";
 import Landing from "../components/Section/Landing";

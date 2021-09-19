@@ -1,5 +1,6 @@
 {
-  "notFoundMessage": "404",
+  "notFoundTitle": "404",
+  "notFoundMessage": "The page you’re looking for is not there",
   "leftButtonText": "Home",
   "leftButtonLink": "/",
   "rightButtonText": "Blog",
