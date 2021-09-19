@@ -21,6 +21,7 @@ import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAni
 import { useState } from "react";
 import { getInitialTheme } from "../../utils/FileManager.utils";
 import NoSSR from "react-no-ssr";
+import { getMeta } from "../../components/Util/MetaGenerator";
 
 const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
@@ -29,8 +30,16 @@ const blogNavbar = require("../../data/blogNavbar.json");
 export default function Home() {
   const [isDark, setIsDark] = useState(getInitialTheme());
 
+  const meta = getMeta(
+    blog.pageTitle,
+    blog.pageDescription,
+    "/images/meta/blog.png",
+    blog.metaImageAlt
+  );
+
   const noSSRContent = (
     <div>
+      {meta}
       <div className={`${blogStyle}`}>
         <BlogNavbar
           headerText={blogNavbar.blogBranding}
@@ -84,6 +93,7 @@ export default function Home() {
 
   const content = (
     <div>
+      {meta}
       <GrowingCircleAnimation isDark={isDark} />
       <div className={`${blogStyle}`}>
         <BlogNavbar
