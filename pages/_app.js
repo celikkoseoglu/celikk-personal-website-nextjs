@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }) {
       const favicon = document.querySelector('link[rel="icon"]');
       favicon.href = null;
       favicon.href = "/favicon.svg";
-      console.log("set favicon");
     });
   }, []);
 
