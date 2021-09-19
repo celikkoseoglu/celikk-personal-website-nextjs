@@ -9,6 +9,7 @@ import {
 import Container from "../Util/Container";
 import Hero from "../Hero";
 import { isIPad13 } from "react-device-detect";
+import NoSSR from "react-no-ssr";
 
 const hero = require("../../data/hero.json");
 
@@ -81,10 +82,12 @@ const Landing = ({ id, arrowAnimationReference }) => {
         />
       </Container>
 
-      <ArrowAnimation
-        className={`${arrowMargin} ${arrowSize}`}
-        reference={arrowAnimationReference}
-      />
+      <NoSSR>
+        <ArrowAnimation
+          className={`${arrowMargin} ${arrowSize}`}
+          reference={arrowAnimationReference}
+        />
+      </NoSSR>
     </header>
   );
 
