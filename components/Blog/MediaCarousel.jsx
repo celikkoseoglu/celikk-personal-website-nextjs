@@ -9,17 +9,21 @@ import {
   mediaCarousel,
   multipleImage,
 } from "../../stylesheets/components/Blog/MediaCarousel.module.sass";
+import ImageWithFallback from "../Util/ImageWithFallback";
+
+const getImageLinkWithExtension = (imageLink) => {
+  if (imageLink.endsWith(".png")) {
+    return `${imageLink.substring(0, imageLink.length - 4)}.webp`;
+  }
+  return imageLink;
+};
 
 const MediaCarousel = ({ folder, images, isDark }) => {
   const imageFileNames = images.split(",");
   const imagesToBeLoaded = [];
 
   for (let i = 0; i < imageFileNames.length; i += 1) {
-    imagesToBeLoaded.push(
-      // TODO: bring WEBP support back
-      // eslint-disable-next-line global-require,import/no-dynamic-require
-      `/images/blogPost/${folder}/${imageFileNames[i]}`
-    );
+    imagesToBeLoaded.push(`/images/blogPost/${folder}/${imageFileNames[i]}`);
   }
 
   return (
@@ -48,13 +52,14 @@ const MediaCarousel = ({ folder, images, isDark }) => {
               Your browser does not support the video tag.
             </video>
           ) : (
-            <img
-              src={imageRelativeLink}
+            <ImageWithFallback
+              src={getImageLinkWithExtension(imageRelativeLink)}
+              alt={imageRelativeLink}
+              key={imageRelativeLink}
+              fallback={imageRelativeLink}
               className={`${autoSizeImage} ${
                 imagesToBeLoaded.length > 1 && autoSizeMultipleImage
               } ${index > 0 && imageMargin}`}
-              alt={imageRelativeLink}
-              key={imageRelativeLink}
             />
           )
         )}
