@@ -8,11 +8,15 @@ function MyApp({ Component, pageProps }) {
       "(prefers-color-scheme: dark)"
     );
 
-    prefersColorSchemeWatcher.addEventListener("change", () => {
-      const favicon = document.querySelector('link[rel="icon"]');
-      favicon.href = null;
-      favicon.href = "/favicon.svg";
-    });
+    // If the browser doesn't support prefers-color-scheme
+    // then don't call addEventListener on a null object
+    if (prefersColorSchemeWatcher.matches) {
+      prefersColorSchemeWatcher.addEventListener("change", () => {
+        const favicon = document.querySelector('link[rel="icon"]');
+        favicon.href = null;
+        favicon.href = "/favicon.svg";
+      });
+    }
   }, []);
 
   return (
