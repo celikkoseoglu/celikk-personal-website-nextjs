@@ -40,7 +40,7 @@ export default function Home() {
   const noSSRContent = (
     <div>
       {meta}
-      <div className={`${blogStyle}`}>
+      <div className={blogStyle}>
         <BlogNavbar
           headerText={blogNavbar.blogBranding}
           brandingLink={blogNavbar.homeLink}
@@ -95,7 +95,7 @@ export default function Home() {
     <div>
       {meta}
       <GrowingCircleAnimation isDark={isDark} />
-      <div className={`${blogStyle}`}>
+      <div className={blogStyle}>
         <BlogNavbar
           headerText={blogNavbar.blogBranding}
           brandingLink={blogNavbar.homeLink}
