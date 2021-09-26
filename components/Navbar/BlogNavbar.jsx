@@ -7,7 +7,6 @@ import {
   titleDark,
   navbarFlex,
   darkModeToggle,
-  brandingContainer,
   branding,
   brandingDark,
   blogLinkBranding,
@@ -18,6 +17,7 @@ import {
 import DarkModeToggle from "../DarkModeToggle";
 import UnstyledLink from "../Util/UnstyledLink";
 import BlogBrandingLogo from "../Animations/BlogBrandingLogo";
+import Row from "../Util/Row";
 
 const BlogNavbar = ({
   headerText,
@@ -47,7 +47,7 @@ const BlogNavbar = ({
 
   return (
     <div className={`${navbarFlex} ${className}`}>
-      <div className={brandingContainer}>
+      <Row>
         <UnstyledLink to={brandingLink}>
           <BlogBrandingLogo
             className={`${branding} ${isDark && brandingDark}`}
@@ -56,7 +56,7 @@ const BlogNavbar = ({
         </UnstyledLink>
 
         {getTitleOrButton(headerText, headerLink, isDark)}
-      </div>
+      </Row>
       <div className={darkModeToggle}>
         <DarkModeToggle
           onClickMethod={setIsDark}
