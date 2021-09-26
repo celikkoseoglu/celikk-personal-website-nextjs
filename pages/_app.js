@@ -8,11 +8,15 @@ function MyApp({ Component, pageProps }) {
       "(prefers-color-scheme: dark)"
     );
 
-    prefersColorSchemeWatcher.addEventListener("change", () => {
-      const favicon = document.querySelector('link[rel="icon"]');
-      favicon.href = null;
-      favicon.href = "/favicon.svg";
-    });
+    // If the browser doesn't support prefers-color-schemeΩ
+    // then don't call addEventListener on a null object
+    if (prefersColorSchemeWatcher != null) {
+      prefersColorSchemeWatcher.addEventListener("change", () => {
+        const favicon = document.querySelector('link[rel="icon"]');
+        favicon.href = null;
+        favicon.href = "/favicon.svg";
+      });
+    }
   }, []);
 
   return (
@@ -20,7 +24,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Çelik Köseoğlu</title>
         <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=11" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
