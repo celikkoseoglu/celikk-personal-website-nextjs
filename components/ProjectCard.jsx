@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import {
   point,
@@ -19,9 +19,9 @@ const ProjectCard = ({
   blogPost,
 }) => {
   return (
-    <div className={`${point}`}>
+    <div className={point}>
       <UnstyledLink to={`/blog/${blogPost}`}>
-        <div className={`${contentDiv}`}>
+        <div className={contentDiv}>
           <img className={imageDiv} src={imageLink} alt={imageAlt} />
           <div className={description}>
             <h4>{title}</h4>
