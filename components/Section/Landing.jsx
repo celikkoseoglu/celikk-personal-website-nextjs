@@ -10,12 +10,11 @@ import Container from "../Util/Container";
 import Hero from "../Hero";
 import { isIPad13 } from "react-device-detect";
 import NoSSR from "react-no-ssr";
-
-const hero = require("../../data/hero.json");
-
 import { getRandomInt } from "../../utils/FileManager.utils";
 import ArrowAnimation from "../Animations/ArrowAnimation";
 import { debounce } from "../../utils/Limitors";
+
+const hero = require("../../data/hero.json");
 
 const imagePaths = [
   "/images/hero/balcony.jpg",
