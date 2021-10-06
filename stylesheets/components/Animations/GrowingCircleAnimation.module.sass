@@ -3,6 +3,12 @@
 .size
   width: 100vw
   height: 100vh
-  position: fixed
+  position: absolute
   z-index: -1
   background: $midnight-black
+  /* top: 0 and left: 0 are required for MediaCarousel to be able to play video in MacOS Safari 15.
+     This is a rather interesting bug where putting a fixed div behind a page breaks Safari's ability
+     to display <video> tags properly. I haven't done much research as to why this happens because Safari
+     15 is relatively new at the time of writing. */
+  top: 0
+  left: 0
