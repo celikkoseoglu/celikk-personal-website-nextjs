@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - AirPods Pro"
+title:
+  page: "CK - AirPods Pro"
+  post: "Airpods Pro - the end of wired earphones"
 description: "Earphones have come a long way. It's about time we forget about the headphone jack."
 date: "2020-05-17T00:00:00.000Z"
 cover:

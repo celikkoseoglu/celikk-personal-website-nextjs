@@ -22,20 +22,23 @@ import { useState } from "react";
 import { getInitialTheme } from "../../utils/FileManager.utils";
 import NoSSR from "react-no-ssr";
 import { getMeta } from "../../components/Util/MetaGenerator";
+import { getAllPosts } from "../../lib/api";
 
 const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
 const blogNavbar = require("../../data/blogNavbar.json");
 
-export default function Home() {
+export default function Blog({ allPosts }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
 
   const meta = getMeta(
-    blog.pageTitle,
+    blog.title.page,
     blog.pageDescription,
     "/images/meta/blog.png",
     blog.metaImageAlt
   );
+
+  console.log(allPosts);
 
   const noSSRContent = (
     <div>
@@ -70,14 +73,14 @@ export default function Home() {
           </div>
         </Row>
 
-        {blog.blogItems.map((blogItem) => (
+        {blog.blogItems.map((blogItem, index) => (
           <BlogItem
             className={blogItemMargin}
-            title={blogItem.title}
+            title={allPosts[index].title.post}
             date={blogItem.date}
             minutes={blogItem.minutes}
             subtitle={blogItem.subtitle}
-            blogPost={blogItem.blogPost}
+            blogPost={allPosts[index].slug}
             isDark={false}
             key={blogItem.title}
           />
@@ -125,15 +128,15 @@ export default function Home() {
           </div>
         </Row>
 
-        {blog.blogItems.map((blogItem) => (
+        {blog.blogItems.map((blogItem, index) => (
           <BlogItem
             className={blogItemMargin}
-            title={blogItem.title}
+            title={allPosts[index].title.post}
             date={blogItem.date}
             minutes={blogItem.minutes}
             subtitle={blogItem.subtitle}
-            blogPost={blogItem.blogPost}
-            isDark={isDark}
+            blogPost={allPosts[index].slug}
+            isDark={false}
             key={blogItem.title}
           />
         ))}
@@ -147,4 +150,19 @@ export default function Home() {
   );
 
   return <NoSSR onSSR={noSSRContent}>{content}</NoSSR>;
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    "title",
+    "description",
+    "date",
+    "cover",
+    "author",
+    "slug",
+  ]);
+
+  return {
+    props: { allPosts },
+  };
 }

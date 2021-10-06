@@ -29,7 +29,7 @@ export default function Post({ post }) {
   }
 
   const meta = getMeta(
-    post.seoTitle,
+    post.title.page,
     post.description,
     post.cover.image,
     post.cover.alt
@@ -103,7 +103,7 @@ export default function Post({ post }) {
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
-    "seoTitle",
+    "title",
     "description",
     "date",
     "cover",

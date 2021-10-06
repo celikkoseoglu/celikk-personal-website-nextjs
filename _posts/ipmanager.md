@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - IPManager"
+title:
+  page: "CK - IPManager"
+  post: "IPManager - Switch Between DHCP and Static IP Easily"
 description: "Switching between DHCP and static IP when you switch networks in Windows"
 date: "2019-12-07T00:00:00.000Z"
 cover:

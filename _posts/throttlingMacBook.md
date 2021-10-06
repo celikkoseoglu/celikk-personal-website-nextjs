@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - Throttling MacBook Pro 16"
+title:
+  page: "CK - Throttling MacBook Pro 16"
+  post: "The Curious Case of a Throttling 16\" MacBook Pro"
 description: "Reviews said this laptop had better thermals compared to the previous generation. Mine had great thermals too, up until today."
 date: "2020-04-13T00:00:00.000Z"
 cover:

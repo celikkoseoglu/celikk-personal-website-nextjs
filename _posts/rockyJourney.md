@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - Rocky Journey"
+title:
+  page: "CK - Rocky Journey"
+  post: "Rocky Journey - FPGAs and Verilog"
 description: "Flappy bird on an 8x8 LED Matrix"
 date: "2020-02-02T00:00:00.000Z"
 cover:

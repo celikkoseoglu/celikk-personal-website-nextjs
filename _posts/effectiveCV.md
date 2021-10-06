@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - Effective CV"
+title:
+  page: "CK - Effective CV"
+  post: "Tips on Effective CV Design and Writing"
 description: "Some companies receive hundreds of applications per day. How can you increase the chances of your CV getting noticed?"
 date: "2020-07-17T00:00:00.000Z"
 cover:

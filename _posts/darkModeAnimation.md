@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - Creating a Simple Yet Complicated Dark Mode Animation"
+title:
+  page: "CK - Creating a Simple Yet Complicated Dark Mode Animation"
+  post: "Creating a Simple Yet Complicated Dark Mode Animation"
 description: "A dark mode toggle animation should have some personality. Here's my take on a unique dark mode transition animation."
 date: "2020-12-20T00:00:00.000Z"
 cover:

@@ -1,5 +1,7 @@
 ---
-seoTitle: "CK - Today's Meal in Marmara"
+title:
+  page: "CK - Today's Meal in Marmara"
+  post: "Today's Meal in Marmara - Food as Notification"
 description: "What's in lunch today? Ah, here is my notification!"
 date: "2020-02-02T00:00:00.000Z"
 cover:
