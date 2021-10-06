@@ -142,7 +142,7 @@ export default function Blog({ allPosts }) {
             minutes={post.readTime}
             subtitle={post.description}
             blogPost={post.slug}
-            isDark={false}
+            isDark={isDark}
             key={post.title.post}
           />
         ))}
