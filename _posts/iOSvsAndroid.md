@@ -4,6 +4,7 @@ title:
   post: "iOS vs Android - Why I Choose One Over the Other"
 description: "I've used one generation of devices from each platform in order. Let's compare them and decide which one is better for me."
 date: "2020-03-17T00:00:00.000Z"
+readTime: "20 min"
 cover:
   image: "/images/blogPost/iOSvsAndroid/homeScreen.jpg"
   alt: "on the right, there is an iPhone. On the left, there is a Galaxy S10. Both showing the home screen."

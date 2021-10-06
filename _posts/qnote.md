@@ -4,6 +4,7 @@ title:
   post: "QNote - Blazing Fast Note Taking App"
 description: "This is how my story begins."
 date: "2019-11-24T00:00:00.000Z"
+readTime: "8 min"
 cover:
   image: "/images/blogPost/qnote/qnoteStartupScreen.png"
   alt: "Startup screen of the note taking app QNote"

@@ -4,6 +4,7 @@ title:
   post: "Personal Website - This Time with React"
 description: "There is no programming pill. It takes time."
 date: "2020-01-31T00:00:00.000ZZ"
+readTime: "10 min"
 cover:
   image: "/images/blogPost/personalWebsite/collage.png"
   alt: "A collage made up of screenshots of the website"

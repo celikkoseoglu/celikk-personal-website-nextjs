@@ -4,6 +4,7 @@ title:
   post: "Rocky Journey - FPGAs and Verilog"
 description: "Flappy bird on an 8x8 LED Matrix"
 date: "2020-02-02T00:00:00.000Z"
+readTime: "4 min"
 cover:
   image: "/images/blogPost/rockyJourney/rockyJourneyObstacles.png"
   alt: "Rocky Journey project logo"

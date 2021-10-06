@@ -8,77 +8,62 @@
   "blogItems": [
     {
       "date": "20.12.2020",
-      "minutes": "30 min",
       "subtitle": "A dark mode toggle animation should have some personality. Here's my take on a unique dark mode transition animation."
     },
     {
       "date": "27.11.2020",
-      "minutes": "10 min",
       "subtitle": "Your personal website is the perfect place to showcase your projects. Why don't you display some GitHub stats on there?"
     },
     {
       "date": "17.07.2020",
-      "minutes": "10 min",
       "subtitle": "Some companies receive hundreds of applications per day. How can you increase the chances of your CV getting noticed?"
     },
     {
       "date": "17.05.2020",
-      "minutes": "10 min",
       "subtitle": "Earphones have come a long way. It's about time we forget about the headphone jack."
     },
     {
       "date": "11.05.2020",
-      "minutes": "12 min",
       "subtitle": "For years, I resisted to pay fashion accessory prices for a tech gadget. Now that Apple removed the fashion tax, let's give it a try."
     },
     {
       "date": "13.04.2020",
-      "minutes": "5 min",
       "subtitle": "Reviews said this laptop had better thermals compared to the previous generation. Mine had great thermals too, up until today."
     },
     {
       "date": "17.03.2020",
-      "minutes": "20 min",
       "subtitle": "I've used one generation of devices from each platform in order. Let's compare them and decide which one is better for me.."
     },
     {
       "date": "01.03.2020",
-      "minutes": "15 min",
       "subtitle": "The story of how I was an iPhone, Windows Phone and an Android user at different times. I'll give you brief history of which devices I've used."
     },
     {
       "date": "02.02.2020",
-      "minutes": "4 min",
       "subtitle": "This was our term project for CS223 Digital Design in Bilkent University. We've recreated something like Flappy Bird using an 8x8 LED Matrix."
     },
     {
       "date": "02.02.2020",
-      "minutes": "5 min",
       "subtitle": "As a student in Bilkent, I sometimes wondered what was available in the school's cafeteria. There should be an app for this."
     },
     {
       "date": "31.01.2020",
-      "minutes": "10 min",
       "subtitle": "There is no programming pill. It takes time. This is the story how this website is made. I also talk about how I taught myself HTML, CSS, JS and React."
     },
     {
       "date": "03.01.2020",
-      "minutes": "5 min",
       "subtitle": "Reduce your React Bundle Size by only importing the icons that you need. Not the whole favicon css."
     },
     {
       "date": "07.12.2019",
-      "minutes": "5 min",
       "subtitle": "There is an app for your Windows Laptop that allows you to change between DHCP and static IP easily."
     },
     {
       "date": "06.12.2019",
-      "minutes": "10 min",
       "subtitle": "One of the first apps to be in the Windows Phone Store that allows you to hide pictures from your phone's gallery."
     },
     {
       "date": "24.11.2019",
-      "minutes": "8 min",
       "subtitle": "Creating one of the first Windows Phone Store Apps"
     }
   ]

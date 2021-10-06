@@ -4,6 +4,7 @@ title:
   post: "PhotoSec - First app that allows you to hide pictures on Windows Phone"
 description: "Getting downloads on a non-existent platform"
 date: "2019-12-06T00:00:00.000Z"
+readTime: "10 min"
 cover:
   image: "/images/blogPost/photosec/appIcon.png"
   alt: "App icon for PhotoSec"

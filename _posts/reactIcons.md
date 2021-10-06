@@ -4,6 +4,7 @@ title:
   post: "React Icons - Import Only the Required Favicons"
 description: "Introducing React-Icons. A node dependency that allows you to select import icons instead of the whole favicon css."
 date: "2020-01-03T00:00:00.000Z"
+readTime: "5 min"
 cover:
   image: "/images/blogPost/reactIcons/thumbnail.png"
   alt: "text that says import favicons efficiently without increasing bundle size, and at the bottom, there is the logo of react-icons"

@@ -4,6 +4,7 @@ title:
   post: "Today's Meal in Marmara - Food as Notification"
 description: "What's in lunch today? Ah, here is my notification!"
 date: "2020-02-02T00:00:00.000Z"
+readTime: "5 min"
 cover:
   image: "/images/blogPost/marmara/marmaraMockup.png"
   alt: "user interface mockup for the Marmara app, drawn by hand"

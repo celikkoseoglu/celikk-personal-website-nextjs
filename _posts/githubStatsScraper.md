@@ -4,6 +4,7 @@ title:
   post: "GitHub Stats Scraper - showcase repositories on your website"
 description: "Pull github statistics from a particular repo and display them on your website"
 date: "2020-11-27T00:00:00.000Z"
+readTime: "10 min"
 cover:
   image: "/images/blogPost/githubStatsScraper/githubStatsScraper.jpg"
   alt: "An image showing GitHub star and fork icons. It says 20 next to stars, 3 next to forks"

@@ -4,6 +4,7 @@ title:
   post: "What is an Apple Watch useful for?"
 description: "For years, I resisted to pay fashion accessory prices for a tech gadget. Now that Apple removed the fashion tax, let's give it a try."
 date: "2020-05-11T00:00:00.000Z"
+readTime: "12 min"
 cover:
   image: "/images/blogPost/appleWatch/versusSkagen1.jpg"
   alt: "an apple watch next to two Skagen watches"

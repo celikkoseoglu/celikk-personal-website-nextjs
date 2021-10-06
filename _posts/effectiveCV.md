@@ -4,6 +4,7 @@ title:
   post: "Tips on Effective CV Design and Writing"
 description: "Some companies receive hundreds of applications per day. How can you increase the chances of your CV getting noticed?"
 date: "2020-07-17T00:00:00.000Z"
+readTime: "10 min"
 cover:
   image: "/images/blogPost/effectiveCV/meta.jpg"
   alt: "the title says making an effective CV. Under that, there is a boring looking CV to the left. And there is a good looking CV to the right. There is an arrow pointing from the boring cv to the good looking CV."

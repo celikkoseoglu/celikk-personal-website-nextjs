@@ -78,7 +78,7 @@ export default function Blog({ allPosts }) {
             className={blogItemMargin}
             title={allPosts[index].title.post}
             date={blogItem.date}
-            minutes={blogItem.minutes}
+            minutes={allPosts[index].readTime}
             subtitle={blogItem.subtitle}
             blogPost={allPosts[index].slug}
             isDark={false}
@@ -133,7 +133,7 @@ export default function Blog({ allPosts }) {
             className={blogItemMargin}
             title={allPosts[index].title.post}
             date={blogItem.date}
-            minutes={blogItem.minutes}
+            minutes={allPosts[index].readTime}
             subtitle={blogItem.subtitle}
             blogPost={allPosts[index].slug}
             isDark={false}
@@ -157,6 +157,7 @@ export async function getStaticProps() {
     "title",
     "description",
     "date",
+    "readTime",
     "cover",
     "author",
     "slug",
