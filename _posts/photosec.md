@@ -2,8 +2,8 @@
 title:
   page: "CK - PhotoSec"
   post: "PhotoSec - First app that allows you to hide pictures on Windows Phone"
-description: "Getting downloads on a non-existent platform"
-date: "2019-12-06T00:00:00.000Z"
+description: "One of the first apps to be in the Windows Phone Store that allows you to hide pictures from your phone's gallery."
+date: "2019-12-06"
 readTime: "10 min"
 cover:
   image: "/images/blogPost/photosec/appIcon.png"

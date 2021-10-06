@@ -14,10 +14,11 @@ import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
 import BlogShowcase from "../components/Section/BlogShowcase";
 import { getMeta } from "../components/Util/MetaGenerator";
+import { getAllPosts } from "../lib/api";
 
 const content = require("../data/content.json");
 
-export default function Home() {
+export default function Home({ allPosts }) {
   const horizontalRuler = (
     <div className={skillsBackground}>
       <Container>
@@ -47,7 +48,7 @@ export default function Home() {
       {horizontalRuler}
       <Skills id={content.skillsReference} />
       {horizontalRuler}
-      <BlogShowcase id={content.latestBlogPostsReference} />
+      <BlogShowcase id={content.latestBlogPostsReference} allPosts={allPosts} />
 
       <div
         id={content.contactReference}
@@ -59,4 +60,20 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    "title",
+    "description",
+    "date",
+    "readTime",
+    "cover",
+    "author",
+    "slug",
+  ]);
+
+  return {
+    props: { allPosts },
+  };
 }

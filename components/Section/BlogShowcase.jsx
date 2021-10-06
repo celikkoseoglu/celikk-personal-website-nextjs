@@ -17,27 +17,26 @@ import BlogShowcaseCard from "../BlogShowcase/BlogShowcaseCard";
 import BlogShowcaseButton from "../BlogShowcase/BlogShowcaseButton";
 import { BLOG_LINK } from "../../utils/Constants.utils";
 
-const blog = require("../../data/blog.json");
 const blogShowcase = require("../../data/blogShowcase.json");
 
-const BlogShowcase = ({ id }) => (
+const BlogShowcase = ({ id, allPosts }) => (
   <Section id={id}>
     <Heading marginBottom text={blogShowcase.latestBlogPostsTitle} />
     <Container className={blogShowcaseContainer}>
       <Row className={blogPostCardsRow}>
-        {retrieveLatestBlogPosts(blog).map((blogItem, index) => (
+        {retrieveLatestBlogPosts(allPosts).map((blogItem, index) => (
           <BlogShowcaseCard
             timestamp={blogItem.date}
-            minutes={blogItem.minutes}
-            blogPost={blogItem.blogPost}
-            title={blogItem.title}
-            subtitle={blogItem.subtitle}
+            minutes={blogItem.readTime}
+            blogPost={blogItem.slug}
+            title={blogItem.title.post}
+            subtitle={blogItem.description}
             className={
               index >= NUMBER_OF_LATEST_BLOG_CARDS_TO_RENDER_ON_MOBILE
                 ? blogShowcaseCard
                 : null
             }
-            key={blogItem.title}
+            key={blogItem.title.post}
           />
         ))}
       </Row>

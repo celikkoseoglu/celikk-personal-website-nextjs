@@ -2,8 +2,8 @@
 title:
   page: "CK - Personal Website - This Time with React"
   post: "Personal Website - This Time with React"
-description: "There is no programming pill. It takes time."
-date: "2020-01-31T00:00:00.000ZZ"
+description: "There is no programming pill. It takes time. This is the story how this website is made. I also talk about how I taught myself HTML, CSS, JS and React."
+date: "2020-01-31"
 readTime: "10 min"
 cover:
   image: "/images/blogPost/personalWebsite/collage.png"

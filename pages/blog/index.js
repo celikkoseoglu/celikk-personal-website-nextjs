@@ -28,6 +28,14 @@ const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
 const blogNavbar = require("../../data/blogNavbar.json");
 
+const formatDate = (date) => {
+  const dateObject = new Date(date);
+  const curr_date = dateObject.getDate();
+  const curr_month = dateObject.getMonth() + 1; //Months are zero based
+  const curr_year = dateObject.getFullYear();
+  return curr_date + "." + curr_month + "." + curr_year;
+};
+
 export default function Blog({ allPosts }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
 
@@ -37,8 +45,6 @@ export default function Blog({ allPosts }) {
     "/images/meta/blog.png",
     blog.metaImageAlt
   );
-
-  console.log(allPosts);
 
   const noSSRContent = (
     <div>
@@ -73,16 +79,16 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {blog.blogItems.map((blogItem, index) => (
+        {allPosts.map((post) => (
           <BlogItem
             className={blogItemMargin}
-            title={allPosts[index].title.post}
-            date={blogItem.date}
-            minutes={allPosts[index].readTime}
-            subtitle={blogItem.subtitle}
-            blogPost={allPosts[index].slug}
+            title={post.title.post}
+            date={formatDate(post.date)}
+            minutes={post.readTime}
+            subtitle={post.description}
+            blogPost={post.slug}
             isDark={false}
-            key={blogItem.title}
+            key={post.title.post}
           />
         ))}
 
@@ -128,16 +134,16 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {blog.blogItems.map((blogItem, index) => (
+        {allPosts.map((post) => (
           <BlogItem
             className={blogItemMargin}
-            title={allPosts[index].title.post}
-            date={blogItem.date}
-            minutes={allPosts[index].readTime}
-            subtitle={blogItem.subtitle}
-            blogPost={allPosts[index].slug}
+            title={post.title.post}
+            date={formatDate(post.date)}
+            minutes={post.readTime}
+            subtitle={post.description}
+            blogPost={post.slug}
             isDark={false}
-            key={blogItem.title}
+            key={post.title.post}
           />
         ))}
 

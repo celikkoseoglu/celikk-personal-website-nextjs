@@ -2,8 +2,8 @@
 title:
   page: "CK - Rocky Journey"
   post: "Rocky Journey - FPGAs and Verilog"
-description: "Flappy bird on an 8x8 LED Matrix"
-date: "2020-02-02T00:00:00.000Z"
+description: "This was our term project for CS223 Digital Design in Bilkent University. We've recreated something like Flappy Bird using an 8x8 LED Matrix."
+date: "2020-02-02"
 readTime: "4 min"
 cover:
   image: "/images/blogPost/rockyJourney/rockyJourneyObstacles.png"

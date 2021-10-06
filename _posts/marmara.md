@@ -2,8 +2,8 @@
 title:
   page: "CK - Today's Meal in Marmara"
   post: "Today's Meal in Marmara - Food as Notification"
-description: "What's in lunch today? Ah, here is my notification!"
-date: "2020-02-02T00:00:00.000Z"
+description: "As a student in Bilkent, I sometimes wondered what was available in the school's cafeteria. There should be an app for this."
+date: "2020-02-02"
 readTime: "5 min"
 cover:
   image: "/images/blogPost/marmara/marmaraMockup.png"

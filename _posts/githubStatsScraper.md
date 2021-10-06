@@ -2,8 +2,8 @@
 title:
   page: "CK - GitHub Stats Scraper"
   post: "GitHub Stats Scraper - showcase repositories on your website"
-description: "Pull github statistics from a particular repo and display them on your website"
-date: "2020-11-27T00:00:00.000Z"
+description: "Your personal website is the perfect place to showcase your projects. Why don't you display some GitHub stats on there?"
+date: "2020-11-27"
 readTime: "10 min"
 cover:
   image: "/images/blogPost/githubStatsScraper/githubStatsScraper.jpg"
