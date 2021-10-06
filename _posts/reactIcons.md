@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Reduce Your React Bundle Size by Importing Only the Required Favicons"
 description: "Introducing React-Icons. A node dependency that allows you to select import icons instead of the whole favicon css."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-01-03T00:00:00.000Z"
 cover:
   image: "/images/blogPost/reactIcons/thumbnail.png"
   alt: "text that says import favicons efficiently without increasing bundle size, and at the bottom, there is the logo of react-icons"

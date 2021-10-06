@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - PhotoSec"
 description: "Getting downloads on a non-existent platform"
-date: "2020-05-17T12:35:07.322Z"
+date: "2019-12-06T00:00:00.000Z"
 cover:
   image: "/images/blogPost/photosec/appIcon.png"
   alt: "App icon for PhotoSec"

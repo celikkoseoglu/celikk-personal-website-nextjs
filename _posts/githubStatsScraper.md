@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - GitHub Stats Scraper"
 description: "Pull github statistics from a particular repo and display them on your website"
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-11-27T00:00:00.000Z"
 cover:
   image: "/images/blogPost/githubStatsScraper/githubStatsScraper.jpg"
   alt: "An image showing GitHub star and fork icons. It says 20 next to stars, 3 next to forks"

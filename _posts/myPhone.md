@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Which Phones I've Used and Why"
 description: "The story of how I was an iPhone, Windows Phone and an Android user at different times."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-03-01T00:00:00.000Z"
 cover:
   image: "/images/blogPost/myPhone/beforeAndAfterIPhone.png"
   alt: "a picture of phones available on the market, before and after the iPhone launch"

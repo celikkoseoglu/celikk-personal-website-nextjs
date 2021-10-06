@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - IPManager"
 description: "Switching between DHCP and static IP when you switch networks in Windows"
-date: "2020-05-17T12:35:07.322Z"
+date: "2019-12-07T00:00:00.000Z"
 cover:
   image: "/images/blogPost/ipmanager/ipmanagerUpdate.png"
   alt: "a screenshot of IPManager app"

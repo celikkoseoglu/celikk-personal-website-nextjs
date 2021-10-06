@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - iOS vs Android"
 description: "I've used one generation of devices from each platform in order. Let's compare them and decide which one is better for me."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-03-17T00:00:00.000Z"
 cover:
   image: "/images/blogPost/iOSvsAndroid/homeScreen.jpg"
   alt: "on the right, there is an iPhone. On the left, there is a Galaxy S10. Both showing the home screen."

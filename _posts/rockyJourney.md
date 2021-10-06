@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Rocky Journey"
 description: "Flappy bird on an 8x8 LED Matrix"
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-02-02T00:00:00.000Z"
 cover:
   image: "/images/blogPost/rockyJourney/rockyJourneyObstacles.png"
   alt: "Rocky Journey project logo"

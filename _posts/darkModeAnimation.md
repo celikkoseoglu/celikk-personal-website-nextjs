@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Creating a Simple Yet Complicated Dark Mode Animation"
 description: "A dark mode toggle animation should have some personality. Here's my take on a unique dark mode transition animation."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-12-20T00:00:00.000Z"
 cover:
   image: "/images/blogPost/darkModeAnimation/circleAnimationIllustration.jpg"
   alt: "A circle growing outward from the center of the moon icon"

@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Today's Meal in Marmara"
 description: "What's in lunch today? Ah, here is my notification!"
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-02-02T00:00:00.000Z"
 cover:
   image: "/images/blogPost/marmara/marmaraMockup.png"
   alt: "user interface mockup for the Marmara app, drawn by hand"

@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - Throttling MacBook Pro 16"
 description: "Reviews said this laptop had better thermals compared to the previous generation. Mine had great thermals too, up until today."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-04-13T00:00:00.000Z"
 cover:
   image: "/images/blogPost/throttlingMacBook/leftFanBottomRight.jpg"
   alt: "MacBook Pro 16 Left Fan with some dust"

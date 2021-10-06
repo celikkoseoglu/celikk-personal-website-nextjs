@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - AirPods Pro"
 description: "Earphones have come a long way. It's about time we forget about the headphone jack."
-date: "2020-05-17T12:35:07.322Z"
+date: "2020-05-17T00:00:00.000Z"
 cover:
   image: "/images/blogPost/airpodsPro/case3.jpg"
   alt: "AirPods Pro and Charging Case close up"

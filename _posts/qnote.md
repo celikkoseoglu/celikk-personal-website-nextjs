@@ -1,7 +1,7 @@
 ---
 seoTitle: "CK - QNote"
 description: "This is how my story begins."
-date: "2020-05-17T12:35:07.322Z"
+date: "2019-11-24T00:00:00.000Z"
 cover:
   image: "/images/blogPost/qnote/qnoteStartupScreen.png"
   alt: "Startup screen of the note taking app QNote"
