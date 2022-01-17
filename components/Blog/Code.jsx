@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-
-import { atomDark, prism } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {
+  atomDark,
+  prism,
+} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FaRegClipboard, FaRegCopy } from "react-icons/fa";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";

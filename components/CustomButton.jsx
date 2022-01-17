@@ -11,7 +11,9 @@ const CustomButton = ({ text, to, href, isDark, className }) => (
   <UnstyledLink
     to={to}
     href={href}
-    className={`${textCenter} ${customButton} ${className} ${isDark ? customButtonDark : null}`}
+    className={`${textCenter} ${customButton} ${className} ${
+      isDark ? customButtonDark : null
+    }`}
   >
     {text}
   </UnstyledLink>

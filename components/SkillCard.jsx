@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import {
+  contentDiv,
+  description,
   image,
   imageDiv,
-  description,
-  contentDiv,
 } from "../stylesheets/components/SkillCard.module.sass";
 
 const SkillCard = ({ imageLink, imageAlt, text }) => {

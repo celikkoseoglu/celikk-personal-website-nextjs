@@ -19,7 +19,8 @@ const onClickWrapper = (onClickMethod, isDark, event) => {
   const offsetLeft = elemRect.left - bodyRect.left;
 
   // this tells us how much the user has zoomed in using the pinch gesture
-  const deviceZoomRatio = document.documentElement.clientWidth / window.innerWidth;
+  const deviceZoomRatio =
+    document.documentElement.clientWidth / window.innerWidth;
 
   const customEventState = {
     x: offsetLeft + elemRect.width / 2,
@@ -29,7 +30,9 @@ const onClickWrapper = (onClickMethod, isDark, event) => {
     y: (deviceZoomRatio > 1 ? offsetTop : elemRect.top) + elemRect.height / 2,
   };
 
-  const darkModeToggleEvent = new CustomEvent("darkModeToggle", { detail: customEventState });
+  const darkModeToggleEvent = new CustomEvent("darkModeToggle", {
+    detail: customEventState,
+  });
   onClickMethod(isDark);
   storage.setItem("theme", isDark.toString());
   dispatchEvent(darkModeToggleEvent);
