@@ -11,9 +11,9 @@
   "dependencies": {
     "gray-matter": "4.0.3",
     "local-storage-fallback": "4.1.2",
-    "markdown-to-jsx": "7.1.5",
-    "next": "12.0.7",
-    "prop-types": "15.8.0",
+    "markdown-to-jsx": "7.1.6",
+    "next": "12.0.8",
+    "prop-types": "15.8.1",
     "react": "17.x",
     "react-copy-to-clipboard": "5.0.4",
     "react-device-detect": "2.1.2",
@@ -22,11 +22,11 @@
     "react-no-ssr": "1.1.0",
     "react-scroll": "1.8.4",
     "react-syntax-highlighter": "15.4.5",
-    "sass": "1.45.1"
+    "sass": "1.48.0"
   },
   "devDependencies": {
-    "eslint": "8.5.0",
-    "eslint-config-next": "12.0.7",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1"
