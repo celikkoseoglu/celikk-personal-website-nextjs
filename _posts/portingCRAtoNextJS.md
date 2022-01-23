@@ -6,7 +6,7 @@ description: "I've ported my Create-React-App based personal website to NextJS. 
 date: "2022-01-23"
 readTime: "20 min"
 cover:
-  image: "/images/blogPost/portingCRAtoNextJS/meta.jpg"
+  image: "/images/blogPost/portingCRAtoNextJS/meta.png"
   alt: ""
 author:
   name: Celik Koseoglu
@@ -17,7 +17,7 @@ author:
 
 ### Why NextJS you ask? Let me explain why and talk about what it took for me to get there.
 
-###### January 22, 2022 - 20 min read
+###### January 23, 2022 - 20 min read
 
 I've had a personal website for years. For me, my personal website was just an excuse for me to learn
 the latest front-end technologies. In 2019, I've decided to learn this React thing everyone was
@@ -25,14 +25,14 @@ talking about and the easiest way to get started was
 [Create-React-App](https://reactjs.org/docs/create-a-new-react-app.html). Yes, it was simple, but it
 came with limitations such as; no metatags, 
 no [static rendering](https://frontarm.com/james-k-nelson/static-vs-server-rendering/),
-no built in image optimisation, no Internet Explorer support, no lazy loading.
+no built-in image optimisation, no Internet Explorer support, no lazy loading.
 I got around those limitations by implementing features on my own, but the cost of getting 
 around those limitations started outweighing the benefits of CRA as my website kept growing.
 
 Why did I choose NextJS? Because it already came with the workarounds that I built into CRA. Plus
 automatic deployments via Vercel.
 
-I could have used Gatsby, in fact front-end wizard my friend [Sam-Larsen Disney](https://sld.codes)
+I could have used Gatsby, in fact my friend & front-end wizard [Sam-Larsen Disney](https://sld.codes)
 has recommended me to use Gatsby for my use-case. I've looked into it, and realised the
 porting process was more complicated. I had to dive into GraphQL and manage deployments
 on my own. NextJS already came with static rendering, so I didn't spend much time looking
