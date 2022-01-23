@@ -3,14 +3,14 @@ title:
   page: "CK - CRA to NextJS"
   post: "Porting CRA to NextJS"
 description: "I've ported my Create-React-App based personal website to NextJS. I'll explain why I choose NextJS and talk about what I had to do to make it possible."
-date: "2022-01-22"
+date: "2022-01-23"
 readTime: "20 min"
 cover:
-  image: "/images/blogPost/airpodsPro/case3.jpg"
-  alt: "AirPods Pro and Charging Case close up"
+  image: "/images/blogPost/portingCRAtoNextJS/meta.jpg"
+  alt: ""
 author:
   name: Celik Koseoglu
-  picture: "/images/meta/blog.png"
+  picture: "/images/blog/PP.jpg"
 ---
 
 # Porting This Website From Create-React-App to NextJS
@@ -187,20 +187,17 @@ if your site is heavy on images and if you're not using an external source for y
 your website's total download size can increase significantly compared to Firebase.
 Here is a comparison between NextJS and CRA versions of my website, displaying the same content to users.
 Notice on the last two images, the Vercel version doesn't have `content-encoding` under Response
-Headers for jpg files:
+Headers for jpg files. This makes the overall download size larger for Vercel hosting compared to Firebase:
 
-```
-Media Carousel showing full list of downloads to show airpodsPro blog post
-```
+ <MediaCarousel folder="portingCRAtoNextJS" images="firebase_brotli.png,vercel_no_compression.png"/>
 
 However, NextJS provides an alternative called Next/Image which automatically optimises images and
 handles webp conversion. No need for manual webp generation anymore. While I haven't fully investigated
-the impact on the airpods pro blog post yet, my initial test on the About Me image yielded incredible
-results:
-
-```
-Media Carousel showing before after comparison of my about me image using next/image
-```
+the impact on the airpods pro blog post yet, my initial test shows this component
+basically gets the available viewport width, resizes the images on the server side, converts them into
+webp and serves them to the user that way. If you want to compromise on image quality and save bandwidth,
+this option is good for you. I'm going to explore this in the future. Maybe there is a lot more to it,
+I just haven't had the chance to explore it yet.
 
 #### 8) Performance
 
@@ -213,11 +210,11 @@ Shift result in blog posts.
 
 These results seem to be a fair comparison because in both cases, I'm hosting the production build
 of my website. On one side, I have the CRA production build running using `firebase serve`, on the other side, I
-have the NextJS production running using `yarn build && yarn start`. To make sure these results are
+have the NextJS production build running using `yarn build && yarn start`. To make sure these results are
 also reflected in the real world, I've also run the same test on hosted websites. On one side,
 I had my CRA website hosted on Firebase, one the other side NextJS hosted on Vercel. Results did not change.
 
-#### 9) What's Next?
+#### 9) What's next?
 
 NextJS comes with several other handy tools. I haven't discovered all of them yet but the next thing
 for me is to use the [Next/Image](https://nextjs.org/docs/basic-features/image-optimization) component.
