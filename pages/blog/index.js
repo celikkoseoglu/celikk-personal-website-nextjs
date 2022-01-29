@@ -21,7 +21,7 @@ import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAni
 import { useState } from "react";
 import { getInitialTheme } from "../../utils/FileManager.utils";
 import NoSSR from "react-no-ssr";
-import { getMeta } from "../../components/Util/MetaGenerator";
+import getMeta from "../../components/Util/MetaGenerator";
 import { getAllPosts } from "../../lib/api";
 
 const blog = require("../../data/blog.json");

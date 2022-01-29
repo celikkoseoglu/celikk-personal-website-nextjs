@@ -1,7 +1,7 @@
 import Head from "next/head";
 import metaDecorator from "../../data/metaDecorator.json";
 
-export const getMeta = (title, description, imageUrl, imageAlt) => {
+export default function getMeta(title, description, imageUrl, imageAlt) {
   return (
     <Head>
       <title>{title}</title>
@@ -14,4 +14,4 @@ export const getMeta = (title, description, imageUrl, imageAlt) => {
       <meta name="twitter:site" content={metaDecorator.twitterUsername} />
     </Head>
   );
-};
+}

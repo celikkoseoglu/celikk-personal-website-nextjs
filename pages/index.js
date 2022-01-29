@@ -13,7 +13,7 @@ import {
 import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
 import BlogShowcase from "../components/Section/BlogShowcase";
-import { getMeta } from "../components/Util/MetaGenerator";
+import getMeta from "../components/Util/MetaGenerator";
 import { getAllPosts } from "../lib/api";
 
 const content = require("../data/content.json");

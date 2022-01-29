@@ -27,7 +27,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Hey, this is my personal website. You can take a look at my portfolio, download my CV and see how you can contact me!"
+          content="Hey, this is my personal website. You can take a look at
+          my portfolio, download my CV and see how you can contact me!"
           data-react-helmet="true"
         />
         <meta name="robots" content="index, follow" />

@@ -5,7 +5,7 @@ import {
   customButton,
   noMargin,
 } from "../stylesheets/NotFound.module.sass";
-import { getMeta } from "../components/Util/MetaGenerator";
+import getMeta from "../components/Util/MetaGenerator";
 
 const notFound = require("../data/notFound.json");
 

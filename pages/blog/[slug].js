@@ -18,7 +18,7 @@ import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
 const footer = require("../../data/footer.json");
 import NoSSR from "react-no-ssr";
-import { getMeta } from "../../components/Util/MetaGenerator";
+import getMeta from "../../components/Util/MetaGenerator";
 
 export default function Post({ post }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
