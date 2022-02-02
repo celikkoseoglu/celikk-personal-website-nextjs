@@ -68,8 +68,6 @@ export async function getStaticProps() {
     "description",
     "date",
     "readTime",
-    "cover",
-    "author",
     "slug",
   ]);
 
