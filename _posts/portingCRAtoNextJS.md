@@ -13,9 +13,9 @@ author:
   picture: "/images/blog/PP.jpg"
 ---
 
-# Porting This Website From Create-React-App to NextJS
+# Porting this website from Create-React-App to NextJS
 
-### Why NextJS you ask? Let me explain why and talk about what it took for me to get there.
+### Why NextJS you ask? Let me explain why and talk about what it took to get there.
 
 ###### January 23, 2022 - 20 min read
 
@@ -70,11 +70,11 @@ you already know what I mean.
 [React-Router](https://v5.reactrouter.com/web/guides/quick-start) with CRA allows you to define
 which react component your site will display when the user navigates to
 [/home or /contact or /blog pages](https://github.com/celikkoseoglu/celikk-personal-website/blob/master/src/index.js#L16-L32).
-At first it's fine, but when you start optimising your website for speed and [implement lazy loading](https://github.com/celikkoseoglu/celikk-personal-website/blob/master/src/index.js#L23-L29),
+At first, it's fine, but when you start optimising your website for speed and [implement lazy loading](https://github.com/celikkoseoglu/celikk-personal-website/blob/master/src/index.js#L23-L29),
 it gets confusing very quickly. Plus, react router requires you to implement things like [resetting the scroll position](https://github.com/celikkoseoglu/celikk-personal-website/blob/master/src/utils/PageNavigationListener.utils.jsx).
 Let's say you were on the home page, scrolled down and then clicked the blog link on the navbar. When
 navigating onto the blog page, react-router will retain the scroll position from the previous page
-so the users will the the bottom of the blog page. If you want CRA to do this properly, you need to
+so the users will start from the bottom of the blog page. If you want CRA to do this properly, you need to
 implement it yourself. [This](https://www.youtube.com/watch?v=09jmpIvyDKY) is a YouTube video explaining
 this issue. There is a chance that I might have misunderstood how react-router should be used, but I
 wouldn't even be confused about this if react-router wasn't there at all.
