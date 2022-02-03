@@ -154,7 +154,7 @@ file and add the markdown file separately into
 [this folder](https://github.com/celikkoseoglu/celikk-personal-website/tree/master/src/blog). With
 the new approach, I only add the markdown file under the
 [_posts](https://github.com/celikkoseoglu/celikk-personal-website-nextjs/tree/master/_posts)
-directory and automatic Vercem deployments take care of the rest. One less file to worry about,
+directory and automatic Vercel deployments take care of the rest. One less file to worry about,
 one less point of failure.
 
 #### 5) Dependencies, Cache Config and Overall Less Maintenance Requirement
@@ -166,7 +166,7 @@ versions of my website without using inspector tools. None of them were able to 
 This is the [package.json for CRA](https://github.com/celikkoseoglu/celikk-personal-website/blob/4a56eb5b91a54671e8d22b43b113e84f086dd048/package.json)
 and this is the [package.json for NextJS](https://github.com/celikkoseoglu/celikk-personal-website-nextjs/blob/30a90011bc1d46b0f99d4e864012fea41f77a131/package.json) at the time of writing this blog post. As you can see, the NextJS version is smaller (34 vs 57 lines). Overall less dependency management and the users can't tell a difference. Plus, NextJS comes with Internet Explorer polyfills out of the box. You don't need to configure anything manually.
 
-Cache policy is managed by Vercel so you don't have to store a Firebase cache policy file. No need
+Cache policy is managed by Vercel, so you don't have to store a Firebase cache policy file. No need
 for `react-snap` because NextJS does static rendering by default. Internet Explorer polyfill comes
 out of the box. All of these things combined means that you'll spend less time worrying about upgrading
 or configuring dependencies.
