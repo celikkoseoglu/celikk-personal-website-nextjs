@@ -40,7 +40,7 @@ A homescreen allows you to launch apps. That's it. No more, no less. At least th
  is not a place where I want to spend time on. I just want to launch an app and go on with my business.
 
 iOS and Android platforms both give you a very basic home screen with your regular set of icons. Especially the iOS
- homesreen is pretty simple. It is very easy to recognise if you've seen an iPhone before. Android on the other hand is
+ homescreen is pretty simple. It is very easy to recognise if you've seen an iPhone before. Android on the other hand is
   different. You can customize it to fit your needs. You can set it to show many small icons with no labels. If you
    want huge icons with small labels, you can do that too. Here is an interesting home screen layout I made for this
     blog post. The limit is your imagination.
