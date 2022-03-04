@@ -12,7 +12,7 @@
     "gray-matter": "4.0.3",
     "local-storage-fallback": "4.1.2",
     "markdown-to-jsx": "7.1.6",
-    "next": "12.0.9",
+    "next": "12.1.0",
     "prop-types": "15.8.1",
     "react": "17.x",
     "react-copy-to-clipboard": "5.0.4",
@@ -20,14 +20,14 @@
     "react-dom": "17.x",
     "react-icons": "4.3.1",
     "react-no-ssr": "1.1.0",
-    "react-scroll": "1.8.4",
+    "react-scroll": "1.8.6",
     "react-syntax-highlighter": "15.4.5",
-    "sass": "1.49.0"
+    "sass": "1.49.9"
   },
   "devDependencies": {
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.9",
-    "eslint-config-prettier": "8.3.0",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1"
   }
