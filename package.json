@@ -11,8 +11,12 @@
   "dependencies": {
     "gray-matter": "4.0.3",
     "local-storage-fallback": "4.1.2",
-    "markdown-to-jsx": "7.1.6",
-    "next": "12.1.0",
+    "markdown-to-jsx": "7.1.7",
+    "next": "12.1.2",
+    "imagemin-optipng": "8.0.0",
+    "next-compose-plugins": "2.2.1",
+    "next-optimized-images": "2.6.2",
+    "webp-loader": "0.6.0",
     "prop-types": "15.8.1",
     "react": "17.x",
     "react-copy-to-clipboard": "5.0.4",
@@ -21,14 +25,15 @@
     "react-icons": "4.3.1",
     "react-no-ssr": "1.1.0",
     "react-scroll": "1.8.6",
-    "react-syntax-highlighter": "15.4.5",
+    "react-syntax-highlighter": "15.5.0",
     "sass": "1.49.9"
   },
   "devDependencies": {
-    "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.2",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
-    "prettier": "2.5.1"
+    "file-loader": "6.2.0",
+    "prettier": "2.6.1"
   }
 }

@@ -13,7 +13,7 @@ import ImageWithFallback from "../Util/ImageWithFallback";
 
 const getImageLinkWithExtension = (imageLink) => {
   if (imageLink.endsWith(".png")) {
-    return `${imageLink.substring(0, imageLink.length - 4)}.webp`;
+    return require(`../../public${(imageLink)}?webp`);
   }
   return imageLink;
 };
@@ -48,7 +48,7 @@ const MediaCarousel = ({ folder, images, isDark }) => {
               muted
               key={imageRelativeLink}
             >
-              <source src={imageRelativeLink} type="video/mp4" />
+              <source src={"../.." + imageRelativeLink} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           ) : (
