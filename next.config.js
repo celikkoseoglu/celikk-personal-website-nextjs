@@ -9,6 +9,7 @@ module.exports = withPlugins(
         // config for next-optimized-images
         optimizeImagesInDev: false,
         handleImages: ["png", "webp"],
+        removeOriginalExtension: true,
       },
     ],
     // your other plugins here
