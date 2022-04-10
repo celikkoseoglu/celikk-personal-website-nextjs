@@ -56,7 +56,7 @@ which helps me with that.
 It's a drop-in tool that automatically converts, resizes and optimises your images at build time for your NextJS
 project. It does not increase your bundle size because it only runs during build time.
 
-#### 3) How to Set Up React Optimised Images
+#### 3) How to Set Up Next-Optimized-Images
 
 Add the following lines to your devDependencies in your `package.json` file and do a `yarn/npm install`.
 
@@ -187,6 +187,6 @@ I guess 🤷.
 
 Anyway, the moral of the story is:
 
-#### Optimization is fun. Every MB of bandwidth you save helps save energy!
+#### Optimisation is fun. Every MB of bandwidth you save helps save energy!
 
 
