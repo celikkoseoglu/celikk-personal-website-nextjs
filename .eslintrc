@@ -7,6 +7,7 @@
     "prettier"
   ],
   "rules": {
+    "@next/next/no-img-element": "off",
     "react/jsx-filename-extension": [
       1,
       {

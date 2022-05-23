@@ -13,7 +13,7 @@ import ImageWithFallback from "../Util/ImageWithFallback";
 
 const getImageLinkWithExtension = (imageLink) => {
   if (imageLink.endsWith(".png")) {
-    return require(`../../public${(imageLink)}?webp`);
+    return require(`../../public${imageLink}?webp`);
   }
   return imageLink;
 };
