@@ -1,14 +1,18 @@
-.clearBorder
+@import "../../../utils/colorPalette.sass"
+@import "../../../utils/animationTimer"
+
+.main
   border: none
+  transition: border-top $colorTransitionDuration
 
 .dark
-  border-top: 1px solid rgba(120,120,120,.8)
+  border-top: 1px solid $grey
 
 .light
   border-top: 1px solid rgba(0,0,0,.1)
 
 .thickDark
-  border-top: 2px solid rgba(255,255,255,.15)
+  border-top: 2px solid rgb(255, 255, 255)
 
 .thickLight
   border-top: 2px solid rgba(0,0,0,.15)
