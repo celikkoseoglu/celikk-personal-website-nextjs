@@ -26,12 +26,12 @@
     "sass": "1.52.3"
   },
   "devDependencies": {
-    "eslint": "8.17.0",
+    "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "file-loader": "6.2.0",
-    "prettier": "2.7.0",
+    "prettier": "2.7.1",
     "next-compose-plugins": "2.2.1",
     "next-optimized-images": "2.6.2",
     "webp-loader": "0.6.0"
