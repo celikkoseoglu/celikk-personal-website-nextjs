@@ -29,10 +29,10 @@ export default function Post({ post }) {
   }
 
   const meta = getMeta(
-    post.title.page,
-    post.description,
-    post.cover.image,
-    post.cover.alt
+    post.data.title.page,
+    post.data.description,
+    post.data.cover.image,
+    post.data.cover.alt
   );
 
   const noSSRContent = (
@@ -102,15 +102,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "description",
-    "date",
-    "cover",
-    "author",
-    "content",
-    "slug",
-  ]);
+  const post = getPostBySlug(params.slug);
 
   const content = post.content || "";
 

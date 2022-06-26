@@ -26,17 +26,17 @@ const BlogShowcase = ({ id, allPosts }) => (
       <Row className={blogPostCardsRow}>
         {retrieveLatestBlogPosts(allPosts).map((blogItem, index) => (
           <BlogShowcaseCard
-            timestamp={blogItem.date}
-            minutes={blogItem.readTime}
+            timestamp={blogItem.data.date}
+            minutes={blogItem.data.readTime}
             blogPost={blogItem.slug}
-            title={blogItem.title.post}
-            subtitle={blogItem.description}
+            title={blogItem.data.title.post}
+            subtitle={blogItem.data.description}
             className={
               index >= NUMBER_OF_LATEST_BLOG_CARDS_TO_RENDER_ON_MOBILE
                 ? blogShowcaseCard
                 : null
             }
-            key={blogItem.title.post}
+            key={blogItem.data.title.post}
           />
         ))}
       </Row>

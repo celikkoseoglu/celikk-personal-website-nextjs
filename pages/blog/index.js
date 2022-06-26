@@ -46,6 +46,19 @@ export default function Blog({ allPosts }) {
     blog.metaImageAlt
   );
 
+  const getBlogItem = (post, isDark) => (
+    <BlogItem
+      className={blogItemMargin}
+      title={post.data.title.post}
+      date={formatDate(post.data.date)}
+      minutes={post.data.readTime}
+      subtitle={post.data.description}
+      blogPost={post.slug}
+      isDark={isDark}
+      key={post.data.title.post}
+    />
+  );
+
   const noSSRContent = (
     <div>
       {meta}
@@ -79,18 +92,7 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {allPosts.map((post) => (
-          <BlogItem
-            className={blogItemMargin}
-            title={post.title.post}
-            date={formatDate(post.date)}
-            minutes={post.readTime}
-            subtitle={post.description}
-            blogPost={post.slug}
-            isDark={false}
-            key={post.title.post}
-          />
-        ))}
+        {allPosts.map((post) => getBlogItem(post, false))}
 
         <HorizontalRuler isDark={false} />
       </div>
@@ -134,18 +136,7 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {allPosts.map((post) => (
-          <BlogItem
-            className={blogItemMargin}
-            title={post.title.post}
-            date={formatDate(post.date)}
-            minutes={post.readTime}
-            subtitle={post.description}
-            blogPost={post.slug}
-            isDark={isDark}
-            key={post.title.post}
-          />
-        ))}
+        {allPosts.map((post) => getBlogItem(post, isDark))}
 
         <HorizontalRuler isDark={isDark} />
       </div>
