@@ -30,7 +30,6 @@ const retrieveCodeFromHighlightCache = (language, isDark, content) => {
       children: content,
       style: isDark ? atomDark : prism,
     };
-    SyntaxHighlighter(highlighterProps);
     const cachedVar = SyntaxHighlighter(highlighterProps);
     codeHighlightCache.set(content + isDark, cachedVar);
     return cachedVar;
