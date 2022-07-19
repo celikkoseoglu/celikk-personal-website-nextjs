@@ -150,15 +150,7 @@ export default function Blog({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    "title",
-    "description",
-    "date",
-    "readTime",
-    "cover",
-    "author",
-    "slug",
-  ]);
+  const allPosts = getAllPosts();
 
   return {
     props: { allPosts },

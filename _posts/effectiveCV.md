@@ -17,7 +17,7 @@ author:
 
 #### Some companies receive hundreds of applications per day. How can you increase the chances of your CV getting noticed?
 
-######July 17, 2020 - 10 min read
+###### July 17, 2020 - 10 min read
 
 I've had the opportunity to **work with** recruiters in my career. I've taken numerous interviewer trainings, done interviews and been to a broad range of company recruitment events including events in universities. In addition to that, I get 3-5 messages on LinkedIn per day from rectuiters hiring for various companies. I talk with some of them even if I'm not interested in the job to understand what they like about my CV. This allows me to create a feedback loop where I can learn more about what attracts them.
 
@@ -113,6 +113,6 @@ If you execute all of these steps correctly, then you're very likely to get invi
 
 Moral of the story is:
 
-####Use your CV as an advertisement, not a biography.
+#### Use your CV as an advertisement, not a biography.
 
 You are as good as you market yourself.

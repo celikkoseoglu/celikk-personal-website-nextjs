@@ -13,13 +13,12 @@
     margin-bottom: 30px
     color: $grey
   code
-    color: $dark-blue
+    border-radius: 5px
     // TODO: disabled due to performance constraints. Animates the code inside the Code component
     //transition: color $colorTransitionDuration linear
     //transition-delay: $transitionDelay
   pre
     background: $pale-grey
-    padding: 10px
     -webkit-transition: $backgroundTransition
     -moz-transition: $backgroundTransition
     transition: $backgroundTransition
@@ -56,16 +55,3 @@
       display: inline-block
       font-size: 16px
       width: 1em
-
-.blogPostDarkStyle
-  a
-    color: $sky-blue
-    &:hover
-      color: $blue
-  code
-    color: $sky-blue
-  pre
-    background: $space-grey
-  blockquote
-    background: $space-black
-    border-left: 10px solid $dark-grey

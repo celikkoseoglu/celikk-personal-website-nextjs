@@ -17,7 +17,7 @@ author:
 
 #### The story of how I was an iPhone, Windows Phone and an Android user at different times.
 
-######March 01, 2020 - 15 min read
+###### March 01, 2020 - 15 min read
 
 Technologies Used: `iOS`, `Windows Phone`, `Android`
 
@@ -142,7 +142,7 @@ On an ending note, I feel like I should mention this: I'm one of the very few pe
 
 Moral of the story is:
 
-####Sometimes one is not undoubtedly better than the other.
+#### Sometimes one is not undoubtedly better than the other.
 
 Be open for change and keep trying different things.
 

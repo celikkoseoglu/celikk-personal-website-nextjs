@@ -17,7 +17,7 @@ author:
 
 ### Coming back to C# after a long break
 
-######December 07, 2019 - 5 min read
+###### December 07, 2019 - 5 min read
 
 Technologies Used: `Microsoft Visual Studio`, `C# .NET`, `WPF`
 

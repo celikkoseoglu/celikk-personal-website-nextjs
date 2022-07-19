@@ -17,7 +17,7 @@ author:
 
 ### Getting downloads on a non-existent platform
 
-######December 06, 2019 - 10 min read
+###### December 06, 2019 - 10 min read
 
 Technologies Used: `Microsoft Visual Studio`, `C# .NET`, `WPF`
 
@@ -88,6 +88,6 @@ people. Some of them were too ambitious for the current technology. I've never u
 
  Moral of the story is:
 
- ####Turn your hobby into your job
+#### Turn your hobby into your job
 
  Now go find what you like, practise, get better at it. One day, it will be your job.

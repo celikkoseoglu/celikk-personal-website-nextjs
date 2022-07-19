@@ -17,7 +17,7 @@ author:
 
 #### There is no programming pill. It takes time.
 
-######January 31, 2020 - 10 min read
+###### January 31, 2020 - 10 min read
 
 Technologies Used: `React`, `Bootstrap`, `markdown-to-jsx`
 
@@ -103,4 +103,4 @@ to learn React while keeping a happy face.
 
 Moral of the story is:
 
-####We all start from 0, progress comes with effort.
+#### We all start from 0, progress comes with effort.

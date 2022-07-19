@@ -18,6 +18,8 @@
   justify-content: center
   transition: color $colorTransitionDuration
   min-height: 100vh
+  code
+    color: $dark-blue
 
 .blogPostNavbarMargin
   margin-bottom: 50px
@@ -25,6 +27,15 @@
     margin-bottom: 40px
 
 .blogPostDark
+  a
+    color: $sky-blue
+    &:hover
+      color: $blue
+  pre
+    background: $space-grey
+  blockquote
+    background: $space-black
+    border-left: 10px solid $dark-grey
   color: $white
 
 .footerStyle

@@ -17,7 +17,7 @@ author:
 
 ### Reviews said this laptop had better thermals compared to the previous generation. Mine had great thermals too, up until today.
 
-######April 13, 2020 - 5 min read
+###### April 13, 2020 - 5 min read
 
 Tools Used: `A pentalobe screwdriver`, `A brush`
 
@@ -44,7 +44,7 @@ I picked up a brush and cleaned it off. Put the cover and the screws back in. Pr
 
 Moral of the story is: 
 
-####Clean your laptop
+#### Clean your laptop
 
 Get the tools required and just do it yourself (or find a friend who can do it for you).
 

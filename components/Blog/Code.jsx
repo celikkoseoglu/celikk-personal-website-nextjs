@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  atomDark,
-  prism,
-} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FaRegClipboard, FaRegCopy } from "react-icons/fa";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
@@ -20,32 +17,21 @@ SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("sass", sass);
 
-const codeHighlightCache = new Map();
+const Code = (props) => {
+  const { className, children } = props.children.props;
 
-const retrieveCodeFromHighlightCache = (language, isDark, content) => {
-  const cachedItem = codeHighlightCache.get(content + isDark);
-  if (cachedItem === undefined) {
-    const highlighterProps = {
-      language,
-      children: content,
-      style: isDark ? atomDark : prism,
-    };
-    const cachedVar = SyntaxHighlighter(highlighterProps);
-    codeHighlightCache.set(content + isDark, cachedVar);
-    return cachedVar;
-  }
+  const language =
+    className.match(/(?<=language-)(\w.*?)\b/) != null
+      ? className.match(/(?<=language-)(\w.*?)\b/)[0]
+      : "javascript";
 
-  return cachedItem;
-};
-
-const Code = ({ children, language, isDark }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   return (
     <div className={parentDiv}>
       <CopyToClipboard
         onCopy={() => setIsCopied(true)}
-        className={`${copyButton} ${isDark && copyButtonDark}`}
+        className={`${copyButton} ${copyButtonDark}`}
         text={children}
       >
         <button type="button" aria-label="Copy to Clipboard Button">
@@ -53,19 +39,26 @@ const Code = ({ children, language, isDark }) => {
         </button>
       </CopyToClipboard>
 
-      {retrieveCodeFromHighlightCache(language, isDark, children)}
+      <SyntaxHighlighter language={language} style={atomDark}>
+        {children}
+      </SyntaxHighlighter>
     </div>
   );
 };
 
 Code.propTypes = {
-  children: PropTypes.PropTypes.arrayOf(PropTypes.PropTypes.string).isRequired,
-  language: PropTypes.string,
-  isDark: PropTypes.bool.isRequired,
+  props: PropTypes.shape({
+    children: PropTypes.shape({
+      props: PropTypes.shape({
+        children: PropTypes.object.isRequired,
+        className: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
 };
 
 Code.defaultProps = {
-  language: null,
+  language: "javascript",
 };
 
 export default Code;

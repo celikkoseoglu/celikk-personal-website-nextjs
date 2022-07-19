@@ -60,7 +60,7 @@ project. It does not increase your bundle size because it only runs during build
 
 Add the following lines to your devDependencies in your `package.json` file and do a `yarn/npm install`.
 
-<Code language="javascript">
+```jsx
 },
 "devDependencies": {
   .
@@ -68,34 +68,35 @@ Add the following lines to your devDependencies in your `package.json` file and 
   "next-compose-plugins": "2.2.1",
   "next-optimized-images": "2.6.2",
   "webp-loader": "0.6.0"
-}</Code>
+}
+```
 
 Modify your `next.config.js` file to look like the following: (this wasn't enough for me, I'll explain in the next section):
 
-<Code language="javascript">
+```jsx
 // next.config.js
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 
-module.exports = withPlugins(\[
-  \[optimizedImages, {
+module.exports = withPlugins([
+  [optimizedImages, {
     /\* config for next-optimized-images \*/
   }],
   // your other plugins here
 ]);
-</Code>
+```
 
 At this point, I'd recommend you to start your development server and see if this works. After you see is running fine,
 it's time to start utilising `next-optimised-images`. To start using automatic conversion, just replace your regular
 image imports, similar to the following example:
 
-<Code language="javascript">
-\<!-- Replace the following with -->
-\<img src="/path/to/image.png"/>
-&nbsp;
-\<!-- This one: -->
-\<img src={require("../../public/path/to/image.png?webp")}/>
-</Code>
+```jsx
+<!-- Replace the following with -->
+<img src="/path/to/image.png"/>
+
+<!-- This one: -->
+<img src={require("../../public/path/to/image.png?webp")}/>
+```
 
 This should be enough for you to see a WebP version of your PNG if you're running a WebP supported browser. However,
 this didn't work for me, which takes us to the next section.
@@ -106,7 +107,7 @@ Next-Optimized-Images modifies your webpack config and this caused my website to
 types other than the 5 specified image types in the `next-optimized-images` documentation (`Default: ['jpeg', 'png', 'svg', 'webp', 'gif']`).
 To solve this issue, I had to modify my `next.config.js` even further to look like this:
 
-<Code language="javascript">
+```jsx
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
@@ -140,7 +141,7 @@ module.exports = withPlugins(
     },
   }
 );
-</Code>
+```
 
 Let's walk you through the changes in this config.
 
@@ -159,16 +160,16 @@ With these changes, I was able to make everything work as expected!
 In this case, you can use the `<picture>` tag of HTML. This allows you to list of image formats that the browser
 can use and the browser will choose the best one that fits the use case.
 
-<Code language="javascript">
-\<!-- Replace the following with -->
-\<img src="/path/to/image.png"/>
+```jsx
+<!-- Replace the following with -->
+<img src="/path/to/image.png"/>
 
-\<!-- This one: -->
-\<picture>
-  \<source srcSet={require("../../public/path/to/image.png?webp")} type="image/webp" />
-  \<img src={"/path/to/image.png"} />
-\</picture>
-</Code>
+<!-- This one: -->
+<picture>
+  <source srcSet={require("../../public/path/to/image.png?webp")} type="image/webp" />
+  <img src={"/path/to/image.png"} />
+</picture>
+```
 
 #### 6) Final results and what's next?
 

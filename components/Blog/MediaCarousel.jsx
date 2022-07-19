@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {
   autoSizeImage,
   autoSizeMultipleImage,
-  darkMediaCarousel,
   horizontalOverflow,
   imageMargin,
   mediaCarousel,
@@ -18,7 +17,7 @@ const getImageLinkWithExtension = (imageLink) => {
   return imageLink;
 };
 
-const MediaCarousel = ({ folder, images, isDark }) => {
+const MediaCarousel = ({ folder, images }) => {
   const imageFileNames = images.split(",");
   const imagesToBeLoaded = [];
 
@@ -30,9 +29,9 @@ const MediaCarousel = ({ folder, images, isDark }) => {
     <>
       <div
         align="center"
-        className={`${horizontalOverflow} ${
-          isDark ? darkMediaCarousel : null
-        } ${mediaCarousel} ${imagesToBeLoaded.length > 1 && multipleImage}`}
+        className={`${horizontalOverflow} ${mediaCarousel} ${
+          imagesToBeLoaded.length > 1 && multipleImage
+        }`}
       >
         {imagesToBeLoaded.map((imageRelativeLink, index) =>
           imageRelativeLink !== undefined &&
@@ -71,11 +70,6 @@ const MediaCarousel = ({ folder, images, isDark }) => {
 MediaCarousel.propTypes = {
   folder: PropTypes.string.isRequired,
   images: PropTypes.string.isRequired,
-  isDark: PropTypes.bool,
-};
-
-MediaCarousel.defaultProps = {
-  isDark: false,
 };
 
 export default MediaCarousel;

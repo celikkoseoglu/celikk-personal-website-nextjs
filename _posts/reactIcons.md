@@ -17,7 +17,7 @@ author:
 
 ### Introducing React-Icons. A node dependency that allows you to select import icons instead of the whole favicon css.
 
-######January 03, 2020 - 5 min read
+###### January 03, 2020 - 5 min read
 
 Technologies Used: `React`, `Favicon`, `React-Icons`
 
@@ -27,37 +27,40 @@ size about 30KBs without doing any major work at all.
 
 Before React-Icons, we used to import the whole favicon css into our component as below:
 
-<Code language="javascript">
+```jsx
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 const FaviconComponent = () => {
-  return &lt;p className="fa fa-twitter" />;
+  return <p className="fa fa-twitter" />;
 };
-export default FaviconComponent;</Code>
+export default FaviconComponent;
+```
 
 Instead of doing this, you can specify which icons to import using React-Icons. To install the package dependency,
  run the following command in your terminal:
 
-<Code language="bash">
-npm install react-icons --save</Code>
+```bash
+npm install react-icons --save
+```
 
 This is how the code looks now. You just import the required icon using an import statement, then use it just like you would use
 a regular component.
 
-<Code language="javascript">
+```jsx
 import React from "react";
 import { FaTwitter } from "react-icons/fa";
 const FaviconComponent = () => {
-  return &lt;FaTwitter />;
+  return <FaTwitter />;
 };
-export default FaviconComponent;</Code>
+export default FaviconComponent;
+```
 
 If you want to explore which icons are available in the favicon library, you can go and browse node_modules/react-icons/fa/index.js.
 You will find a bunch of icons there with their respective names. Or there is a more visual guide available in here: https://fontawesome.com/icons
 
 Moral of the story is:
 
-####Efficiency and speed matter. 
+#### Efficiency and speed matter. 
 
 [People sent space probes to Pluto with a PS1 processor](https://www.theverge.com/2015/1/15/7551365/playstation-cpu-powers-new-horizons-pluto-probe). 
 You have access to multiples of times faster hardware now. Why would we need to wait more than 5 seconds for a website to load?

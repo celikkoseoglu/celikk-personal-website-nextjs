@@ -17,7 +17,7 @@ author:
 
 ### This is how my story begins.
 
-######November 24, 2019 - 8 min read
+###### November 24, 2019 - 8 min read
 
 Technologies Used: `Microsoft Visual Studio`, `C# .NET`, `WPF`
 
@@ -86,7 +86,7 @@ versions are open source. You can all see how bad my coding skills were when I f
 
 Moral of the story is: 
 
-####We all start from somewhere.
+#### We all start from somewhere.
 
 Now go and chase your dreams.
 

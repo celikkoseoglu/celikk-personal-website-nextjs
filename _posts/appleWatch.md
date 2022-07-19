@@ -17,7 +17,7 @@ author:
 
 ### For years, I resisted to pay [fashion accessory prices](https://www.theverge.com/2015/3/9/8162455/apple-watch-price-release-date-2015) for a tech gadget. Now that Apple removed the fashion tax, let's give it a try.
 
-######May 11, 2020 - 12 min read
+###### May 11, 2020 - 12 min read
 
 Many of you are going to ask, why did you wait 5 years to get an Apple Watch?
  The answer is simple really. I don't see the Apple Watch as a fashion accessory.
@@ -37,7 +37,7 @@ In this blog post, I am going to focus on the technology aspect. I'll talk about
  features that I use on the Watch. Assume that I don't use the feature if it's not listed below.
   The following list is ordered by importance to me.
 
-####1) See and reply notifications from your wrist
+#### 1) See and reply notifications from your wrist
 
 When a notification arrives on your phone, the Watch will gently tap your wrist.
  The vibration is so subtle, it feels like a tap. After you feel the tap, you
@@ -52,7 +52,7 @@ Some of you are probably going to find this feature to be intrusive because you
   there is a "Do Not Disturb" mode available on the Watch. You can disable 
   notifications for as long as you want.
 
-####2) Get notified about your upcoming calendar events
+#### 2) Get notified about your upcoming calendar events
 
 I'm not going to say I regularly miss meetings in the office, but I'm human and
  sometimes I forget. This is probably because I don't pay enough attention to
@@ -67,7 +67,7 @@ You're probably going to say, an iPhone sends you meeting notifications as well,
    When notifications arrive with a tap on your wrist, they are much easier to notice. The
     watch almost forces you to pay attention to your notifications.
 
-####3) Apple Pay
+#### 3) Apple Pay
 
 Contactless payments are accepted everywhere in London. Before I got the Watch, I always
  used Google/Apple Pay on my phone. The nice thing is, the 
@@ -77,7 +77,7 @@ Contactless payments are accepted everywhere in London. Before I got the Watch, 
 
  <MediaCarousel folder="appleWatch" images="applePay1.jpg,applePay2.jpg,applePay3.jpg"/>
 
-####4) Sleep tracking
+#### 4) Sleep tracking
 
 This is not a feature that comes in built in with the Watch. There is an app on the AppStore
  called [AutoSleep](https://apps.apple.com/us/app/autosleep-track-sleep-on-watch/id1164801111)
@@ -94,7 +94,7 @@ summary for the past month:
 
  <MediaCarousel folder="appleWatch" images="sleepTrackingSleepTime.png,sleepTrackingInBedAt.png,sleepTrackingHeartrate.png"/>
 
-####5) Heart rate tracking
+#### 5) Heart rate tracking
 
 Here are some interesting facts about me: 
 
@@ -108,7 +108,7 @@ Did you find this interesting? If yes, then there is an app on the Watch that al
 
  <MediaCarousel folder="appleWatch" images="watchFace1.jpg,heartrate.jpg,heartrateDay.png,heartrateMonth.png"/>
 
-####6) Body activity and exercise tracking
+#### 6) Body activity and exercise tracking
 
 Before we start this section, I encourage you to watch the following videos:
 
@@ -127,7 +127,7 @@ Another thing the Watch can do for you is to set exercise goals. If you want to 
 to the videos that I linked at the beginning of this section. There is a much better explanation
 there.
 
-####7) Cool watch faces
+#### 7) Cool watch faces
 
 There are so many faces that you can pick and customize to fit your preferences. The process
  of creating a watch face is pretty simple. You start by selecting a template and then
@@ -136,7 +136,7 @@ There are so many faces that you can pick and customize to fit your preferences.
 
  <MediaCarousel folder="appleWatch" images="watchFace1.jpg,watchFace2.jpg,watchFace3.jpg,watchFace4.jpg,watchFace5.jpg,watchFace6.jpg,watchFace7.jpg,watchFace8.jpg,watchFace9.jpg"/>
 
-####8) Navigation with Apple Maps
+#### 8) Navigation with Apple Maps
 
 I like going around with a bike in London. When I'm exploring new areas, I set a random
  destination on Apple Maps. Then my watch will start showing a smaller version of the
@@ -156,7 +156,7 @@ You're probably going to say: What about Google Maps? Unfortunately, Google Maps
 
 Apple Watch falls a bit short on this category unfortunately.
 
-####9) 3rd party bands are great!
+#### 9) 3rd party bands are great!
 
 Before buying the Apple Watch, I did my research on 3rd party watch bands. There are
  so many 3rd party options on Amazon that match the quality of the bands that Apple are selling.
@@ -165,7 +165,7 @@ Before buying the Apple Watch, I did my research on 3rd party watch bands. There
 
  <MediaCarousel folder="appleWatch" images="bands.jpg"/>
 
-####10) Battery Life
+#### 10) Battery Life
 
 When buying the Watch, I was ready for 1-day battery life. I was just going to plug
  it in when I'm taking a shower and eating my breakfast and it was going to stay on my wrist

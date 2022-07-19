@@ -30,7 +30,7 @@ wrong, there is nothing wrong with a simple color transition. It just doesn't fe
 In very basic terms, this animation is just a HTML canvas that draws a shrinking circle. The circle shrinks or grows
  in size depending on if we want dark mode enabled or not. Plus, it integrates nicely with React's component states.
 
-####1) What kind of animation do I want?
+#### 1) What kind of animation do I want?
 
  <MediaCarousel folder="darkModeAnimation" images="circleAnimationIllustration.jpg"/>
 
@@ -45,7 +45,7 @@ In very basic terms, this animation is just a HTML canvas that draws a shrinking
 **d.** The animation should stop when radius reaches zero, or when radius is bigger than the page width (animation
  is not visible anymore).
 
-####2) What are my options?
+#### 2) What are my options?
  
  First option that comes to mind is to use a [HTML canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
   Canvas allows drawing an arbitrary shape on a webpage
@@ -58,7 +58,7 @@ In very basic terms, this animation is just a HTML canvas that draws a shrinking
  
  My recommendation is to go with a canvas.
 
-####3) How do I work with a canvas in React?
+#### 3) How do I work with a canvas in React?
 
 The [useRef()](https://reactjs.org/docs/hooks-reference.html#useref) hook can be used to get the reference for
  the element you're working with on the DOM. This way, we can refer back to our canvas and start drawing on
@@ -66,30 +66,30 @@ The [useRef()](https://reactjs.org/docs/hooks-reference.html#useref) hook can be
    
 Here is a sample Canvas component that you can plug in and try now. It just draws a circle when mounted.
    
-<Code language="javascript">
+```jsx
 import React, { useEffect, useRef } from "react";
-&nbsp;
+ 
 const CircleCanvas = () => {
   const canvasRef = useRef(null);
-&nbsp;
+ 
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
-&nbsp;
+ 
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-    context.fillStyle = \"#00F";
+    context.fillStyle = "#00F";
     context.beginPath();
-    context.arc(75, 75, 60, 0, 2 *&nbsp;Math.PI);
+    context.arc(75, 75, 60, 0, 2 * Math.PI);
     context.fill();
-&nbsp;
+ 
     window.requestAnimationFrame(() => {});
   }, []);
-&nbsp;
-  return \<canvas ref={canvasRef} />;
+ 
+  return <canvas ref={canvasRef} />;
 };
-&nbsp;
-export default CircleCanvas;</Code>
-
-####4) Drawing a circle that continuously grows
+ 
+export default CircleCanvas;
+```
+#### 4) Drawing a circle that continuously grows
 
 Up next is animating a circle that continuously grows. The canvas provides us with a function called
  requestAnimationFrame(callback). This function draws whatever you have in the context, and then calls the callback
@@ -98,66 +98,66 @@ Up next is animating a circle that continuously grows. The canvas provides us wi
 So the logic we're going to follow here is pretty simple. We're going to increase the circle radius by 0.05 each time
  render() is called by the requestAnimationFrame callback.
 
-<Code language="javascript">
+```jsx
 import React, {useEffect, useRef} from "react";
-&nbsp;
+ 
 const GrowingCircleCanvas = () => {
   const canvasRef = useRef(null);
-&nbsp;
+ 
   const draw = (ctx, radius) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.fillStyle = \"#00F";
     ctx.beginPath();
-    ctx.arc(50, 100, radius, 0, 2 *&nbsp;Math.PI);
+    ctx.arc(50, 100, radius, 0, 2 * Math.PI);
     ctx.fill();
   };
-&nbsp;
+ 
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
     let radius = 0;
     let animationFrameId;
-&nbsp;
+ 
     const render = () => {
       radius += 0.05;
       draw(context, radius);
       animationFrameId = window.requestAnimationFrame(render);
     };
     render();
-&nbsp;
+ 
     return () => {
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [draw]);
-&nbsp;
-  return \<canvas ref={canvasRef} />;
+ 
+  return <canvas ref={canvasRef} />;
 };
-&nbsp;
-export default GrowingCircleCanvas;</Code>
-
+ 
+export default GrowingCircleCanvas;
+```
 This allows us to get a circle growing at a constant speed. There is no way to make the circle smaller yet, but that's
  ok. We're going to address that issue at a later stage.
 
-####5) Adjusting the scaling and resolution for the canvas
+#### 5) Adjusting the scaling and resolution for the canvas
 
 Depending on how you placed your canvas in your page, you might have noticed that the canvas looks pixelated.
  This happens because we manually need to
  adjust the scaling factor of the canvas. All devices come with different screen pixel ratios. Here is the code
   that adjusts canvas draw resolution. Place it in your useEffect() function.
     
-<Code language="javascript">
+```jsx
 const { width, height } = context.canvas.getBoundingClientRect();
 if (context.canvas.width !== width || context.canvas.height !== height) {
   const { devicePixelRatio: originalRatio = 1 } = window;
   // we don't need such a high resolution for this type of animation. Plus it makes the edges
   // of the circle look blurred, which looks nicer. Also improves performance a lot on slow GPUs
   // change from 0.5 to 1 if you want to use display's native resolution.
-  const lowerResolutionRatio = originalRatio&nbsp;*&nbsp;0.5;
-  context.canvas.width = width&nbsp;*&nbsp;lowerResolutionRatio;
-  context.canvas.height = height&nbsp;*&nbsp;lowerResolutionRatio;
+  const lowerResolutionRatio = originalRatio * 0.5;
+  context.canvas.width = width * lowerResolutionRatio;
+  context.canvas.height = height * lowerResolutionRatio;
   context.scale(lowerResolutionRatio, lowerResolutionRatio);
-}</Code>
-
-####6) Time-based rendering for consistency
+}
+```
+#### 6) Time-based rendering for consistency
 
 When you're programming animations, it's a good practise for your animation speed to be based off of real time.
  Let me explain by a simple example:
@@ -181,52 +181,52 @@ This logic can be implemented with the code fragment below. When we're calculati
  going to subtract the time at previous completion from now. This value is going to be multiplied with
   RADIUS\_INCREASE\_PER\_MS to get the actual radius.
 
-<Code language="javascript">
+```jsx
 import React, {useEffect, useRef} from "react";
-&nbsp;
+ 
 const GrowingCircleCanvasTime = () => {
   const canvasRef = useRef(null);
-  const RADIUS\_INCREASE\_PER_MS = 0.05;
+  const RADIUS_INCREASE_PER_MS = 0.05;
   let timeAtPreviousDraw = Date.now();
-&nbsp;
+ 
   const draw = (ctx, radius) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.fillStyle = "#FFF";
     ctx.beginPath();
-    ctx.arc(50, 100, radius, 0, 2 *&nbsp;Math.PI);
+    ctx.arc(50, 100, radius, 0, 2 * Math.PI);
     ctx.fill();
   };
-&nbsp;
+ 
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
     let radius = 0;
     let animationFrameId;
-&nbsp;
+ 
     const render = () => {
       const timeAtRenderStart = Date.now();
-      const timePastSincePreviousDraw =&nbsp;timeAtRenderStart&nbsp;-&nbsp;timeAtPreviousDraw;
+      const timePastSincePreviousDraw = timeAtRenderStart - timeAtPreviousDraw;
       // In the future, we will get computers so fast that the difference between
       // previous and current frame is less than 1ms. Math.max() ensures that we
       // still grow the circle even if the computer is super fast.
       const timePastSinceLastDraw = Math.max(1, timePastSincePreviousDraw);
-      radius += RADIUS\_INCREASE\_PER\_MS&nbsp;*&nbsp;timePastSinceLastDraw;
+      radius += RADIUS\_INCREASE\_PER\_MS * timePastSinceLastDraw;
       timeAtPreviousDraw = timeAtRenderStart;
       draw(context, radius);
       animationFrameId = window.requestAnimationFrame(render);
     };
     render();
-&nbsp;
+ 
     return () => {
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [draw]);
-&nbsp;
-  return \<canvas ref={canvasRef} />;
+ 
+  return <canvas ref={canvasRef} />;
 };
-&nbsp;
-export default GrowingCircleCanvasTime;</Code>
-
-####7) Making the animation look nicer
+ 
+export default GrowingCircleCanvasTime;
+```
+#### 7) Making the animation look nicer
 
 Animations don't look as nice when they play at a constant speed. Imagine you're scrolling on your
  smartphone. The animation starts fast as you flick your finger and then slows down gradually right? Or when you
@@ -243,7 +243,7 @@ This will ensure that the circle starts growing slowly at first and then exponen
  
  <MediaCarousel folder="darkModeAnimation" images="exponential_growth.mp4,linear_growth.mp4"/>
 
-####8) When to stop the animation
+#### 8) When to stop the animation
 
 So knowing when to stop when shrinking the circle is simple. When the radius reaches zero, we can stop drawing the
  circle and stop animating. What if the circle is growing though? The radius is going to be different for all screen
@@ -260,15 +260,15 @@ For the first item, `window.innerHeight` and `window.innerWidth` can be used.
  For the second item, we can reverse the exponential function and get the maximum value our actual radius can take before
   the exponential operation.
  
-<Code language="javascript">
+```jsx
 const screenHeight = window.screen.height;
 const screenWidth = window.screen.height;
-const maxRadiusMultiplier = Math.pow(Math.max(screenWidth, screenHeight), (1.0&nbsp;/&nbsp;GROWTH\_FUNCTION\_EXPONENTIAL));</Code>
-
+const maxRadiusMultiplier = Math.pow(Math.max(screenWidth, screenHeight), (1.0 / GROWTH\_FUNCTION\_EXPONENTIAL));
+```
 When animating, the current radiusMultiplier can be compared with the maxRadiusMultiplier. If we're past maxRadiusMultiplier,
  then it's time to stop animating.
 
-####9) Using canvas as page background
+#### 9) Using canvas as page background
 
 This canvas is going to cover the whole background of the page. This means the width and height
  must be set accordingly for this canvas. CSS properties can be used to adjust this. Apart from that, canvas needs to stay at the
@@ -276,15 +276,15 @@ This canvas is going to cover the whole background of the page. This means the w
    it behaves as a transparent layer. The background property should be the
     colour that you want to display in your `dark mode`.
 
-<Code language="sass">
+```sass
 .size
   width: 100vw
   height: 100vh
   position: fixed
   z-index: -1
-  background: #111</Code>
-
-####10) Start Drawing On Dark Mode Toggle Click
+  background: #111
+  ```
+#### 10) Start Drawing On Dark Mode Toggle Click
 
 The canvas we have currently draws growing circle on render but how do we start drawing on a mouse click event?
 
@@ -299,73 +299,73 @@ Additionally, CustomEvents can take parameters and pass them together in the eve
  mode toggle, the button's coordinates will be sent together with the event. Canvas component will use these coordinates
   as the center of the circle.
   
-<Code language="javascript">
+```jsx
 const circleCenterCoordinates = {
   x: null,
   y: null,
 };
-&nbsp;
+ 
 const GrowingCircleAnimation = ({ isDark }) => {
   useEffect(() => {
-&nbsp;
+ 
     .
     .
-&nbsp;
+ 
     const handleClick = (event) => {
       // fill in the mouse coordinates when we receive a click so we know the center of the circle
       circleCenterCoordinates.x = event.detail.x;
       circleCenterCoordinates.y = event.detail.y;
     };
-&nbsp;
+ 
     window.addEventListener("darkModeToggle", handleClick);
     return () => {
       isStateMachinePowered = false;
       window.removeEventListener("darkModeToggle", handleClick);
     };
   }, []);
-&nbsp;
-  return \<canvas ref={canvasRef} />;
-};</Code>
-
+ 
+  return <canvas ref={canvasRef} />;
+};
+```
 This is only the listener part of the code. Up next, DarkModeToggle needs an update.
 
-####11) Get Mouse Coordinates of the Dark Mode Toggle
+#### 11) Get Mouse Coordinates of the Dark Mode Toggle
 
 The CustomEvent created in the previous step can be used to pass some data. In this case, the mouse coordinates of the
 dark mode toggle button are passed in the event. This event then gets picked up by the canvas component. Canvas component
 extracts the coordinates and sets them as the center coordinates of the circle.
 
-<Code language="javascript">
+```jsx
 const onClickWrapper = (onClickMethod, isDark, event) => {
   const bodyRect = document.body.getBoundingClientRect();
   const elemRect = event.target.getBoundingClientRect();
-  const offsetLeft = elemRect.left&nbsp;-&nbsp;bodyRect.left;
-&nbsp;
+  const offsetLeft = elemRect.left - bodyRect.left;
+  
   const customEventState = { // custom object to wrap event data
-    x: offsetLeft&nbsp;+&nbsp;elemRect.width&nbsp;/&nbsp;2, // center coordinates of the dark mode toggle on the x-axis
-    y: elemRect.top&nbsp;+&nbsp;elemRect.height&nbsp;/&nbsp;2, // center coordinates of the dark mode toggle on the y-axis
+    x: offsetLeft + elemRect.width / 2, // center coordinates of the dark mode toggle on the x-axis
+    y: elemRect.top + elemRect.height / 2, // center coordinates of the dark mode toggle on the y-axis
   };
-&nbsp;
+  
   const darkModeToggleEvent = new CustomEvent("darkModeToggle", { detail: customEventState });
   onClickMethod(isDark);
   storage.setItem("theme", isDark.toString());
   dispatchEvent(darkModeToggleEvent);
 };
-&nbsp;
+
 const DarkModeToggle = ({ isDark, onClickMethod }) => {
   return (
-    \<button
+    <button
       type="button"
       aria-label="Dark Mode Toggle"
       onClick={(event) => onClickWrapper(onClickMethod, !isDark, event)}
-      className={\`${isDark ? moon : sun} ${darkModeToggle}\`}
-    \>
-      \<div className={crescent} />
-    \</button>
+      className={`${isDark ? moon : sun} ${darkModeToggle}`}
+    >
+      <div className={crescent} />
+    </button>
   );
-};</Code>
-
-####12) Designing a state machine
+};
+```
+#### 12) Designing a state machine
 
 Animation code requires **consistent** structure. I can use what we have at hand so far. Yes, it just draws a growing
  circle, but that's ok. I can reverse the animation by subtracting the radius instead of adding it on each render.
@@ -383,13 +383,13 @@ When we land on the page with the canvas, we need to initialise the canvas drive
   if the state is `IsDark` or `!IsDark`. When the circle radius reaches zero or maximum, state machine ends operation.
    This approach was way cleaner compared to what I had before.
 
-####13) Implementing the state machine
+#### 13) Implementing the state machine
 
 At the top, I have a list of global state variables. These variables are accessible from every state of my machine.
  Then, I have a list of states. Each state evaluates some variables, manipulates the canvas if necessary and then
   returns the next state. If there is no next state, it returns null. Here is a very pseudo-code version.
   
-<Code language="javascript">
+```jsx
 // circle animation state machine
 const m = {
   ctx: null, // canvas context
@@ -397,7 +397,7 @@ const m = {
   radiusMultiplier: null, // current radius
   maxRadiusMultiplier: null, // maximum possible radius for the given screen size
   timeAtPreviousDraw: null,
-&nbsp;
+ 
   createMachine: (ctx, isDark) => {
     // do some setup
     return m.start;
@@ -424,12 +424,12 @@ const m = {
     // draw the circle and go back to the start state
     return m.start;
   },
-};</Code>
-
+};
+```
 Then I can assign the start function to a variable. Then I can call the function in the variable and keep assigning it
  back to itself. When it returns null, I won't do another call. This is best illustrated with a code snippet:
  
-<Code language="javascript">
+```jsx
 let stateMachine = m.createMachine(ctx, isDark); // create a state machine and assign it to a variable
 const stateMachineRunner = () => {
   if (stateMachine !== null) {
@@ -437,8 +437,8 @@ const stateMachineRunner = () => {
     stateMachineRunner(); // keep calling stateMachineRunner() until state machine returns null as the next state
   }
 };
-stateMachineRunner();</Code>
-
+stateMachineRunner();
+```
 #### 14) Create Machine - setup function
 
 We've created a state machine but a setup function is required to set the initial state for all variables. This step
@@ -450,7 +450,7 @@ If you've made this far into the blog post, that means you're ready to start rea
  you to the [full canvas component](https://github.com/celikkoseoglu/celikk-personal-website/blob/master/src/components/Animations/GrowingCircleAnimation.jsx).
   Read the createMachine() state code yourself. It has the necessary comments.
 
-####15) Fixing weird bugs and glitches
+#### 15) Fixing weird bugs and glitches
 
 It's time for QA. The first bug we encounter is related with page resizes. A page resize happens when you take
  a browser window on your laptop and just resize it. The best and easiest thing to do in this case is to reset the state
@@ -461,25 +461,25 @@ Second bug happens when we pinch to zoom in on a mobile phone and click the dark
  pinch to zoom, scaling factors, window width and other things break. There is [yet another StackOverflow post](https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window)
   explaining how to fix this issue.
   
-<Code language="javascript">
+```jsx
 // when mobile device is zoomed in using the pinch gesture,
 // we need to get the relative coordinate on the page.
 const bodyRect = document.body.getBoundingClientRect();
 const elemRect = event.target.getBoundingClientRect();
-const offsetTop = elemRect.top&nbsp;-&nbsp;bodyRect.top;
-const offsetLeft = elemRect.left&nbsp;-&nbsp;bodyRect.left;
-&nbsp;
+const offsetTop = elemRect.top - bodyRect.top;
+const offsetLeft = elemRect.left - bodyRect.left;
+ 
 // this tells us how much the user has zoomed in using the pinch gesture
-const deviceZoomRatio = document.documentElement.clientWidth&nbsp;/&nbsp;window.innerWidth;
-&nbsp;
+const deviceZoomRatio = document.documentElement.clientWidth / window.innerWidth;
+ 
 const customEventState = {
-  x: offsetLeft&nbsp;+&nbsp;elemRect.width&nbsp;/&nbsp;2,
+  x: offsetLeft + elemRect.width / 2,
   // if the user is pinch zoomed in, then use the pinch zoom coordinate detection logic,
   // otherwise, use the distance of the icon from the top of the page. For some reason
   // offsetTop doesn't work when the user scrolls down and the zoom ratio == 1 (iOS14)
-  y: (deviceZoomRatio&nbsp;>&nbsp;1&nbsp;?&nbsp;offsetTop&nbsp;:&nbsp;elemRect.top)&nbsp;+&nbsp;elemRect.height&nbsp;/&nbsp;2,
-};</Code>
-
+  y: (deviceZoomRatio > 1 ? offsetTop : elemRect.top) + elemRect.height / 2,
+};
+```
 Third bug happens when we change the scaling factor in iOS safari. When a user switches from dark mode to light mode in a
  smaller scale and sets a bigger scaling factor, animation won't work anymore. This is due to the radiusMultiplier from the
   previous state being bigger than the new maxRadiusMultiplier.

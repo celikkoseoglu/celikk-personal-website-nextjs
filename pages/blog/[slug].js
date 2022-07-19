@@ -19,6 +19,7 @@ const blogNavbar = require("../../data/blogNavbar.json");
 const footer = require("../../data/footer.json");
 import NoSSR from "react-no-ssr";
 import getMeta from "../../components/Util/MetaGenerator";
+import { serialize } from "next-mdx-remote/serialize";
 
 export default function Post({ post }) {
   const [isDark, setIsDark] = useState(getInitialTheme());
@@ -50,11 +51,7 @@ export default function Post({ post }) {
               setIsDark={setIsDark}
             />
 
-            <BlogPostMarkdown
-              fileName={post.slug}
-              content={post.content}
-              isDark={false}
-            />
+            <BlogPostMarkdown content={post.content} />
 
             <HorizontalRuler isDark={false} />
           </div>
@@ -72,7 +69,7 @@ export default function Post({ post }) {
       <div className={`${isDark && blogPostDark} ${blogPostBody}`}>
         <GrowingCircleAnimation isDark={isDark} />
         <div className={width}>
-          <div className={`${blogContainer}`}>
+          <div className={blogContainer}>
             <BlogNavbar
               headerText={blogNavbar.blogBranding}
               headerLink={blogNavbar.blogLink}
@@ -82,11 +79,7 @@ export default function Post({ post }) {
               setIsDark={setIsDark}
             />
 
-            <BlogPostMarkdown
-              fileName={post.slug}
-              content={post.content}
-              isDark={isDark}
-            />
+            <BlogPostMarkdown content={post.content} />
 
             <HorizontalRuler isDark={isDark} />
           </div>
@@ -104,7 +97,7 @@ export default function Post({ post }) {
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug);
 
-  const content = post.content || "";
+  const content = await serialize(post.content);
 
   return {
     props: {
@@ -117,7 +110,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPosts();
 
   return {
     paths: posts.map((post) => {

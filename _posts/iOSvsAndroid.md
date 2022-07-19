@@ -17,7 +17,7 @@ author:
 
 ### I've used one generation of devices from each platform in order. Let's compare them and decide which one is better for me.
 
-######March 17, 2020 - 20 min read
+###### March 17, 2020 - 20 min read
 
 This blog post is not your regular Galaxy S10 vs iPhone XS Max specs race. It’s about comparing iOS and Android
  platforms. I'm not going to talk about how many megapixels the cameras have, or how much of a GeekBench score
@@ -32,7 +32,7 @@ This comparison is not meant to fully compare the platforms with **all** of thei
 Both of these phones are flagships. They are the best Apple and Samsung has to offer in their model year. They both
  support the latest iOS and Android features available today. Without any further ado, let's get into the comparison.
 
-####1. Home Screen
+#### 1. Home Screen
 
  <MediaCarousel folder="iOSvsAndroid" images="homeScreen.jpg"/>
 
@@ -50,7 +50,7 @@ iOS and Android platforms both give you a very basic home screen with your regul
 Although Android here gives me a lot more flexibility, I never felt the need to customize my homescreen. I'm not
  going to say I prefer one over the other one.
 
-####2. Widgets
+#### 2. Widgets
 
 Unlike iOS, Android allows you to put widgets anywhere
  on your home screen. On iOS, the leftmost page on the homescreen is dedicated to your widgets and it contains
@@ -70,7 +70,7 @@ What about iOS widgets? Right now, I use the Stocks and Calendar widgets on my i
 
 iOS made me use widgets, so I have to say I prefer iOS in here.
 
-####3. Navigation Gestures
+#### 3. Navigation Gestures
 
 I remember when I first saw an iPhone, it was truly magical. The way the gestures worked was
  like a science fiction movie.
@@ -89,7 +89,7 @@ Also I'd like the mention the most confusing button ever on Android. The physica
 
 This is my review, and my opinion: iOS has better navigation gestures. iOS wins here.
 
-####4. Twitter App
+#### 4. Twitter App
 
 When you first launch it, both platforms greet you with a very similar looking screen. Using the
  application feels fairly similar. There are two differences I've identified. One minor and one major.
@@ -109,7 +109,7 @@ Here is the major difference: Let's say you're listening to music on Spotify on 
 
 I use Twitter every day. I have to say I prefer iOS just because it doesn't stop my music app.
 
-####5. Instagram App
+#### 5. Instagram App
 
 The app feels quite similar on both platforms but when it comes to capturing
  videos for stories, there is a slight difference.
@@ -127,7 +127,7 @@ Here is the story captured on the Galaxy S10 and the iPhone side by side:
   I think I prefer the video taken on the iPhone due to higher framerate, but I'll let you decide the winner
    in this category. It's a minor nitpick.
 
-####6. File Management
+#### 6. File Management
 
 This is quite possibly one of Android's biggest strengths. Proper file management and microSD expansion. Let's say
  you want to copy some random files, music, whatever into your Android phone. You can plug it into a PC and it
@@ -155,7 +155,7 @@ Let's say you're on holiday and you've taken gigabytes of footage on your GoPro.
 
 If you ask me, this the BIGGEST strength of Android as a platform. Freedom to manage YOUR files!
 
-####7. Notifications
+#### 7. Notifications
 
 I haven't noticed a major difference on how notifications are handled **when the screens are on and the devices are unlocked**.
  When you receive a notification,
@@ -176,7 +176,7 @@ I don't know why Apple doesn't have an always on display on the iPhone. The iPho
 
 The Android platform wins here.
 
-####8. Portrait Mode
+#### 8. Portrait Mode
 
 Portrait Mode was launched with the iPhone 7 Plus. It used the dual-camera system to create this artificial bokeh
  effect on pictures. Google and Samsung quickly followed with their own implementations. Here are the results for
@@ -190,7 +190,7 @@ As you can see from the pictures, the iPhone XS does a better job than the Galax
 
 I'm not going to say anything about who wins in this area. You can pick your side.
 
-####9. Slow Motion Video Editing
+#### 9. Slow Motion Video Editing
 
 If you're a fan of slow motion videos, just skip the Galaxy S10. Depending on the lighting conditions and the movement
  in the scene, it might skip frames and you would end up with a stuttery video. I'm not saying this happens all the
@@ -211,7 +211,7 @@ Here is a screenshot showing the Galaxy S10 only allowing 10% of the video to be
 On the other hand, the iPhone captures and edits slow motion videos as you would expect. All is good.
  iPhone wins hands down.
 
-####10. Auto-Fill Two-Factor Auth SMS Messages
+#### 10. Auto-Fill Two-Factor Auth SMS Messages
 
 Let's say you're signing into PayPal. Signing in requires two-factor authentication via SMS. On an iPhone, when you
  receive a 2 factor authentication SMS, it automatically copies the authentication code and puts
@@ -226,7 +226,7 @@ So far, this worked with all two factor authentication messages that I've receiv
 
 This feature doesn't exist on my Galaxy S10. Or if it does, it is very well hidden. I'll pick the iPhone here.
 
-####11. The Typing and Keyboard Experience
+#### 11. The Typing and Keyboard Experience
 
  <MediaCarousel folder="iOSvsAndroid" images="keyboards.jpg"/>
 
@@ -246,7 +246,7 @@ I'm not sure how I can prove this to you, but I am able to type faster on an iPh
 I know I haven’t explored Android’s great keyboard customizability options but as I’ve mentioned before, I use the
  keyboard only to type. I don’t need crazy autocorrect features or GIF search etc.
 
-####12. Split view
+#### 12. Split view
 
 Being able to run two apps side by side is a big deal. Imagine this, you are watching a YouTube video on your phone,
  you receive a message notification. Now what? The Galaxy S10 and iPhone XS can handle these scenarios quite
@@ -267,7 +267,7 @@ The story gets far more exciting on Android. You can open your messaging app sid
 
 Android wins here, hands down.
 
-####13. AppStore vs PlayStore
+#### 13. AppStore vs PlayStore
 
 I'm not one of those people who look at the AppStore or the Play Store every day to see what's new. I just go there
  when I need to download an app that I've seen somewhere. In that regard, both AppStore and Play Store do the same
@@ -293,7 +293,7 @@ Because Google Play provides so many options, very often you feel lost while loo
 Even though Android apps will never be as polished as the apps on the AppStore, I have to say I prefer the Play Store
  in here. I want to be able to install whatever I want on my phone. Android wins this one.
 
-####14. The Apple Ecosystem
+#### 14. The Apple Ecosystem
 
 This is an area where Apple is really good at. Features such as AirDrop and Continuity really make a great impact
  in terms of the overall user experience. Ever since I switched to an iPhone, I found myself constantly using shared
@@ -316,7 +316,7 @@ This is where we mention the ecosystem again. Notability is a great note taking 
 
 iOS and MacOS as a platform and an ecosystem, wins this one.
 
-####15. Lightning vs USB-C
+#### 15. Lightning vs USB-C
 
 I don't think there is much to talk about in here. Lightning was amazing when it came out, but it is time for Apple
  to replace it with USB-C. 
@@ -328,7 +328,7 @@ when those deals expire. As a company they will obviously make the switch when i
 So the Android platform wins in this regard. Android phones sold today come with USB-C and all chargers are
  cross compatible.
 
-####16. The Physical Mute Switch
+#### 16. The Physical Mute Switch
 
 Let's say you're an an important meeting, your phone starts ringing and you have to mute it immediately. You can 
 hit the lock button once to silence it. But it would ring again when you receive another call or message. You are 
@@ -349,7 +349,7 @@ On the Galaxy S10 and almost all Android phones:
 Some people think the mute switch is not a big deal. I agree. All I’m saying is, these little things add up to create
  a nice user experience. The iPhone wins in here.
 
-####Conclusion
+#### Conclusion
 
 I have to say it has been a very difficult choice for me. The competition between iOS and Android has never been
  greater. Both platforms are great and they have their unique strengths and weaknesses. I don't want to make this
@@ -368,6 +368,6 @@ One day in the future, I will definitely switch back to Android (or the next big
 
 Moral of the story is:
 
-####Change is good. It keeps you fresh and up to date!
+#### Change is good. It keeps you fresh and up to date!
 
 Now go make a change and learn from it.
