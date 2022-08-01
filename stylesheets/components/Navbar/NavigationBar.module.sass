@@ -27,23 +27,17 @@ $navbar-color: rgba(27, 27, 27, $transparency)
   &:hover
     color: $white
 
+.brandContainer
+  padding: 10px 0 10px 16px
+  +screen(small)
+    padding: 10px 0 10px 0
+
 .brand
-  // this allows for more space on the NavBar on a small
-  // screen like portrait iPad so items don't wrap to the next line
-  padding-right: 0
-  color: $pale-grey
-  font-family: 'Montserrat', sans-serif
-  font-weight: 600
-  font-size: 1.5em
-  transition: color .3s ease-in-out
+  height: 34px
   &:hover
     color: $white
   +screen(small)
-    padding-left: 0
-  +screen(large)
-    font-size: 1.4em
-  +screen(greaterThanLarge)
-    font-size: 2em
+    height: 24px
 
 .navbarToggle
   +screen(greaterThanMedium)

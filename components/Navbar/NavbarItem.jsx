@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import UnstyledLink from "../Util/UnstyledLink";
 import { navLink } from "../../stylesheets/components/Navbar/NavbarItem.module.sass";
 
-const NavbarItem = ({ title, reference, href, className }) => {
+const NavbarItem = ({ children, reference, href, className }) => {
   if (reference != null) {
     return (
       <Link
@@ -16,19 +16,19 @@ const NavbarItem = ({ title, reference, href, className }) => {
         ignoreCancelEvents={false}
         href="/"
       >
-        {title}
+        {children}
       </Link>
     );
   }
   return (
     <UnstyledLink className={`${className} ${navLink}`} to={href}>
-      {title}
+      {children}
     </UnstyledLink>
   );
 };
 
 NavbarItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
   reference: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,

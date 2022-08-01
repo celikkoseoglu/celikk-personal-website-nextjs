@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
 import {
   brand,
+  brandContainer,
   customNavbar,
   mobileNavbar,
   mobileNavbarLinksCollapsed,
@@ -16,6 +17,7 @@ import {
 import Container from "../Util/Container";
 import NavbarToggle from "./NavbarToggle";
 import { debounce, throttle } from "../../utils/Limitors";
+import BrandingLogo from "../Animations/BrandingLogo";
 
 const content = require("../../data/navbar.json");
 
@@ -66,10 +68,15 @@ const NavigationBar = () => {
       <Container className={navbarContainer}>
         <div className={mobileNavbar}>
           <NavbarItem
-            title={content.heroTitle}
+            className={brandContainer}
             reference={content.landingReference}
-            className={brand}
-          />
+          >
+            <BrandingLogo
+              className={brand}
+              fillColor={"#F0F0F0"}
+              strokeColor={"#F0F0F0"}
+            />
+          </NavbarItem>
           <NavbarToggle
             onClickMethod={setMobileNavbarCollapsed}
             collapsed={mobileNavbarCollapsed}
@@ -85,12 +92,13 @@ const NavigationBar = () => {
         >
           {content.items.map((item) => (
             <NavbarItem
-              title={item.title}
               reference={item.reference}
               href={item.href}
               className={whiteLink}
               key={item.title}
-            />
+            >
+              {item.title}
+            </NavbarItem>
           ))}
         </div>
       </Container>

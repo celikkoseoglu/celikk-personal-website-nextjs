@@ -16,7 +16,7 @@ import {
 } from "../../stylesheets/components/Navbar/BlogNavbar.module.sass";
 import DarkModeToggle from "../DarkModeToggle";
 import UnstyledLink from "../Util/UnstyledLink";
-import BlogBrandingLogo from "../Animations/BlogBrandingLogo";
+import BrandingLogo from "../Animations/BrandingLogo";
 import Row from "../Util/Row";
 
 const BlogNavbar = ({
@@ -49,9 +49,10 @@ const BlogNavbar = ({
     <div className={`${navbarFlex} ${className}`}>
       <Row>
         <UnstyledLink to={brandingLink}>
-          <BlogBrandingLogo
+          <BrandingLogo
             className={`${branding} ${isDark && brandingDark}`}
-            isDark={isDark}
+            fillColor={isDark ? "#A2C1EB" : "#003C85"}
+            strokeColor={isDark ? "#A2C1EB" : "#003C85"}
           />
         </UnstyledLink>
 
