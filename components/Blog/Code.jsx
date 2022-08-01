@@ -20,10 +20,12 @@ SyntaxHighlighter.registerLanguage("sass", sass);
 const Code = (props) => {
   const { className, children } = props.children.props;
 
-  const language =
-    className.match(/(?<=language-)(\w.*?)\b/) != null
-      ? className.match(/(?<=language-)(\w.*?)\b/)[0]
-      : "javascript";
+  let language = null;
+  if (className != null && className.length > 9) {
+    language = className.slice(9);
+  } else {
+    throw new Error("Language not specified for Code element in markdown!");
+  }
 
   const [isCopied, setIsCopied] = useState(false);
 

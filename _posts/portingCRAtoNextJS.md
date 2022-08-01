@@ -92,7 +92,7 @@ image and a description. I previously explained how this works on a
 [YouTube video](https://www.youtube.com/watch?v=ZutMjfIqj6M). Here is the structure I used in
 my CRA website:
 
-```bash
+```js
 <BlogMetaDecorator
   folder="throttlingMacBook"
   image="leftFanBottomRight.jpg"
