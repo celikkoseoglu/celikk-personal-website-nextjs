@@ -28,7 +28,8 @@ const NavbarItem = ({ children, reference, href, className }) => {
 };
 
 NavbarItem.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    .isRequired,
   reference: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
