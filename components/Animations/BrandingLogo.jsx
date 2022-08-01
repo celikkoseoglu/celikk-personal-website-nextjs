@@ -32,7 +32,6 @@ const BrandingLogo = ({ className, fillColor, strokeColor }) => (
     </path>
 
     <path
-      id="linePath"
       fill="transparent"
       className={colorTransition}
       stroke={strokeColor}
