@@ -39,7 +39,10 @@ export default function Home({ allPosts }) {
       <Projects />
       <Heading id={content.skillsReference} text={content.skillsTitle} />
       <Skills />
-      <Heading id={content.latestBlogPostsReference} text={content.latestBlogPostsTitle} />
+      <Heading
+        id={content.latestBlogPostsReference}
+        text={content.latestBlogPostsTitle}
+      />
       <BlogShowcase allPosts={allPosts} />
 
       <Section>
