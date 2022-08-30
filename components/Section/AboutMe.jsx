@@ -21,11 +21,11 @@ const aboutMe = require("../../data/aboutMe.json");
 const AboutMe = ({ id }) => (
   <Section id={id}>
     <Container>
-      <Row className={`${titleRow}`}>
+      <Row className={titleRow}>
         <Heading text={aboutMe.title} className={heading} />
         <HorizontalRuler isThick className={ruler} />
       </Row>
-      <Row className={`${descriptionRow}`}>
+      <Row className={descriptionRow}>
         <div className={description}>
           <p>{aboutMe.descriptionHead}</p>
 
