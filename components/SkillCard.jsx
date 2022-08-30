@@ -10,7 +10,7 @@ import {
 const SkillCard = ({ imageLink, imageAlt, text }) => {
   return (
     <div className={contentDiv}>
-      <div className={`${imageDiv}`}>
+      <div className={imageDiv}>
         <img className={image} src={imageLink} alt={imageAlt} />
       </div>
       <p className={description}>{text}</p>

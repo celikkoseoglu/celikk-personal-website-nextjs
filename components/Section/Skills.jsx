@@ -1,15 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Section from "../Util/Section";
-import { noMarginBottom } from "../../stylesheets/components/Section/Skills.module.sass";
-import Heading from "../Heading";
 import SkillCard from "../SkillCard";
 
 const personalSkills = require("../../data/personalSkills.json");
 
-const Skills = ({ id }) => (
-  <Section id={id}>
-    <Heading className={noMarginBottom} text={personalSkills.skillsTitle} />
+const Skills = () => (
+  <Section>
     {personalSkills.skillList.map((personalSkill) => (
       <SkillCard
         imageLink={personalSkill.imageLink}
@@ -20,9 +16,5 @@ const Skills = ({ id }) => (
     ))}
   </Section>
 );
-
-Skills.propTypes = {
-  id: PropTypes.string.isRequired,
-};
 
 export default Skills;

@@ -5,17 +5,13 @@ import {
   sectionBackground,
 } from "../../stylesheets/components/Util/Section.module.sass";
 
-const Section = ({ id, className, children }) => (
-  <section
-    id={id}
-    className={`${sectionBackground} ${sectionPadding} ${className}`}
-  >
+const Section = ({ className, children }) => (
+  <section className={`${sectionBackground} ${sectionPadding} ${className}`}>
     {children}
   </section>
 );
 
 Section.propTypes = {
-  id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };

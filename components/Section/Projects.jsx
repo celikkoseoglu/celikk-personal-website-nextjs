@@ -1,19 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Section from "../Util/Section";
 import Row from "../Util/Row";
 import {
   projectsDiv,
   projectsRow,
 } from "../../stylesheets/components/Section/Projects.module.sass";
-import Heading from "../Heading";
 import ProjectCard from "../ProjectCard";
 
 const projects = require("../../data/projects.json");
 
-const Projects = ({ id }) => (
-  <Section id={id}>
-    <Heading text={projects.projectsTitle} />
+const Projects = () => (
+  <Section>
     <div className={projectsDiv}>
       <Row className={projectsRow}>
         {projects.projectList.map((project) => (
@@ -31,9 +28,5 @@ const Projects = ({ id }) => (
     </div>
   </Section>
 );
-
-Projects.propTypes = {
-  id: PropTypes.string.isRequired,
-};
 
 export default Projects;

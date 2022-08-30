@@ -1,12 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Section from "../Util/Section";
 import {
-  blogShowcaseContainer,
   blogPostCardsRow,
   blogShowcaseCard,
+  blogShowcaseContainer,
 } from "../../stylesheets/components/Section/BlogShowcase.module.sass";
-import Heading from "../Heading";
 import Container from "../Util/Container";
 import Row from "../Util/Row";
 import {
@@ -19,9 +17,8 @@ import { BLOG_LINK } from "../../utils/Constants.utils";
 
 const blogShowcase = require("../../data/blogShowcase.json");
 
-const BlogShowcase = ({ id, allPosts }) => (
-  <Section id={id}>
-    <Heading marginBottom text={blogShowcase.latestBlogPostsTitle} />
+const BlogShowcase = ({ allPosts }) => (
+  <Section>
     <Container className={blogShowcaseContainer}>
       <Row className={blogPostCardsRow}>
         {retrieveLatestBlogPosts(allPosts).map((blogItem, index) => (
@@ -47,9 +44,5 @@ const BlogShowcase = ({ id, allPosts }) => (
     </Container>
   </Section>
 );
-
-BlogShowcase.propTypes = {
-  id: PropTypes.string.isRequired,
-};
 
 export default BlogShowcase;

@@ -1,4 +1,8 @@
 {
+  "aboutMeTitle": "ABOUT ME",
+  "projectsTitle": "PROJECTS",
+  "skillsTitle": "SKILLS",
+  "latestBlogPostsTitle": "BLOG POSTS",
   "landingReference": "landing",
   "aboutMeReference": "aboutMe",
   "projectsReference": "projects",
