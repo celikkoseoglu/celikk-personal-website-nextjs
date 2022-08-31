@@ -2,10 +2,10 @@ import AboutMe from "../components/Section/AboutMe";
 import NavigationBar from "../components/Navbar/NavigationBar";
 import Landing from "../components/Section/Landing";
 import Projects from "../components/Section/Projects";
-import Container from "../components/Util/Container";
 import {
   footerBackground,
   footerPadding,
+  marginTop,
 } from "../stylesheets/Home.module.sass";
 import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
@@ -13,7 +13,6 @@ import BlogShowcase from "../components/Section/BlogShowcase";
 import getMeta from "../components/Util/MetaGenerator";
 import { getAllPosts } from "../lib/api";
 import Heading from "../components/Heading";
-import Section from "../components/Util/Section";
 
 const content = require("../data/content.json");
 
@@ -45,16 +44,12 @@ export default function Home({ allPosts }) {
       />
       <BlogShowcase allPosts={allPosts} />
 
-      <Section>
-        <div
-          id={content.contactReference}
-          className={`${footerBackground} ${footerPadding}`}
-        >
-          <Container noPadding>
-            <Footer />
-          </Container>
-        </div>
-      </Section>
+      <div
+        id={content.contactReference}
+        className={`${footerBackground} ${footerPadding} ${marginTop}`}
+      >
+        <Footer />
+      </div>
     </>
   );
 }
