@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 import UnstyledLink from "../Util/UnstyledLink";
 import { navLink } from "../../stylesheets/components/Navbar/NavbarItem.module.sass";
+import { SCROLL_DURATION, SCROLL_OFFSET } from "../../utils/Constants.utils";
 
 const NavbarItem = ({ children, reference, href, className }) => {
   if (reference != null) {
@@ -11,8 +12,8 @@ const NavbarItem = ({ children, reference, href, className }) => {
         className={`${className} page-scroll ${navLink}`}
         to={reference}
         smooth
-        offset={-50}
-        duration={500}
+        offset={SCROLL_OFFSET}
+        duration={SCROLL_DURATION}
         ignoreCancelEvents={false}
         href="/"
       >

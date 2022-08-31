@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
+import { SCROLL_DURATION, SCROLL_OFFSET } from "../../utils/Constants.utils";
 
 const DRAW_IN_TIME = 1.5;
 const DRAW_OUT_TIME = 0.4;
 const EASE_IN_OUT_BEZIER_SPLINES = "0.42 0 0.58 1";
-const SCROLL_DURATION = 500;
-const SCROLL_OFFSET = -90;
 
 const ArrowAnimation = ({ className, reference }) => {
   const [clicked, setClicked] = useState(false);
