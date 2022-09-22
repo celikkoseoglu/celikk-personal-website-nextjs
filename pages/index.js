@@ -3,9 +3,8 @@ import NavigationBar from "../components/Navbar/NavigationBar";
 import Landing from "../components/Section/Landing";
 import Projects from "../components/Section/Projects";
 import {
-  footerBackground,
+  footerSpacingBackground,
   footerPadding,
-  marginTop,
 } from "../stylesheets/Home.module.sass";
 import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
@@ -46,7 +45,7 @@ export default function Home({ allPosts }) {
 
       <div
         id={content.contactReference}
-        className={`${footerBackground} ${footerPadding} ${marginTop}`}
+        className={`${footerSpacingBackground} ${footerPadding}`}
       >
         <Footer />
       </div>
