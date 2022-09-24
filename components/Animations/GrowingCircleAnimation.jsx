@@ -46,7 +46,7 @@ const m = {
 
     // set page body background color before starting the animation. iOS 14 safari bottom bar does
     // not play nicely when scrolling down. When the bottom bar disappears as you scroll down, it
-    // first fill the view with the body color, and then the canvas colour. Also, Twitter app's
+    // first fills the view with the body color, and then the canvas colour. Also, Twitter app's
     // webview does not readjust window.innerHeight after the bottom bar disappears, leaving the
     // bottom part of the website dark. Consider removing this if/when Safari fixes itself.
     document.body.style.backgroundColor = m.isDark
