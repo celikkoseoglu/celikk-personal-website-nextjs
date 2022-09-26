@@ -43,6 +43,13 @@ const NavigationBar = () => {
   }
 
   useEffect(() => {
+    /*  Safari does not call the scroll listener function if the user navigates back to the page.
+        For example, a user can scroll all the way to the bottom of the page, click one of the links
+        in the footer, then click the back button on the browser window. The scroll position will be
+        remembered but the navigation bar style won't be updated to reflect the new state
+        (blurred background). This is why we have to call the handleScroll function at least once
+        when the component is mounted. */
+    handleScroll();
     window.addEventListener("scroll", throttle(debounce(handleScroll)));
     return () =>
       window.removeEventListener("scroll", throttle(debounce(handleScroll)));
