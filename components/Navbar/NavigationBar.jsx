@@ -27,16 +27,16 @@ const NavigationBar = () => {
   const [transparency, setTransparency] = useState(0.0);
 
   function handleScroll() {
-    if (window.pageYOffset > 50) {
+    if (window.scrollY > 50) {
       setNavbarExpanded(false);
-    } else if (window.pageYOffset < 50) {
+    } else if (window.scrollY < 50) {
       setNavbarExpanded(true);
     }
 
-    if (window.pageYOffset > 500) {
+    if (window.scrollY > 500) {
       setTransparency(1);
     } else {
-      setTransparency(window.pageYOffset / 500.0);
+      setTransparency(window.scrollY / 500.0);
     }
 
     setMobileNavbarCollapsed(true);
