@@ -16,10 +16,11 @@
 .blogPostBody
   display: flex
   justify-content: center
-  transition: color $colorTransitionDuration
+  transition: $colorTransition
   min-height: 100vh
   code
     color: $dark-blue
+    transition: $colorTransition
 
 .blogPostNavbarMargin
   margin-bottom: 50px
@@ -36,6 +37,8 @@
   blockquote
     background: $space-black
     border-left: 10px solid $dark-grey
+  code
+    color: $sky-blue
   color: $white
 
 .footerStyle
