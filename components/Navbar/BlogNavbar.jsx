@@ -62,7 +62,6 @@ const BlogNavbar = ({
         <DarkModeToggle
           onClickMethod={setIsDark}
           isDark={isDark}
-          setIsDark={setIsDark}
         />
       </div>
     </div>
