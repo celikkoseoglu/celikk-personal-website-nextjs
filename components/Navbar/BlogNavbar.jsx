@@ -18,29 +18,27 @@ import DarkModeToggle from "../DarkModeToggle";
 import UnstyledLink from "../Util/UnstyledLink";
 import BrandingLogo from "../Animations/BrandingLogo";
 import Row from "../Util/Row";
+import useDarkMode from "use-dark-mode";
 
-const BlogNavbar = ({
-  headerText,
-  headerLink,
-  brandingLink,
-  isDark,
-  setIsDark,
-  className,
-}) => {
+const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
+  const darkMode = useDarkMode(false);
+
   const header = <h1 className={`${noMargin} ${titleFont}`}>{headerText}</h1>;
 
   const getTitleOrButton = (text, link) =>
     link ? (
       <UnstyledLink
         className={`${
-          isDark ? blogLinkBrandingDark : blogLinkBranding
+          darkMode.value ? blogLinkBrandingDark : blogLinkBranding
         } ${pointerCursor}`}
         to={link}
       >
         {header}
       </UnstyledLink>
     ) : (
-      <span className={`${defaultCursor} ${isDark ? titleDark : title}`}>
+      <span
+        className={`${defaultCursor} ${darkMode.value ? titleDark : title}`}
+      >
         {header}
       </span>
     );
@@ -50,19 +48,16 @@ const BlogNavbar = ({
       <Row>
         <UnstyledLink to={brandingLink}>
           <BrandingLogo
-            className={`${branding} ${isDark && brandingDark}`}
-            fillColor={isDark ? "#A2C1EB" : "#003C85"}
-            strokeColor={isDark ? "#A2C1EB" : "#003C85"}
+            className={`${branding} ${darkMode.value && brandingDark}`}
+            fillColor={darkMode.value ? "#A2C1EB" : "#003C85"}
+            strokeColor={darkMode.value ? "#A2C1EB" : "#003C85"}
           />
         </UnstyledLink>
 
-        {getTitleOrButton(headerText, headerLink, isDark)}
+        {getTitleOrButton(headerText, headerLink, darkMode.value)}
       </Row>
       <div className={darkModeToggle}>
-        <DarkModeToggle
-          onClickMethod={setIsDark}
-          isDark={isDark}
-        />
+        <DarkModeToggle />
       </div>
     </div>
   );
@@ -72,8 +67,6 @@ BlogNavbar.propTypes = {
   headerText: PropTypes.string.isRequired,
   headerLink: PropTypes.string,
   brandingLink: PropTypes.string.isRequired,
-  isDark: PropTypes.bool.isRequired,
-  setIsDark: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
 

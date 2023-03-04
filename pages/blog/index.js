@@ -18,11 +18,10 @@ import BlogFooter from "../../components/Footer/BlogFooter";
 import HorizontalRuler from "../../components/Util/HorizontalRuler";
 import BlogNavbar from "../../components/Navbar/BlogNavbar";
 import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
-import { useState } from "react";
-import { getInitialTheme } from "../../utils/FileManager.utils";
 import NoSSR from "react-no-ssr";
 import getMeta from "../../components/Util/MetaGenerator";
 import { getAllPosts } from "../../lib/api";
+import useDarkMode from "use-dark-mode";
 
 const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
@@ -37,7 +36,7 @@ const formatDate = (date) => {
 };
 
 export default function Blog({ allPosts }) {
-  const [isDark, setIsDark] = useState(getInitialTheme());
+  const darkMode = useDarkMode(false);
 
   const meta = getMeta(
     blog.title.page,
@@ -46,7 +45,7 @@ export default function Blog({ allPosts }) {
     blog.metaImageAlt
   );
 
-  const getBlogItem = (post, isDark) => (
+  const getBlogItem = (post) => (
     <BlogItem
       className={blogItemMargin}
       title={post.data.title.post}
@@ -54,7 +53,6 @@ export default function Blog({ allPosts }) {
       minutes={post.data.readTime}
       subtitle={post.data.description}
       blogPost={post.slug}
-      isDark={isDark}
       key={post.data.title.post}
     />
   );
@@ -67,8 +65,6 @@ export default function Blog({ allPosts }) {
           headerText={blogNavbar.blogBranding}
           brandingLink={blogNavbar.homeLink}
           className={blogNavbarMargin}
-          isDark={false}
-          setIsDark={setIsDark}
         />
         <Row className={`${blogItemMargin} ${verticalCenter}`}>
           <div>
@@ -92,12 +88,12 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {allPosts.map((post) => getBlogItem(post, false))}
+        {allPosts.map((post) => getBlogItem(post))}
 
-        <HorizontalRuler isDark={false} />
+        <HorizontalRuler />
       </div>
       <div className={footerStyle}>
-        <BlogFooter content={footer} isDark={false} />
+        <BlogFooter content={footer} />
       </div>
     </div>
   );
@@ -105,14 +101,12 @@ export default function Blog({ allPosts }) {
   const content = (
     <div>
       {meta}
-      <GrowingCircleAnimation isDark={isDark} />
+      <GrowingCircleAnimation />
       <div className={blogStyle}>
         <BlogNavbar
           headerText={blogNavbar.blogBranding}
           brandingLink={blogNavbar.homeLink}
           className={blogNavbarMargin}
-          isDark={isDark}
-          setIsDark={setIsDark}
         />
         <Row className={`${blogItemMargin} ${verticalCenter}`}>
           <div>
@@ -122,7 +116,7 @@ export default function Blog({ allPosts }) {
               alt={blog.imageAlt}
             />
           </div>
-          <div className={`${isDark && blogDark}`}>
+          <div className={`${darkMode.value && blogDark}`}>
             <p
               className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}
             >
@@ -136,12 +130,12 @@ export default function Blog({ allPosts }) {
           </div>
         </Row>
 
-        {allPosts.map((post) => getBlogItem(post, isDark))}
+        {allPosts.map((post) => getBlogItem(post))}
 
-        <HorizontalRuler isDark={isDark} />
+        <HorizontalRuler />
       </div>
       <div className={footerStyle}>
-        <BlogFooter content={footer} isDark={isDark} />
+        <BlogFooter content={footer} />
       </div>
     </div>
   );

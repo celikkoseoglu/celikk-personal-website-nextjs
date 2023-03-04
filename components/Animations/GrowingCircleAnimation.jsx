@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 import { size } from "../../stylesheets/components/Animations/GrowingCircleAnimation.module.sass";
 import { debounce, throttle } from "../../utils/Limitors";
+import useDarkMode from "use-dark-mode";
 
 const COLORS = {
   white: "#FFF",
@@ -131,13 +131,14 @@ const m = {
   },
 };
 
-const GrowingCircleAnimation = ({ isDark }) => {
+const GrowingCircleAnimation = () => {
+  const darkMode = useDarkMode(false);
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const ctx = canvasRef.current.getContext("2d");
 
-    let stateMachine = m.createMachine(ctx, isDark);
+    let stateMachine = m.createMachine(ctx, darkMode.value);
     let isStateMachinePowered = true;
 
     const stateMachineRunner = () => {
@@ -164,7 +165,7 @@ const GrowingCircleAnimation = ({ isDark }) => {
 
     const handleResize = () => {
       circleCenterCoordinates.resetMouseState();
-      stateMachine = m.createMachine(ctx, isDark);
+      stateMachine = m.createMachine(ctx, darkMode.value);
       stateMachineRunner();
     };
 
@@ -179,13 +180,9 @@ const GrowingCircleAnimation = ({ isDark }) => {
         false
       );
     };
-  }, [isDark]);
+  });
 
   return <canvas className={size} ref={canvasRef} />;
-};
-
-GrowingCircleAnimation.propTypes = {
-  isDark: PropTypes.bool.isRequired,
 };
 
 export default GrowingCircleAnimation;

@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
-import storage from "local-storage-fallback";
 import {
   sun,
   moon,
   darkModeToggle,
   crescent,
 } from "../stylesheets/components/DarkModeToggle.module.sass";
+import useDarkMode from "use-dark-mode";
 
-const onClickWrapper = (onClickMethod, isDark, event) => {
+const onClickWrapper = (darkMode, event) => {
   // when mobile device is zoomed in using the pinch gesture, we need to get the relative
   // coordinate on the page.
   // https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-
@@ -33,25 +32,23 @@ const onClickWrapper = (onClickMethod, isDark, event) => {
   const darkModeToggleEvent = new CustomEvent("darkModeToggle", {
     detail: customEventState,
   });
-  onClickMethod(isDark);
-  storage.setItem("theme", isDark.toString());
+  darkMode.toggle();
   dispatchEvent(darkModeToggleEvent);
 };
 
-const DarkModeToggle = ({ isDark, onClickMethod }) => (
-  <button
-    type="button"
-    aria-label="Dark Mode Toggle"
-    onClick={(event) => onClickWrapper(onClickMethod, !isDark, event)}
-    className={`${isDark ? moon : sun} ${darkModeToggle}`}
-  >
-    <div className={crescent} />
-  </button>
-);
+const DarkModeToggle = () => {
+  const darkMode = useDarkMode(false);
 
-DarkModeToggle.propTypes = {
-  isDark: PropTypes.bool.isRequired,
-  onClickMethod: PropTypes.func.isRequired,
+  return (
+    <button
+      type="button"
+      aria-label="Dark Mode Toggle"
+      onClick={(event) => onClickWrapper(darkMode, event)}
+      className={`${darkMode.value ? moon : sun} ${darkModeToggle}`}
+    >
+      <div className={crescent} />
+    </button>
+  );
 };
 
 export default DarkModeToggle;

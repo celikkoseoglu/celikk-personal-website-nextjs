@@ -12,17 +12,16 @@ import {
   footerStyle,
   width,
 } from "../../stylesheets/BlogPost.module.sass";
-import { useState } from "react";
-import { getInitialTheme } from "../../utils/FileManager.utils";
 import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
 const footer = require("../../data/footer.json");
 import NoSSR from "react-no-ssr";
 import getMeta from "../../components/Util/MetaGenerator";
 import { serialize } from "next-mdx-remote/serialize";
+import useDarkMode from "use-dark-mode";
 
 export default function Post({ post }) {
-  const [isDark, setIsDark] = useState(getInitialTheme());
+  const darkMode = useDarkMode(false);
 
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -47,16 +46,14 @@ export default function Post({ post }) {
               headerLink={blogNavbar.blogLink}
               brandingLink={blogNavbar.homeLink}
               className={blogPostNavbarMargin}
-              isDark={false}
-              setIsDark={setIsDark}
             />
 
             <BlogPostMarkdown content={post.content} />
 
-            <HorizontalRuler isDark={false} />
+            <HorizontalRuler />
           </div>
           <div className={footerStyle}>
-            <BlogFooter content={footer} isDark={false} />
+            <BlogFooter content={footer} />
           </div>
         </div>
       </div>
@@ -66,8 +63,8 @@ export default function Post({ post }) {
   const content = (
     <>
       {meta}
-      <div className={`${isDark && blogPostDark} ${blogPostBody}`}>
-        <GrowingCircleAnimation isDark={isDark} />
+      <div className={`${darkMode.value && blogPostDark} ${blogPostBody}`}>
+        <GrowingCircleAnimation />
         <div className={width}>
           <div className={blogContainer}>
             <BlogNavbar
@@ -75,16 +72,14 @@ export default function Post({ post }) {
               headerLink={blogNavbar.blogLink}
               brandingLink={blogNavbar.homeLink}
               className={blogPostNavbarMargin}
-              isDark={isDark}
-              setIsDark={setIsDark}
             />
 
             <BlogPostMarkdown content={post.content} />
 
-            <HorizontalRuler isDark={isDark} />
+            <HorizontalRuler />
           </div>
           <div className={footerStyle}>
-            <BlogFooter content={footer} isDark={isDark} />
+            <BlogFooter content={footer} />
           </div>
         </div>
       </div>

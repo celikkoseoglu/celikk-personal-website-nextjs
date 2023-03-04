@@ -7,24 +7,33 @@ import {
   thickLight,
   main,
 } from "../../stylesheets/components/Util/HorizontalRuler.module.sass";
+import useDarkMode from "use-dark-mode";
 
-const HorizontalRuler = ({ isDark, isThick, className }) => (
-  <hr
-    className={`${className} ${main} ${
-      // eslint-disable-next-line no-nested-ternary
-      isDark ? (isThick ? thickDark : dark) : isThick ? thickLight : light
-    }`}
-  />
-);
+const HorizontalRuler = ({ isThick, className }) => {
+  const darkMode = useDarkMode(false);
+
+  return (
+    <hr
+      className={`${className} ${main} ${
+        // eslint-disable-next-line no-nested-ternary
+        darkMode.value
+          ? isThick
+            ? thickDark
+            : dark
+          : isThick
+          ? thickLight
+          : light
+      }`}
+    />
+  );
+};
 
 HorizontalRuler.propTypes = {
-  isDark: PropTypes.bool,
   isThick: PropTypes.bool,
   className: PropTypes.string,
 };
 
 HorizontalRuler.defaultProps = {
-  isDark: false,
   isThick: false,
   className: null,
 };

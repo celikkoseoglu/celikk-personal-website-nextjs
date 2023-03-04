@@ -6,29 +6,26 @@ import {
   blogItemLinkDark,
 } from "../../stylesheets/components/Blog/BlogItem.module.sass";
 import { BLOG_LINK } from "../../utils/Constants.utils";
+import useDarkMode from "use-dark-mode";
 
-const BlogItem = ({
-  className,
-  title,
-  date,
-  minutes,
-  subtitle,
-  blogPost,
-  isDark,
-}) => (
-  <div className={className}>
-    <UnstyledLink
-      to={`${BLOG_LINK}${blogPost}`}
-      className={`${blogItemLink} ${isDark && blogItemLinkDark}`}
-    >
-      <h4>{title}</h4>
-      <h6>
-        {date} - {minutes}
-      </h6>
-      <p>{subtitle}</p>
-    </UnstyledLink>
-  </div>
-);
+const BlogItem = ({ className, title, date, minutes, subtitle, blogPost }) => {
+  const darkMode = useDarkMode(false);
+
+  return (
+    <div className={className}>
+      <UnstyledLink
+        to={`${BLOG_LINK}${blogPost}`}
+        className={`${blogItemLink} ${darkMode.value && blogItemLinkDark}`}
+      >
+        <h4>{title}</h4>
+        <h6>
+          {date} - {minutes}
+        </h6>
+        <p>{subtitle}</p>
+      </UnstyledLink>
+    </div>
+  );
+};
 
 BlogItem.propTypes = {
   className: PropTypes.string.isRequired,
@@ -37,11 +34,6 @@ BlogItem.propTypes = {
   minutes: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   blogPost: PropTypes.string.isRequired,
-  isDark: PropTypes.bool,
-};
-
-BlogItem.defaultProps = {
-  isDark: false,
 };
 
 export default BlogItem;

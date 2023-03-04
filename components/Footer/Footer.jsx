@@ -59,7 +59,7 @@ const Footer = () => (
         </div>
       </Row>
 
-      <Signature className={signature} isDark />
+      <Signature isDark className={signature} />
 
       <div className={footerGithubStatsDiv}>
         <a href={footer.githubLink} className={footerGithubStatsLink}>
