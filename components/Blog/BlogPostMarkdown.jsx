@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import MediaCarousel from "./MediaCarousel";
 import { blogPostStyle } from "../../stylesheets/components/Blog/BlogPostMarkdown.module.sass";

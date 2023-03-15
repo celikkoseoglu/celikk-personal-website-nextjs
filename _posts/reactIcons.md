@@ -28,7 +28,6 @@ size about 30KBs without doing any major work at all.
 Before React-Icons, we used to import the whole favicon css into our component as below:
 
 ```jsx
-import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 const FaviconComponent = () => {
   return <p className="fa fa-twitter" />;
@@ -47,7 +46,6 @@ This is how the code looks now. You just import the required icon using an impor
 a regular component.
 
 ```jsx
-import React from "react";
 import { FaTwitter } from "react-icons/fa";
 const FaviconComponent = () => {
   return <FaTwitter />;

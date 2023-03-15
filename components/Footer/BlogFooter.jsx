@@ -1,4 +1,3 @@
-import React from "react";
 import SocialMediaBar from "./SocialMediaBar";
 import Signature from "../Signature";
 import {

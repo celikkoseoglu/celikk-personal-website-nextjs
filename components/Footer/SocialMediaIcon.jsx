@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { inlineListItem } from "../../stylesheets/components/Footer/SocialMediaIcon.module.sass";
 

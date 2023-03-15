@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { colorTransition } from "../../stylesheets/components/Animations/BrandingLogo.module.sass";
 

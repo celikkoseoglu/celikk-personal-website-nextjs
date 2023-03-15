@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { row } from "../../stylesheets/components/Util/Row.module.sass";
 

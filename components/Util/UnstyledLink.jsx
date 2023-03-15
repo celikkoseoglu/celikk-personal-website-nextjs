@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { noDecoration } from "../../stylesheets/components/Util/UnstyledLink.module.sass";
 import Router from "next/router";

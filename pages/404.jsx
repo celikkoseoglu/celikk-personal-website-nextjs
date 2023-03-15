@@ -1,4 +1,3 @@
-import React from "react";
 import CustomButton from "../components/CustomButton";
 import {
   notFoundStyle,

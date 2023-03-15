@@ -1,4 +1,3 @@
-import React from "react";
 import Row from "../Util/Row";
 import {
   footerStyle,

@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 // https://www.joshwcomeau.com/performance/embracing-modern-image-formats/

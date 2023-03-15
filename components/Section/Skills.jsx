@@ -1,4 +1,3 @@
-import React from "react";
 import Section from "../Util/Section";
 import SkillCard from "../SkillCard";
 
