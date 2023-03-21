@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { size } from "../../stylesheets/components/Animations/GrowingCircleAnimation.module.sass";
 import { debounce, throttle } from "../../utils/Limitors";
 import useDarkMode from "use-dark-mode";

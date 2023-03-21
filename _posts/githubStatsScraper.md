@@ -34,7 +34,7 @@ Here is an example: https://api.github.com/repos/celikkoseoglu/celikk-personal-w
 Up next, we're going to create a very simple react component that just displays how many stars and forks our repo got. You can pretty much copy and paste this onto your project to see it in action.
 
 ```jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const GithubStatistics = () => {
   const [githubStats, setGithubStats] = useState({
@@ -83,7 +83,7 @@ We managed to get the numbers but now we need to focus on the visual part. We ca
 Now you're ready to insert them into your component. Notice how I've added `<GoStar />` and `<GoRepoForked />`. 
 
 ```jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GoStar, GoRepoForked } from "react-icons/go";
 
 const GithubStatistics = () => {
@@ -125,7 +125,7 @@ With those added, we can see some icons next to the numbers but it definitely ne
 It's a good practise to keep components reusable. Notice how it now requires you to give it a `username` and a `repo` string. You can pretty much copy and paste this version into your own project and treat it as a black box now.
 
 ```jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GoStar, GoRepoForked } from "react-icons/go";
 import { numbers, main, innerMain } from "../stylesheets/components/GithubStatistics.module.sass";
 

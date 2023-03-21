@@ -67,7 +67,7 @@ The [useRef()](https://reactjs.org/docs/hooks-reference.html#useref) hook can be
 Here is a sample Canvas component that you can plug in and try now. It just draws a circle when mounted.
    
 ```jsx
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
  
 const CircleCanvas = () => {
   const canvasRef = useRef(null);
@@ -99,7 +99,7 @@ So the logic we're going to follow here is pretty simple. We're going to increas
  render() is called by the requestAnimationFrame callback.
 
 ```jsx
-import React, {useEffect, useRef} from "react";
+import {useEffect, useRef} from "react";
  
 const GrowingCircleCanvas = () => {
   const canvasRef = useRef(null);
@@ -182,7 +182,7 @@ This logic can be implemented with the code fragment below. When we're calculati
   RADIUS\_INCREASE\_PER\_MS to get the actual radius.
 
 ```jsx
-import React, {useEffect, useRef} from "react";
+import {useEffect, useRef} from "react";
  
 const GrowingCircleCanvasTime = () => {
   const canvasRef = useRef(null);
