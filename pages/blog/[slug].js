@@ -90,7 +90,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.slug, true);
 
   const content = await serialize(post.content);
 
