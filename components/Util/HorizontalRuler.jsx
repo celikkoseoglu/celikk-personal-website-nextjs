@@ -9,7 +9,7 @@ import {
 import useDarkMode from "use-dark-mode";
 
 const HorizontalRuler = ({ isThick, className }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   return (
     <hr

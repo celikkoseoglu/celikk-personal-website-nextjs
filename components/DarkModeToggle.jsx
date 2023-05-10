@@ -36,7 +36,7 @@ const onClickWrapper = (darkMode, event) => {
 };
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   return (
     <button

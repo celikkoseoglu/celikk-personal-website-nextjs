@@ -132,7 +132,7 @@ const m = {
 };
 
 const GrowingCircleAnimation = () => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
   const canvasRef = useRef(null);
 
   useEffect(() => {

@@ -8,7 +8,7 @@ import UnstyledLink from "./Util/UnstyledLink";
 import useDarkMode from "use-dark-mode";
 
 const CustomButton = ({ text, to, href, className }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   return (
     <UnstyledLink

@@ -20,7 +20,7 @@ import Row from "../Util/Row";
 import useDarkMode from "use-dark-mode";
 
 const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   const header = <h1 className={`${noMargin} ${titleFont}`}>{headerText}</h1>;
 

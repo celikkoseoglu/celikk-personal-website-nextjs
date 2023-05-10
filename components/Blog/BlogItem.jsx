@@ -8,7 +8,7 @@ import { BLOG_LINK } from "../../utils/Constants.utils";
 import useDarkMode from "use-dark-mode";
 
 const BlogItem = ({ className, title, date, minutes, subtitle, blogPost }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   return (
     <div className={className}>

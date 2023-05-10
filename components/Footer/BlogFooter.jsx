@@ -13,7 +13,7 @@ import useDarkMode from "use-dark-mode";
 const footer = require("../../data/footer.json");
 
 const BlogFooter = () => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   return (
     <footer className={footerStyle}>

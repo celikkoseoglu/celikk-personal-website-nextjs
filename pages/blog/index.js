@@ -36,7 +36,7 @@ const formatDate = (date) => {
 };
 
 export default function Blog({ allPosts }) {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   const meta = getMeta(
     blog.title.page,

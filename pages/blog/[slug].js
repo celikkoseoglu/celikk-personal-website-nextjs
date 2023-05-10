@@ -21,7 +21,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import useDarkMode from "use-dark-mode";
 
 export default function Post({ post }) {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
 
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
