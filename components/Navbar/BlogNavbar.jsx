@@ -24,7 +24,7 @@ const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
 
   const header = <h1 className={`${noMargin} ${titleFont}`}>{headerText}</h1>;
 
-  const getTitleOrButton = (text, link) =>
+  const getTitleOrButton = (link) =>
     link ? (
       <UnstyledLink
         className={`${
@@ -53,7 +53,7 @@ const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
           />
         </UnstyledLink>
 
-        {getTitleOrButton(headerText, headerLink, darkMode.value)}
+        {getTitleOrButton(headerLink)}
       </Row>
       <div className={darkModeToggle}>
         <DarkModeToggle />
