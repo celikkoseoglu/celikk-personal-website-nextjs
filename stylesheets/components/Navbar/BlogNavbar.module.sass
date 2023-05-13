@@ -16,11 +16,8 @@
   cursor: pointer
 
 .title
-  text-shadow: -2px 2px 0px $smoke-grey
-
-.titleDark
-  text-shadow: -2px 2px 0px $dark-grey
-  color: $white
+  text-shadow: -2px 2px 0px var(--text-shadow-color)
+  color: var(--primary-text-color)
 
 .navbarFlex
   display: flex
@@ -35,24 +32,16 @@
 .branding
   height: 42px
   width: 46.1875px // internet explorer cannot determine the width of an SVG automatically
-  border-right: 2px solid $black
+  border-right: 2px solid var(--primary-text-color)
   transition: border-right $colorTransitionDuration
   padding-top: 2px
   margin-top: 4px
   margin-right: 16px
   padding-right: 16px
 
-.brandingDark
-  border-right: 2px solid $white
-
 .blogLinkBranding
-  color: $dark-blue
-  text-shadow: -2px 2px 0px $light-blue
+  color: var(--primary-link-color)
+  text-shadow: -2px 2px 0px var(--link-shadow-color)
   &:hover
-    color: $dark-blue
+    color: var(--primary-link-color)
 
-.blogLinkBrandingDark
-  color: $light-blue
-  text-shadow: -2px 2px 0px $dark-blue
-  &:hover
-    color: $light-blue

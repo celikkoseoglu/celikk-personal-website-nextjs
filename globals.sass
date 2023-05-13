@@ -10,9 +10,10 @@ body
   font-size: 14px
   font-weight: 400
   line-height: 1.5
-  color: $midnight-black
+  background: var(--background-color)
   // this transition is used to animate mobile safari address bar's transparent bg
-  transition: background-color $bodyBackgroundColorTransitionDuration ease-in-out
+  // inject this transition in GrowingCircleAnimation useEffect once noflash migration is complete
+  // transition: background $bodyBackgroundColorTransitionDuration ease-in-out
 
 h1, h2, h3, h4, h6
   line-height: 1.2

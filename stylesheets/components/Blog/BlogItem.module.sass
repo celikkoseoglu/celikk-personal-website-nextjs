@@ -2,17 +2,12 @@
 @import "../../../utils/animationTimer"
 
 .blogItemLink
-  color: $midnight-black
+  color: var(--primary-text-color)
   h4, h6, p
     transition: color $colorTransitionDuration ease
   &:hover h4, &:hover h6, &:hover p
     transition: color $hoverColorTransitionDuration ease
-    color: $dark-blue
-
-.blogItemLinkDark
-  h4, h6, p
-    color: $white
+  &:hover h6, &:hover p
+    color: var(--primary-link-color)
   &:hover h4
-    color: $sky-blue
-  &:hover h6,  &:hover p
-    color: $light-blue
+    color: var(--secondary-link-color)

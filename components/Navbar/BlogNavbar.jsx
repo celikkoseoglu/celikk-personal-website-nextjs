@@ -3,13 +3,10 @@ import {
   noMargin,
   titleFont,
   title,
-  titleDark,
   navbarFlex,
   darkModeToggle,
   branding,
-  brandingDark,
   blogLinkBranding,
-  blogLinkBrandingDark,
   defaultCursor,
   pointerCursor,
 } from "../../stylesheets/components/Navbar/BlogNavbar.module.sass";
@@ -27,16 +24,14 @@ const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
   const getTitleOrButton = (link) =>
     link ? (
       <UnstyledLink
-        className={`${
-          darkMode.value ? blogLinkBrandingDark : blogLinkBranding
-        } ${pointerCursor}`}
+        className={`${blogLinkBranding} ${pointerCursor}`}
         to={link}
       >
         {header}
       </UnstyledLink>
     ) : (
       <span
-        className={`${defaultCursor} ${darkMode.value ? titleDark : title}`}
+        className={`${defaultCursor} ${title}`}
       >
         {header}
       </span>
@@ -47,7 +42,7 @@ const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
       <Row>
         <UnstyledLink to={brandingLink}>
           <BrandingLogo
-            className={`${branding} ${darkMode.value && brandingDark}`}
+            className={branding}
             fillColor={darkMode.value ? "#A2C1EB" : "#003C85"}
             strokeColor={darkMode.value ? "#A2C1EB" : "#003C85"}
           />
