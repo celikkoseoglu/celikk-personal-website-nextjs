@@ -2,10 +2,7 @@
 @import "../../../utils/colorPalette"
 
 .socialMediaButtonBackground
-  background: $grey
-
-.socialMediaButtonBackgroundDark
-  background: $space-grey
+  background: var(--button-background-color)
 
 .footerStyle
   text-align: center
@@ -15,14 +12,12 @@
     flex-flow: column-reverse
 
 .title
+  color: var(--primary-text-color)
   span
     display: block
     margin-bottom: 5px
   +screen(small)
     padding-top: 15px
-
-.darkTitle
-  color: $white
 
 .socialMediaBar
   margin-top: auto

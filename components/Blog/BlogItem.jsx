@@ -2,11 +2,8 @@ import PropTypes from "prop-types";
 import UnstyledLink from "../Util/UnstyledLink";
 import { blogItemLink } from "../../stylesheets/components/Blog/BlogItem.module.sass";
 import { BLOG_LINK } from "../../utils/Constants.utils";
-import useDarkMode from "use-dark-mode";
 
 const BlogItem = ({ className, title, date, minutes, subtitle, blogPost }) => {
-  const darkMode = useDarkMode();
-
   return (
     <div className={className}>
       <UnstyledLink to={`${BLOG_LINK}${blogPost}`} className={blogItemLink}>

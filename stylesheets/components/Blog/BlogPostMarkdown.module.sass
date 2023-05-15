@@ -2,10 +2,15 @@
 @import "../../../utils/animationTimer"
 
 .blogPostStyle
+  color: var(--primary-text-color)
+  transition: $colorTransition
   p
     font-size: 16px
   a
     transition: $colorTransition
+    color: var(--primary-link-color)
+    &:hover
+      color: var(--secondary-link-color)
   h1
     margin-bottom: 30px
     font-weight: bolder
@@ -16,18 +21,17 @@
     color: $grey
   code
     border-radius: 5px
+    color: var(--primary-link-color)
     // TODO: disabled due to performance constraints. Animates the code inside the Code component
     //transition: color $colorTransitionDuration linear
     //transition-delay: $transitionDelay
   pre
-    background: $pale-grey
-    -webkit-transition: $backgroundTransition
-    -moz-transition: $backgroundTransition
+    background: var(--blockquote-background-color)
     transition: $backgroundTransition
     transition-delay: $transitionDelay
   blockquote
-    background: $pale-grey
-    border-left: 10px solid $light-grey
+    background: var(--blockquote-background-color)
+    border-left: 10px solid var(--text-shadow-color)
     margin: 1.5em 0
     padding: 0.5em 10px
     transition: background-color $colorTransitionDuration linear

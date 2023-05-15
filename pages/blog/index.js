@@ -1,14 +1,13 @@
 import BlogItem from "../../components/Blog/BlogItem";
 import Row from "../../components/Util/Row";
 import {
-  fontColorTransition,
-  blogDark,
   blogItemMargin,
   blogNavbarMargin,
   blogStyle,
-  blogTitleFont,
   blogSubtitleFont,
+  blogTitleFont,
   circularImage,
+  fontColorTransition,
   footerStyle,
   noMargin,
   profilePicture,
@@ -18,10 +17,8 @@ import BlogFooter from "../../components/Footer/BlogFooter";
 import HorizontalRuler from "../../components/Util/HorizontalRuler";
 import BlogNavbar from "../../components/Navbar/BlogNavbar";
 import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
-import NoSSR from "react-no-ssr";
 import getMeta from "../../components/Util/MetaGenerator";
 import { getAllPosts } from "../../lib/api";
-import useDarkMode from "use-dark-mode";
 
 const blog = require("../../data/blog.json");
 const footer = require("../../data/footer.json");
@@ -36,8 +33,6 @@ const formatDate = (date) => {
 };
 
 export default function Blog({ allPosts }) {
-  const darkMode = useDarkMode();
-
   const meta = getMeta(
     blog.title.page,
     blog.pageDescription,
@@ -57,48 +52,7 @@ export default function Blog({ allPosts }) {
     />
   );
 
-  const noSSRContent = (
-    <div>
-      {meta}
-      <div className={blogStyle}>
-        <BlogNavbar
-          headerText={blogNavbar.blogBranding}
-          brandingLink={blogNavbar.homeLink}
-          className={blogNavbarMargin}
-        />
-        <Row className={`${blogItemMargin} ${verticalCenter}`}>
-          <div>
-            <img
-              className={`${circularImage} ${profilePicture}`}
-              src="/images/blog/PP.jpg"
-              alt={blog.imageAlt}
-            />
-          </div>
-          <div>
-            <p
-              className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}
-            >
-              {blog.title}
-            </p>
-            <p
-              className={`${blogSubtitleFont} ${noMargin} ${fontColorTransition}`}
-            >
-              {blog.subtitle}
-            </p>
-          </div>
-        </Row>
-
-        {allPosts.map((post) => getBlogItem(post))}
-
-        <HorizontalRuler />
-      </div>
-      <div className={footerStyle}>
-        <BlogFooter content={footer} />
-      </div>
-    </div>
-  );
-
-  const content = (
+  return (
     <div>
       {meta}
       <GrowingCircleAnimation />
@@ -116,7 +70,7 @@ export default function Blog({ allPosts }) {
               alt={blog.imageAlt}
             />
           </div>
-          <div className={`${darkMode.value && blogDark}`}>
+          <div>
             <p
               className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}
             >
@@ -139,8 +93,6 @@ export default function Blog({ allPosts }) {
       </div>
     </div>
   );
-
-  return <NoSSR onSSR={noSSRContent}>{content}</NoSSR>;
 }
 
 export async function getStaticProps() {

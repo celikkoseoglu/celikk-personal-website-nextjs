@@ -2,13 +2,12 @@ import SocialMediaBar from "./SocialMediaBar";
 import Signature from "../Signature";
 import {
   socialMediaButtonBackground,
-  socialMediaButtonBackgroundDark,
   footerStyle,
   title,
-  darkTitle,
   socialMediaBar,
 } from "../../stylesheets/components/Footer/BlogFooter.module.sass";
 import useDarkMode from "use-dark-mode";
+import NoSSR from "react-no-ssr";
 
 const footer = require("../../data/footer.json");
 
@@ -18,19 +17,15 @@ const BlogFooter = () => {
   return (
     <footer className={footerStyle}>
       <div className={title}>
-        <span className={darkMode.value ? darkTitle : null}>
-          {footer.title}
-        </span>
-        <Signature isDark={darkMode.value} />
+        <span>{footer.title}</span>
+        <NoSSR>
+          <Signature isDark={darkMode.value} />
+        </NoSSR>
       </div>
       <div className={socialMediaBar}>
         <SocialMediaBar
           socialMediaLinks={footer.socialMediaLinks}
-          buttonBackground={
-            darkMode.value
-              ? socialMediaButtonBackgroundDark
-              : socialMediaButtonBackground
-          }
+          buttonBackground={socialMediaButtonBackground}
         />
       </div>
     </footer>

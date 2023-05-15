@@ -39,6 +39,8 @@ const setColorScheme = () => {
       ds.setProperty("--link-shadow-color", DARK_BLUE);
       ds.setProperty("--text-shadow-color", DARK_GREY);
       ds.setProperty("--background-color", MIDNIGHT_BLACK);
+      ds.setProperty("--button-background-color", SPACE_GREY);
+      ds.setProperty("--blockquote-background-color", SPACE_BLACK);
     } else {
       ds.setProperty("--primary-text-color", MIDNIGHT_BLACK);
       // ds.setProperty("--secondary-text-color", "#FF0000");
@@ -47,6 +49,8 @@ const setColorScheme = () => {
       ds.setProperty("--link-shadow-color", LIGHT_BLUE);
       ds.setProperty("--text-shadow-color", SMOKE_GREY);
       ds.setProperty("--background-color", WHITE);
+      ds.setProperty("--button-background-color", GREY);
+      ds.setProperty("--blockquote-background-color", PALE_GREY);
     }
   }
 

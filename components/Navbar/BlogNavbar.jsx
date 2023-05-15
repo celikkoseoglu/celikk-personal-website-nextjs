@@ -15,6 +15,7 @@ import UnstyledLink from "../Util/UnstyledLink";
 import BrandingLogo from "../Animations/BrandingLogo";
 import Row from "../Util/Row";
 import useDarkMode from "use-dark-mode";
+import NoSSR from "react-no-ssr";
 
 const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
   const darkMode = useDarkMode();
@@ -30,28 +31,28 @@ const BlogNavbar = ({ headerText, headerLink, brandingLink, className }) => {
         {header}
       </UnstyledLink>
     ) : (
-      <span
-        className={`${defaultCursor} ${title}`}
-      >
-        {header}
-      </span>
+      <span className={`${defaultCursor} ${title}`}>{header}</span>
     );
 
   return (
     <div className={`${navbarFlex} ${className}`}>
       <Row>
         <UnstyledLink to={brandingLink}>
-          <BrandingLogo
-            className={branding}
-            fillColor={darkMode.value ? "#A2C1EB" : "#003C85"}
-            strokeColor={darkMode.value ? "#A2C1EB" : "#003C85"}
-          />
+          <NoSSR>
+            <BrandingLogo
+              className={branding}
+              fillColor={darkMode.value ? "#A2C1EB" : "#003C85"}
+              strokeColor={darkMode.value ? "#A2C1EB" : "#003C85"}
+            />
+          </NoSSR>
         </UnstyledLink>
 
         {getTitleOrButton(headerLink)}
       </Row>
       <div className={darkModeToggle}>
-        <DarkModeToggle />
+        <NoSSR>
+          <DarkModeToggle />
+        </NoSSR>
       </div>
     </div>
   );

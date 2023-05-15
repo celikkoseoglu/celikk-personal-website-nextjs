@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import HorizontalRuler from "../../components/Util/HorizontalRuler";
 import BlogFooter from "../../components/Footer/BlogFooter";
@@ -6,7 +5,6 @@ import BlogNavbar from "../../components/Navbar/BlogNavbar";
 import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
 import {
   blogContainer,
-  blogPostDark,
   blogPostBody,
   blogPostNavbarMargin,
   footerStyle,
@@ -18,16 +16,8 @@ const footer = require("../../data/footer.json");
 import NoSSR from "react-no-ssr";
 import getMeta from "../../components/Util/MetaGenerator";
 import { serialize } from "next-mdx-remote/serialize";
-import useDarkMode from "use-dark-mode";
 
 export default function Post({ post }) {
-  const darkMode = useDarkMode();
-
-  const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <p>404</p>;
-  }
-
   const meta = getMeta(
     post.data.title.page,
     post.data.description,
@@ -35,36 +25,14 @@ export default function Post({ post }) {
     post.data.cover.alt
   );
 
-  const noSSRContent = (
-    <>
-      {meta}
-      <div className={blogPostBody}>
-        <div className={width}>
-          <div className={blogContainer}>
-            <BlogNavbar
-              headerText={blogNavbar.blogBranding}
-              headerLink={blogNavbar.blogLink}
-              brandingLink={blogNavbar.homeLink}
-              className={blogPostNavbarMargin}
-            />
-
-            <BlogPostMarkdown content={post.content} />
-
-            <HorizontalRuler />
-          </div>
-          <div className={footerStyle}>
-            <BlogFooter content={footer} />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-
   const content = (
     <>
       {meta}
-      <div className={`${darkMode.value && blogPostDark} ${blogPostBody}`}>
-        <GrowingCircleAnimation />
+      <div className={`${blogPostBody}`}>
+        <NoSSR>
+          <GrowingCircleAnimation />
+        </NoSSR>
+
         <div className={width}>
           <div className={blogContainer}>
             <BlogNavbar
@@ -86,7 +54,7 @@ export default function Post({ post }) {
     </>
   );
 
-  return <NoSSR onSSR={noSSRContent}>{content}</NoSSR>;
+  return content;
 }
 
 export async function getStaticProps({ params }) {
