@@ -15,8 +15,8 @@
   transition: color $colorTransitionDuration
   background: transparent
   border: none transparent // none is required for IE11 Support
-  color: $black
   cursor: pointer
+  color: $white
   button
     border: none transparent // none is required for IE11 Support
   &:focus
@@ -27,10 +27,4 @@
   +screen(small)
     display: none
 
-.copyButtonDark
-  color: $white
-  &:focus
-    color: $dark-blue
-  &:hover
-    color: $light-blue
 

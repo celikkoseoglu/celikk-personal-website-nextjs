@@ -9,7 +9,6 @@ import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 import sass from "react-syntax-highlighter/dist/cjs/languages/prism/sass";
 import {
   copyButton,
-  copyButtonDark,
   parentDiv,
 } from "../../stylesheets/components/Blog/Code.module.sass";
 
@@ -33,7 +32,7 @@ const Code = (props) => {
     <div className={parentDiv}>
       <CopyToClipboard
         onCopy={() => setIsCopied(true)}
-        className={`${copyButton} ${copyButtonDark}`}
+        className={copyButton}
         text={children}
       >
         <button type="button" aria-label="Copy to Clipboard Button">
