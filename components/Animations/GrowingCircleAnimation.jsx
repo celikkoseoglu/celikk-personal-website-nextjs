@@ -141,17 +141,10 @@ const GrowingCircleAnimation = () => {
     let stateMachine = m.createMachine(ctx, darkMode.value);
     let isStateMachinePowered = true;
 
-    const stateMachineRunner = () => {
+    const stateMachineRunner = async () => {
       if (stateMachine !== null && isStateMachinePowered) {
-        if (stateMachine instanceof Function) {
-          stateMachine = stateMachine();
-          stateMachineRunner();
-        } else {
-          stateMachine.then((val) => {
-            stateMachine = val();
-            stateMachineRunner();
-          });
-        }
+        stateMachine = await stateMachine();
+        stateMachineRunner();
       }
     };
 
