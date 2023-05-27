@@ -5,7 +5,6 @@ import BlogNavbar from "../../components/Navbar/BlogNavbar";
 import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAnimation";
 import {
   blogContainer,
-  blogPostBody,
   blogPostNavbarMargin,
   footerStyle,
   width,
@@ -28,7 +27,7 @@ export default function Post({ post }) {
   const content = (
     <>
       {meta}
-      <div className={`${blogPostBody}`}>
+      <>
         <NoSSR>
           <GrowingCircleAnimation />
         </NoSSR>
@@ -50,7 +49,7 @@ export default function Post({ post }) {
             <BlogFooter content={footer} />
           </div>
         </div>
-      </div>
+      </>
     </>
   );
 
