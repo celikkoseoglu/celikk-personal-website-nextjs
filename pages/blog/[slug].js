@@ -7,7 +7,6 @@ import {
   blogContainer,
   blogPostNavbarMargin,
   footerStyle,
-  width,
 } from "../../stylesheets/BlogPost.module.sass";
 import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
@@ -32,22 +31,20 @@ export default function Post({ post }) {
           <GrowingCircleAnimation />
         </NoSSR>
 
-        <div className={width}>
-          <div className={blogContainer}>
-            <BlogNavbar
-              headerText={blogNavbar.blogBranding}
-              headerLink={blogNavbar.blogLink}
-              brandingLink={blogNavbar.homeLink}
-              className={blogPostNavbarMargin}
-            />
+        <div className={blogContainer}>
+          <BlogNavbar
+            headerText={blogNavbar.blogBranding}
+            headerLink={blogNavbar.blogLink}
+            brandingLink={blogNavbar.homeLink}
+            className={blogPostNavbarMargin}
+          />
 
-            <BlogPostMarkdown content={post.content} />
+          <BlogPostMarkdown content={post.content} />
 
-            <HorizontalRuler />
-          </div>
-          <div className={footerStyle}>
-            <BlogFooter content={footer} />
-          </div>
+          <HorizontalRuler />
+        </div>
+        <div className={footerStyle}>
+          <BlogFooter content={footer} />
         </div>
       </>
     </>
