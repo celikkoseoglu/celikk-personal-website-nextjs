@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "gray-matter": "4.0.3",
-    "next": "13.4.4",
     "imagemin-optipng": "8.0.0",
+    "markdown-to-jsx": "7.2.0",
+    "next": "13.4.4",
+    "next-mdx-remote": "4.4.1",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
@@ -22,8 +25,6 @@
     "react-scroll": "1.8.9",
     "react-syntax-highlighter": "15.5.0",
     "sass": "1.62.1",
-    "markdown-to-jsx": "7.2.0",
-    "next-mdx-remote": "4.4.1",
     "use-dark-mode": "2.3.1"
   },
   "devDependencies": {
@@ -32,8 +33,8 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "file-loader": "6.2.0",
-    "prettier": "2.8.8",
     "next-optimized-images": "2.6.2",
+    "prettier": "2.8.8",
     "webp-loader": "0.6.0"
   }
 }

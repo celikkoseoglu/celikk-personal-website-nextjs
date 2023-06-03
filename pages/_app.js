@@ -1,6 +1,7 @@
 import "../globals.sass";
 import { useEffect } from "react";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -57,6 +58,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#111111" />
       </Head>
+      <Analytics />
       <Component {...pageProps} />
     </>
   );
