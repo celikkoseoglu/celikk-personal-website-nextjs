@@ -5,7 +5,7 @@ import {
   timestampStyle,
   subtitleStyle,
   titleStyle,
-  description,
+  description
 } from "../../stylesheets/components/BlogShowcase/BlogShowcaseCard.module.sass";
 import UnstyledLink from "../Util/UnstyledLink";
 import { BLOG_LINK } from "../../utils/Constants.utils";
@@ -16,7 +16,7 @@ const BlogShowcaseCard = ({
   timestamp,
   minutes,
   blogPost,
-  className,
+  className
 }) => (
   <div className={`${square} ${className}`}>
     <UnstyledLink to={`${BLOG_LINK}${blogPost}`}>
@@ -37,11 +37,11 @@ BlogShowcaseCard.propTypes = {
   timestamp: PropTypes.string.isRequired,
   minutes: PropTypes.string.isRequired,
   blogPost: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 BlogShowcaseCard.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default BlogShowcaseCard;

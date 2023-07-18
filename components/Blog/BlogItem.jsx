@@ -23,7 +23,7 @@ BlogItem.propTypes = {
   date: PropTypes.string.isRequired,
   minutes: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  blogPost: PropTypes.string.isRequired,
+  blogPost: PropTypes.string.isRequired
 };
 
 export default BlogItem;

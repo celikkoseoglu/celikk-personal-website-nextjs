@@ -5,7 +5,7 @@ import useDarkMode from "use-dark-mode";
 
 const COLORS = {
   white: "#FFF",
-  midnightBlack: "#111",
+  midnightBlack: "#111"
 };
 
 const RADIUS_GROWTH_PER_MS = 0.025;
@@ -21,7 +21,7 @@ const circleCenterCoordinates = {
   resetMouseState: () => {
     circleCenterCoordinates.x = null;
     circleCenterCoordinates.y = null;
-  },
+  }
 };
 
 // circle animation state machine
@@ -128,7 +128,7 @@ const m = {
       };
       window.requestAnimationFrame(returnAfterAnimating);
     });
-  },
+  }
 };
 
 const GrowingCircleAnimation = () => {

@@ -6,7 +6,7 @@ import Code from "./Code";
 
 const components = {
   pre: (props) => <Code {...props} />,
-  MediaCarousel,
+  MediaCarousel
 };
 
 const BlogPostMarkdown = ({ content }) => (
@@ -16,7 +16,7 @@ const BlogPostMarkdown = ({ content }) => (
 );
 
 BlogPostMarkdown.propTypes = {
-  content: PropTypes.object.isRequired,
+  content: PropTypes.object.isRequired
 };
 
 export default BlogPostMarkdown;

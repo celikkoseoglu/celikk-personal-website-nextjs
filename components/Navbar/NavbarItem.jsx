@@ -32,13 +32,13 @@ NavbarItem.propTypes = {
     .isRequired,
   reference: PropTypes.string,
   href: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 NavbarItem.defaultProps = {
   reference: PropTypes.null,
   href: PropTypes.null,
-  className: PropTypes.null,
+  className: PropTypes.null
 };
 
 export default NavbarItem;

@@ -3,7 +3,7 @@ import {
   contentDiv,
   description,
   image,
-  imageDiv,
+  imageDiv
 } from "../stylesheets/components/SkillCard.module.sass";
 
 const SkillCard = ({ imageLink, imageAlt, text }) => {
@@ -20,7 +20,7 @@ const SkillCard = ({ imageLink, imageAlt, text }) => {
 SkillCard.propTypes = {
   imageLink: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default SkillCard;

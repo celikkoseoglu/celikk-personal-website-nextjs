@@ -3,7 +3,7 @@ import {
   title,
   titleRow,
   ruler,
-  backgroundColor,
+  backgroundColor
 } from "../stylesheets/components/Heading.module.sass";
 
 import HorizontalRuler from "./Util/HorizontalRuler";
@@ -26,12 +26,12 @@ const Heading = ({ id, text, className }) => (
 Heading.propTypes = {
   id: PropTypes.string.isRequired,
   text: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 Heading.defaultProps = {
   text: null,
-  className: null,
+  className: null
 };
 
 export default Heading;

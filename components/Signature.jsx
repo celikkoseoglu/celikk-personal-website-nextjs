@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {
   signature,
-  darkSignature,
+  darkSignature
 } from "../stylesheets/components/Signature.module.sass";
 
 const Signature = ({ isDark, className }) => (
@@ -14,12 +14,12 @@ const Signature = ({ isDark, className }) => (
 
 Signature.propTypes = {
   isDark: PropTypes.bool,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 Signature.defaultProps = {
   isDark: null,
-  className: null,
+  className: null
 };
 
 export default Signature;

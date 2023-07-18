@@ -96,12 +96,12 @@ const ArrowAnimation = ({ className, reference }) => {
 
 ArrowAnimation.propTypes = {
   className: PropTypes.string,
-  reference: PropTypes.string,
+  reference: PropTypes.string
 };
 
 ArrowAnimation.defaultProps = {
   className: null,
-  reference: null,
+  reference: null
 };
 
 export default ArrowAnimation;

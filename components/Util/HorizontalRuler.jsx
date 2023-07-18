@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {
   thick,
-  main,
+  main
 } from "../../stylesheets/components/Util/HorizontalRuler.module.sass";
 
 const HorizontalRuler = ({ isThick, className }) => {
@@ -10,12 +10,12 @@ const HorizontalRuler = ({ isThick, className }) => {
 
 HorizontalRuler.propTypes = {
   isThick: PropTypes.bool,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 HorizontalRuler.defaultProps = {
   isThick: false,
-  className: null,
+  className: null
 };
 
 export default HorizontalRuler;

@@ -4,7 +4,7 @@ import {
   line,
   line1,
   line2,
-  navbarToggle,
+  navbarToggle
 } from "../../stylesheets/components/Navbar/NavbarToggle.module.sass";
 
 const NavbarToggle = ({ collapsed, onClickMethod, className }) => (
@@ -22,11 +22,11 @@ const NavbarToggle = ({ collapsed, onClickMethod, className }) => (
 NavbarToggle.propTypes = {
   collapsed: PropTypes.bool.isRequired,
   onClickMethod: PropTypes.func.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 NavbarToggle.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default NavbarToggle;

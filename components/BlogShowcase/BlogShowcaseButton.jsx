@@ -3,7 +3,7 @@ import {
   square,
   montserrat,
   textColor,
-  shadowMargin,
+  shadowMargin
 } from "../../stylesheets/components/BlogShowcase/BlogShowcaseButton.module.sass";
 import UnstyledLink from "../Util/UnstyledLink";
 
@@ -20,11 +20,11 @@ const BlogShowcaseButton = ({ link, text, className }) => (
 BlogShowcaseButton.propTypes = {
   link: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 BlogShowcaseButton.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default BlogShowcaseButton;

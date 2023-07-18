@@ -2,7 +2,7 @@ import CustomButton from "../components/CustomButton";
 import {
   notFoundStyle,
   customButton,
-  noMargin,
+  noMargin
 } from "../stylesheets/NotFound.module.sass";
 import getMeta from "../components/Util/MetaGenerator";
 

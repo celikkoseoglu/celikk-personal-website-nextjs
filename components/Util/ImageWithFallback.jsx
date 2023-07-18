@@ -18,12 +18,12 @@ const ImageWithFallback = ({
 
 ImageWithFallback.propTypes = {
   src: PropTypes.node,
-  fallback: PropTypes.string,
+  fallback: PropTypes.string
 };
 
 ImageWithFallback.defaultProps = {
   src: null,
-  fallback: null,
+  fallback: null
 };
 
 export default ImageWithFallback;

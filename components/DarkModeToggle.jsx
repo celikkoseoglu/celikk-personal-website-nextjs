@@ -2,7 +2,7 @@ import {
   sun,
   moon,
   darkModeToggle,
-  crescent,
+  crescent
 } from "../stylesheets/components/DarkModeToggle.module.sass";
 import useDarkMode from "use-dark-mode";
 
@@ -25,11 +25,11 @@ const onClickWrapper = (darkMode, event) => {
     // if the user is pinch zoomed in, then use the pinch zoom coordinate detection logic,
     // otherwise, use the distance of the icon from the top of the page. For some reason
     // offsetTop doesn't work when the user scrolls down and the zoom ratio == 1 (iOS14)
-    y: (deviceZoomRatio > 1 ? offsetTop : elemRect.top) + elemRect.height / 2,
+    y: (deviceZoomRatio > 1 ? offsetTop : elemRect.top) + elemRect.height / 2
   };
 
   const darkModeToggleEvent = new CustomEvent("darkModeToggle", {
-    detail: customEventState,
+    detail: customEventState
   });
   darkMode.toggle();
   dispatchEvent(darkModeToggleEvent);

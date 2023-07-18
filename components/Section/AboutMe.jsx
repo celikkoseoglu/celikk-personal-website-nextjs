@@ -3,7 +3,7 @@ import {
   description,
   image,
   descriptionRow,
-  listPadding,
+  listPadding
 } from "../../stylesheets/components/Section/AboutMe.module.sass";
 import Section from "../Util/Section";
 import Container from "../Util/Container";

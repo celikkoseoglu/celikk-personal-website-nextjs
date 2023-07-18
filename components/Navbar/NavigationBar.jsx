@@ -12,7 +12,7 @@ import {
   navbarToggle,
   topNavCollapse,
   topNavExpand,
-  whiteLink,
+  whiteLink
 } from "../../stylesheets/components/Navbar/NavigationBar.module.sass";
 import Container from "../Util/Container";
 import NavbarToggle from "./NavbarToggle";
@@ -61,11 +61,11 @@ const NavigationBar = () => {
         mobileNavbarCollapsed
           ? {
               backgroundColor: `rgba(27, 27, 27, ${transparency * 0.85})`,
-              backdropFilter: `blur(${transparency * 5}px)`,
+              backdropFilter: `blur(${transparency * 5}px)`
             }
           : {
               backgroundColor: `rgba(27, 27, 27, 0.85)`,
-              backdropFilter: `blur(${transparency * 5}px)`,
+              backdropFilter: `blur(${transparency * 5}px)`
             }
       }
       className={`${customNavbar} ${

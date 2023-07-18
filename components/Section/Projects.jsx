@@ -2,7 +2,7 @@ import Section from "../Util/Section";
 import Row from "../Util/Row";
 import {
   projectsDiv,
-  projectsRow,
+  projectsRow
 } from "../../stylesheets/components/Section/Projects.module.sass";
 import ProjectCard from "../ProjectCard";
 

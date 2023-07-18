@@ -2,13 +2,13 @@ import Section from "../Util/Section";
 import {
   blogPostCardsRow,
   blogShowcaseCard,
-  blogShowcaseContainer,
+  blogShowcaseContainer
 } from "../../stylesheets/components/Section/BlogShowcase.module.sass";
 import Container from "../Util/Container";
 import Row from "../Util/Row";
 import {
   NUMBER_OF_LATEST_BLOG_CARDS_TO_RENDER_ON_MOBILE,
-  retrieveLatestBlogPosts,
+  retrieveLatestBlogPosts
 } from "../../utils/LatestBlogsFetcher";
 import BlogShowcaseCard from "../BlogShowcase/BlogShowcaseCard";
 import BlogShowcaseButton from "../BlogShowcase/BlogShowcaseButton";

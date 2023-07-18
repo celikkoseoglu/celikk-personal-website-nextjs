@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {
   sectionPadding,
-  sectionBackground,
+  sectionBackground
 } from "../../stylesheets/components/Util/Section.module.sass";
 
 const Section = ({ className, children }) => (
@@ -12,11 +12,11 @@ const Section = ({ className, children }) => (
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 Section.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default Section;

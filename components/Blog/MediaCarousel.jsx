@@ -5,7 +5,7 @@ import {
   horizontalOverflow,
   imageMargin,
   mediaCarousel,
-  multipleImage,
+  multipleImage
 } from "../../stylesheets/components/Blog/MediaCarousel.module.sass";
 import ImageWithFallback from "../Util/ImageWithFallback";
 
@@ -68,7 +68,7 @@ const MediaCarousel = ({ folder, images }) => {
 
 MediaCarousel.propTypes = {
   folder: PropTypes.string.isRequired,
-  images: PropTypes.string.isRequired,
+  images: PropTypes.string.isRequired
 };
 
 export default MediaCarousel;

@@ -13,11 +13,11 @@ SocialMediaIcon.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   link: PropTypes.string.isRequired,
-  ariaLabel: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string.isRequired
 };
 
 SocialMediaIcon.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default SocialMediaIcon;

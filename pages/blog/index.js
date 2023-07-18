@@ -11,7 +11,7 @@ import {
   footerStyle,
   noMargin,
   profilePicture,
-  verticalCenter,
+  verticalCenter
 } from "../../stylesheets/Blog.module.sass";
 import BlogFooter from "../../components/Footer/BlogFooter";
 import HorizontalRuler from "../../components/Util/HorizontalRuler";
@@ -99,6 +99,6 @@ export async function getStaticProps() {
   const allPosts = getAllPosts();
 
   return {
-    props: { allPosts },
+    props: { allPosts }
   };
 }

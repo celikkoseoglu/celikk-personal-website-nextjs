@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import {
   customButton,
   customButtonDark,
-  textCenter,
+  textCenter
 } from "../stylesheets/components/CustomButton.module.sass";
 import UnstyledLink from "./Util/UnstyledLink";
 import useDarkMode from "use-dark-mode";
@@ -27,13 +27,13 @@ CustomButton.propTypes = {
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 CustomButton.defaultProps = {
   to: null,
   href: null,
-  className: null,
+  className: null
 };
 
 export default CustomButton;

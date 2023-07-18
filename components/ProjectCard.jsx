@@ -5,7 +5,7 @@ import {
   description,
   contentDiv,
   mobileDescription,
-  desktopDescription,
+  desktopDescription
 } from "../stylesheets/components/ProjectCard.module.sass";
 import UnstyledLink from "./Util/UnstyledLink";
 
@@ -15,7 +15,7 @@ const ProjectCard = ({
   title,
   subtitle,
   text,
-  blogPost,
+  blogPost
 }) => {
   return (
     <div className={point}>
@@ -40,7 +40,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   text: PropTypes.string,
-  blogPost: PropTypes.string,
+  blogPost: PropTypes.string
 };
 
 ProjectCard.defaultProps = {
@@ -49,7 +49,7 @@ ProjectCard.defaultProps = {
   title: null,
   subtitle: null,
   text: null,
-  blogPost: null,
+  blogPost: null
 };
 
 export default ProjectCard;

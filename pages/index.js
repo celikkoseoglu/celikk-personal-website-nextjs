@@ -4,7 +4,7 @@ import Landing from "../components/Section/Landing";
 import Projects from "../components/Section/Projects";
 import {
   footerSpacingBackground,
-  footerPadding,
+  footerPadding
 } from "../stylesheets/Home.module.sass";
 import Skills from "../components/Section/Skills";
 import Footer from "../components/Footer/Footer";
@@ -57,6 +57,6 @@ export async function getStaticProps() {
   const allPosts = getAllPosts();
 
   return {
-    props: { allPosts },
+    props: { allPosts }
   };
 }

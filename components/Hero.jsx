@@ -5,7 +5,7 @@ import {
   introMargin,
   introHeadingStyle,
   introLeadInStyle,
-  box,
+  box
 } from "../stylesheets/components/Hero.module.sass";
 
 const Hero = ({ introHeading, introLeadIn, resumeButtonText, resumeLink }) => (
@@ -22,7 +22,7 @@ Hero.propTypes = {
   introHeading: PropTypes.string.isRequired,
   introLeadIn: PropTypes.string.isRequired,
   resumeButtonText: PropTypes.string.isRequired,
-  resumeLink: PropTypes.string.isRequired,
+  resumeLink: PropTypes.string.isRequired
 };
 
 export default Hero;

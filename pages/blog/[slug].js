@@ -6,7 +6,7 @@ import GrowingCircleAnimation from "../../components/Animations/GrowingCircleAni
 import {
   blogContainer,
   blogPostNavbarMargin,
-  footerStyle,
+  footerStyle
 } from "../../stylesheets/BlogPost.module.sass";
 import BlogPostMarkdown from "../../components/Blog/BlogPostMarkdown";
 const blogNavbar = require("../../data/blogNavbar.json");
@@ -62,9 +62,9 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        content,
-      },
-    },
+        content
+      }
+    }
   };
 }
 
@@ -75,10 +75,10 @@ export async function getStaticPaths() {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
-        },
+          slug: post.slug
+        }
       };
     }),
-    fallback: false,
+    fallback: false
   };
 }

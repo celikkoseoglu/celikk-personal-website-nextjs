@@ -16,7 +16,7 @@ import {
   footerLocation,
   footerGithubStats,
   footerGithubStatsLink,
-  footerGithubStatsDiv,
+  footerGithubStatsDiv
 } from "../../stylesheets/components/Footer/Footer.module.sass";
 
 import SocialMediaBar from "./SocialMediaBar";

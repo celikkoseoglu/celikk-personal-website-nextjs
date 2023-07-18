@@ -4,7 +4,7 @@ import {
   heroContainer,
   arrowMargin,
   arrowSize,
-  heroBackground,
+  heroBackground
 } from "../../stylesheets/components/Section/Landing.module.sass";
 import Container from "../Util/Container";
 import Hero from "../Hero";
@@ -22,7 +22,7 @@ const imagePaths = [
   "/images/hero/cliffWalking.jpg",
   "/images/hero/kayaking.jpg",
   "/images/hero/wallAnkara.jpg",
-  "/images/hero/wallLondon.jpg",
+  "/images/hero/wallLondon.jpg"
 ];
 
 let windowInnerWidth = 0;
@@ -67,7 +67,7 @@ const Landing = ({ id, arrowAnimationReference }) => {
       id={id}
       style={
         imageUrl && {
-          backgroundImage: `url(${imageUrl})`,
+          backgroundImage: `url(${imageUrl})`
         }
       }
       className={`${heroBackground}`}
@@ -94,7 +94,7 @@ const Landing = ({ id, arrowAnimationReference }) => {
 };
 Landing.propTypes = {
   id: PropTypes.string.isRequired,
-  arrowAnimationReference: PropTypes.string.isRequired,
+  arrowAnimationReference: PropTypes.string.isRequired
 };
 
 export default Landing;

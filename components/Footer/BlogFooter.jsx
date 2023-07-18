@@ -4,7 +4,7 @@ import {
   socialMediaButtonBackground,
   footerStyle,
   title,
-  socialMediaBar,
+  socialMediaBar
 } from "../../stylesheets/components/Footer/BlogFooter.module.sass";
 import useDarkMode from "use-dark-mode";
 import NoSSR from "react-no-ssr";

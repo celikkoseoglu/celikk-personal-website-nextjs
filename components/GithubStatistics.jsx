@@ -4,13 +4,13 @@ import { GoStar, GoRepoForked } from "react-icons/go";
 import {
   numbers,
   main,
-  innerMain,
+  innerMain
 } from "../stylesheets/components/GithubStatistics.module.sass";
 
 const GithubStatistics = ({ username, repo, className }) => {
   const [githubStats, setGithubStats] = useState({
     stargazers_count: "-",
-    forks_count: "-",
+    forks_count: "-"
   });
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const GithubStatistics = ({ username, repo, className }) => {
       .then((json) => {
         setGithubStats({
           stargazers_count: json.stargazers_count,
-          forks_count: json.forks_count,
+          forks_count: json.forks_count
         });
       })
       // eslint-disable-next-line no-console
@@ -41,11 +41,11 @@ const GithubStatistics = ({ username, repo, className }) => {
 GithubStatistics.propTypes = {
   username: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 GithubStatistics.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default GithubStatistics;

@@ -21,12 +21,12 @@ const UnstyledLink = ({ className, to, children }) => (
 UnstyledLink.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 UnstyledLink.defaultProps = {
   className: null,
-  children: null,
+  children: null
 };
 
 export default UnstyledLink;

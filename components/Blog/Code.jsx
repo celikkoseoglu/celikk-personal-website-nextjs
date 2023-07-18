@@ -9,7 +9,7 @@ import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 import sass from "react-syntax-highlighter/dist/cjs/languages/prism/sass";
 import {
   copyButton,
-  parentDiv,
+  parentDiv
 } from "../../stylesheets/components/Blog/Code.module.sass";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -52,14 +52,14 @@ Code.propTypes = {
     children: PropTypes.shape({
       props: PropTypes.shape({
         children: PropTypes.object.isRequired,
-        className: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
+        className: PropTypes.string.isRequired
+      })
+    })
+  })
 };
 
 Code.defaultProps = {
-  language: "javascript",
+  language: "javascript"
 };
 
 export default Code;

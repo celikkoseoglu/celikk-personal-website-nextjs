@@ -8,7 +8,7 @@ import {
   branding,
   blogLinkBranding,
   defaultCursor,
-  pointerCursor,
+  pointerCursor
 } from "../../stylesheets/components/Navbar/BlogNavbar.module.sass";
 import DarkModeToggle from "../DarkModeToggle";
 import UnstyledLink from "../Util/UnstyledLink";
@@ -62,12 +62,12 @@ BlogNavbar.propTypes = {
   headerText: PropTypes.string.isRequired,
   headerLink: PropTypes.string,
   brandingLink: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 BlogNavbar.defaultProps = {
   headerLink: null,
-  className: null,
+  className: null
 };
 
 export default BlogNavbar;

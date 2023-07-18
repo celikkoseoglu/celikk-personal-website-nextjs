@@ -58,11 +58,11 @@ const BrandingLogo = ({ className, fillColor, strokeColor }) => (
 BrandingLogo.propTypes = {
   className: PropTypes.string,
   fillColor: PropTypes.string.isRequired,
-  strokeColor: PropTypes.string.isRequired,
+  strokeColor: PropTypes.string.isRequired
 };
 
 BrandingLogo.defaultProps = {
-  className: null,
+  className: null
 };
 
 export default BrandingLogo;
