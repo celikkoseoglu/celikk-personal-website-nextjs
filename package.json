@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/analytics": "1.1.2",
+    "@vercel/analytics": "1.1.4",
     "gray-matter": "4.0.3",
     "imagemin-optipng": "8.0.0",
-    "markdown-to-jsx": "7.4.0",
+    "markdown-to-jsx": "7.4.1",
     "next": "14.1.0",
     "next-mdx-remote": "4.4.1",
     "prop-types": "15.8.1",
@@ -34,7 +34,7 @@
     "eslint-plugin-prettier": "5.1.3",
     "file-loader": "6.2.0",
     "next-optimized-images": "2.6.2",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "webp-loader": "0.6.0"
   }
 }
